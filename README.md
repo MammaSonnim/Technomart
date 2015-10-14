@@ -1,1 +1,1 @@
-# id124052 (Yana Kriklivaya) Technomart 
+# id124052 (yakri) Technomart 
