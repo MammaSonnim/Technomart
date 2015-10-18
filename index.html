@@ -8,13 +8,10 @@
     <header class="main-header">
         <div class="header-upper-row">
             <div class="container-center">
-                <div class="header-logo">
-                    <a href="#">Техномарт</a>
-                </div>
+                <a class="header-logo" href="#">Техномарт</a>
                 <form action="/echo" method="get">
-                    <label>Поиск
-                    <input type="search" name="search">
-                    </label>
+                    <input type="search" name="search" placeholder="Поиск">
+                    <input type="submit">
                 </form>
                 <span class="bookmarks-count">Закладки: 0</span>
                 <span class="cart-count">Корзина: 0</span>
@@ -22,7 +19,7 @@
             </div>
         </div>
         <div class="header-row container-center">
-            <h1 class="header-title header-row__col">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+            <p class="header-title header-row__col">Интернет-магазин строительных материалов и инструментов для ремонта</p>
             <div class="header-contacts header-row__col">
                 <p class="contacts__tel">+7 (812) 555-05-55</p>
                 <p class="contacts__adress">г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
@@ -33,32 +30,37 @@
             </div>
         </div>
         <nav class="main-navigation container-center">
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Компания</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Спецпредложения</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
+            <a href="#">Главная</a>
+            <a href="#">Компания</a>
+            <a href="#">Каталог</a>
+            <a href="#">Новости</a>
+            <a href="#">Спецпредложения</a>
+            <a href="#">Доставка</a>
+            <a href="#">Контакты</a>
+
         </nav>
     </header>
-    <main class="main-content">
+    <div class="main-content">
         <section class="features  container-center">
-            <div class="features-item">
+            <article class="features-item">
                 <h2 class="features-item-title">Материалы</h2>
                 <div class="feature-items-btn"><a href="#">на любой вкус</a></div>
-            </div>
-            <div class="features-item">
+            </article>
+            <article class="features-item">
                 <h2 class="features-item-title">Инструмент</h2>
                 <div class="feature-items-btn"><a href="#">на все случаи</a></div>
-            </div>
-            <div class="features-item">
+            </article>
+            <article class="features-item">
                 <h2 class="features-item-title">Техника</h2>
                 <div class="features-item-btn"><a href="#">для стройки</a></div>
-            </div>
-            <div class="features-slider">
+            </article>
+            <article class="features-slider">
+                <div class="features-slider-toggle">
+                    <input type="radio" id="features-slider-btn-1" name="toggle" checked>
+                    <input type="radio" id="features-slider-btn-2" name="toggle">
+                    <label for="features-slider-btn-1"></label>
+                    <label for="features-slider-btn-2"></label>
+                </div>
                 <div class="feature-slider-inner">
                     <h2 class="features-slider-title">Перфораторы</h2>
                     <p>Настоящие мужские игрушки</p>
@@ -66,29 +68,21 @@
                         <img src="images/features-slide-1.jpg" width="620" height="266">
                         <img src="images/features-slide-1.jpg" width="620" height="266">
                     </div>
-    <!-- стрелки может сделать псевдоэлементами вообще?
                     <div class="features-slider-controls">
                         <a href="#" class="control-left"></a>
                         <a href="#" class="control-right"></a>
                     </div>
-    -->
                     <a href="#" class="features-slider-btn">Открыть каталог</a>
                 </div>
-                <div class="features-slider-toggle">
-                    <label for="features-slider-btn-1"></label>
-                    <input type="radio" id="features-slider-btn-1" name="toggle" checked>
-                    <label for="features-slider-btn-2"></label>
-                    <input type="radio" id="features-slider-btn-2" name="toggle">
-                </div>
-            </div>
-            <div class="features-item">
+            </article>
+            <article class="features-item">
                 <h2 class="features-item-title">Скидки</h2>
                 <div class="features-item-btn"><a href="#">50%</a></div>
-            </div>
-            <div class="features-item">
+            </article>
+            <article class="features-item">
                 <h2 class="features-item-title">Доставка</h2>
                 <div class="features-item-btn"><a href="#">бесплатно</a></div>
-            </div>
+            </article>
         </section>
         <div class="container-center">
             <article class="popular-products">
@@ -122,7 +116,7 @@
                         <div class="product-card-price">25500 р.</div>
                     </div>
                     <div class="product-card">
-                        <div class="flag flag-new">Новинка</div>
+                        <div class="flag flag-new">Новинка-заменить - псевдо</div>
                         <div class="product-card-image">
                             <a href="#"><img src="" alt="" width="" height=""></a>
                         </div>
@@ -163,6 +157,7 @@
                 </ul>
                 <div class="service-slider-inner">
                     <div class="service-slide service-slide-active">
+<!--                       dd dt or label radio-->
                         <h3 class="service-slide-title">Доставка</h3>
                         <p class="service-slide-promo">
                             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
@@ -213,7 +208,7 @@
                 <a href="#" class="btn">Заблудились? Напишите нам!</a>
             </div>
         </div>
-    </main>
+    </div>
     <footer class="main-footer">
         <div class="footer-upper-row">
             <div class="container-center">
@@ -261,13 +256,13 @@
                 <div class="footer-bottom-row__col feedback">
                     <p>
                         Обратная связь:<br>
-                        <span>mail@htmlacademy.ru</span>
+                        <a>mail@htmlacademy.ru</a>
                     </p>
                 </div>
                 <div class="footer-bottom-row__col developer">
                     <p>
                         Разработано — <br>
-                        <span>htmlacademy.ru</span>
+                        <a>htmlacademy.ru</a>
                     </p>
                 </div>
             </div>
