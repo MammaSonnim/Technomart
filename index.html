@@ -45,45 +45,131 @@
         </nav>
     </header>
     <main class="main-content">
-        <section class="features">
+        <section class="features  container-center">
             <div class="features-item">
                 <h2 class="features-item-title">Материалы</h2>
-                <a href="#" class="features-item-btn">на любой вкус</a>
+                <div class="feature-items-btn"><a href="#">на любой вкус</a></div>
             </div>
             <div class="features-item">
                 <h2 class="features-item-title">Инструмент</h2>
-                <a href="#" class="feature-items-btn">на все случаи</a>
+                <div class="feature-items-btn"><a href="#">на все случаи</a></div>
             </div>
             <div class="features-item">
                 <h2 class="features-item-title">Техника</h2>
-                <a href="#" class="features-item-btn">для стройки</a>
-            </div>
-            <div class="features-item">
-                <h2 class="features-item-title">Скидки</h2>
-                <a href="#" class="features-item-btn">50%</a>
-            </div>
-            <div class="features-item">
-                <h2 class="features-item-title">Доставка</h2>
-                <a href="#" class="features-item-btn">бесплатно</a>
+                <div class="features-item-btn"><a href="#">для стройки</a></div>
             </div>
             <div class="features-slider">
-                <h2 class="features-slider-title"></h2>
-                <div class="features-slider-slides">
-                    <img src="images/features-slide-1.jpg" width="620" height="266">
-                    <img src="images/features-slide-1.jpg" width="620" height="266">
+                <div class="feature-slider-inner">
+                    <h2 class="features-slider-title"></h2>
+                    <div class="features-slider-slides">
+                        <img src="images/features-slide-1.jpg" width="620" height="266">
+                        <img src="images/features-slide-1.jpg" width="620" height="266">
+                    </div>
+    <!-- стрелки может сделать псевдоэлементами вообще?
+                    <div class="features-slider-controls">
+                        <a href="#" class="control-left"></a>
+                        <a href="#" class="control-right"></a>
+                    </div>
+    -->
+                    <a href="#" class="features-slider-btn">Открыть каталог</a>
                 </div>
-<!-- стрелки может сделать псевдоэлементами вообще?
-                <div class="features-slider-controls">
-                    <a href="#" class="control-left"></a>
-                    <a href="#" class="control-right"></a>
-                </div>
--->
-                <a href="#" class="features-slider-btn">Открыть каталог</a>
                 <div class="features-slider-toggle">
                     <label for="features-slider-btn-1"></label>
                     <input type="radio" id="features-slider-btn-1" name="toggle" checked>
                     <label for="features-slider-btn-2"></label>
                     <input type="radio" id="features-slider-btn-2" name="toggle">
+                </div>
+            </div>
+            <div class="features-item">
+                <h2 class="features-item-title">Скидки</h2>
+                <div class="features-item-btn"><a href="#">50%</a></div>
+            </div>
+            <div class="features-item">
+                <h2 class="features-item-title">Доставка</h2>
+                <div class="features-item-btn"><a href="#">бесплатно</a></div>
+            </div>
+        </section>
+        <div class="container-center">
+            <article class="popular-products">
+                <header class="header-popular clearfix">
+                    <h2 class="header-popular-title">Популярные товары:</h2>
+                    <div class="header-popular-btn"><a href="#">Все популярные товары</a></div>
+                </header>
+                <section class="products-items">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <a href="#"><img src="" alt="" width="" height=""></a>
+                        </div>
+                        <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
+                        <div class="product-card-price-old">32500 р.</div>
+                        <div class="product-card-price">25500 р.</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <a href="#"><img src="" alt="" width="" height=""></a>
+                        </div>
+                        <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
+                        <div class="product-card-price-old">22500 р.</div>
+                        <div class="product-card-price">15500 р.</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <a href="#"><img src="" alt="" width="" height=""></a>
+                        </div>
+                        <h3 class="product-card-title">Перфоратор BOSCH BFG 6000</h3>
+                        <div class="product-card-price-old">30500 р.</div>
+                        <div class="product-card-price">25500 р.</div>
+                    </div>
+                    <div class="product-card">
+                        <div class="flag flag-new">Новинка</div>
+                        <div class="product-card-image">
+                            <a href="#"><img src="" alt="" width="" height=""></a>
+                        </div>
+                        <h3 class="product-card-title">Перфоратор BOSCH BFG 2000</h3>
+                        <div class="product-card-price-old"></div>
+                        <div class="product-card-price">12500 р.</div>
+                    </div>
+                </section>
+            </article>
+            <article class="popular-brands">
+                <header class="header-popular clearfix">
+                    <h2 class="header-popular-title">Популярные производители:</h2>
+                    <div class="header-popular-btn"><a href="#">Все производители</a></div>
+                </header>
+                <ul class="brands-list">
+                    <li><a href="#"><img src="" alt="Bosch"></a></li>
+                    <li><a href="#"><img src="" alt="Makita"></a></li>
+                    <li><a href="#"><img src="" alt="DeWalt"></a></li>
+                    <li><a href="#"><img src="" alt="Интерскол"></a></li>
+                    <li><a href="#"><img src="" alt="Hitachi"></a></li>
+                    <li><a href="#"><img src="" alt="LG"></a></li>
+                    <li><a href="#"><img src="" alt="AEG"></a></li>
+                    <li><a href="#"><img src="" alt="Metabo"></a></li>
+                </ul>
+            </article>
+        </div>
+        <section class="service">
+            <div class="container-center">
+                <h2 class="service-title">Сервисы</h2>
+                <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+                <ul class="service-menu">
+                    <li class="active"><a href="#">Доставка</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                    <li><a href="#">Кредит</a></li>
+                </ul>
+                <div class="service-slider-inner">
+                    <div class="service-slide service-slide-active">
+                        <h3 class="service-slide-title">Доставка</h3>
+                        <p class="service-slide-promo">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
+                    </div>
+                    <div class="service-slide">
+                        <h3 class="service-slide-title">Гарантия</h3>
+                        <p class="service-slide-promo">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
+                    </div>
+                    <div class="service-slide">
+                        <h3 class="service-slide-title">Кредит</h3>
+                        <p class="service-slide-promo">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
+                    </div>
                 </div>
             </div>
         </section>
