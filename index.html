@@ -1,13 +1,93 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Техномарт</title>
-  <link href='https://fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Техномарт</title>
 </head>
 <body>
-  <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-  <p></p>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container-center">
+                <div class="logo">
+                    <a href="#">Техномарт</a>
+                </div>
+                <form action="/echo" method="get">
+                    <label>Поиск
+                    <input type="search" name="search">
+                    </label>
+                </form>
+                <span class="bookmarks-count">Закладки: 0</div>
+                <span class="cart-count">Корзина: 0</div>
+                <a href="#" class="btn">Оформить заказ</a>
+            </div>
+        </div>
+        <div class="header-row container-center">
+            <h1 class="header-title header-row__col">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+            <div class="contacts header-row__col">
+                <p class="contacts__tel">+7 (812) 555-05-55</p>
+                <p class="contacts__adress">г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
+            </div>
+            <div class="user-block header-row__col">
+                <a href="#" class="user-block__login">Войти</a>
+                <a href="#" class="user-block__sign-up">Регистрация</a>
+            </div>
+        </div>
+        <nav class="main-navigation container-center">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Спецпредложения</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="features">
+            <div class="features-item">
+                <h2 class="features-item-title">Материалы</h2>
+                <a href="#" class="features-item-btn">на любой вкус</a>
+            </div>
+            <div class="features-item">
+                <h2 class="features-item-title">Инструмент</h2>
+                <a href="#" class="feature-items-btn">на все случаи</a>
+            </div>
+            <div class="features-item">
+                <h2 class="features-item-title">Техника</h2>
+                <a href="#" class="features-item-btn">для стройки</a>
+            </div>
+            <div class="features-item">
+                <h2 class="features-item-title">Скидки</h2>
+                <a href="#" class="features-item-btn">50%</a>
+            </div>
+            <div class="features-item">
+                <h2 class="features-item-title">Доставка</h2>
+                <a href="#" class="features-item-btn">бесплатно</a>
+            </div>
+            <div class="features-slider">
+                <h2 class="features-slider-title"></h2>
+                <div class="features-slider-slides">
+                    <img src="images/features-slide-1.jpg" width="620" height="266">
+                    <img src="images/features-slide-1.jpg" width="620" height="266">
+                </div>
+<!-- стрелки может сделать псевдоэлементами вообще?
+                <div class="features-slider-controls">
+                    <a href="#" class="control-left"></a>
+                    <a href="#" class="control-right"></a>
+                </div>
+-->
+                <a href="#" class="features-slider-btn">Открыть каталог</a>
+                <div class="features-slider-toggle">
+                    <label for="features-slider-btn-1"></label>
+                    <input type="radio" id="features-slider-btn-1" name="toggle" checked>
+                    <label for="features-slider-btn-2"></label>
+                    <input type="radio" id="features-slider-btn-2" name="toggle">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer"></footer>
 </body>
 </html>
-
