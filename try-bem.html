@@ -3,81 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Техномарт</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
+<!--main-header, потому что возможно появление простых header в проекте, которые скорее всего будут иметь совершенно другую структуру-->
     <header class="main-header">
-        <div class="main-header-bar">
+<!--    TODO: решить main-header-bar или bar.
+        Суть: 1) - элемент, на котором размещаются некоторые блоки, актуальные для родителя,
+                в отрыве от хедера не имеет смысла
+                 - не может содержать собственных элементов (нужны ли они ему?)
+              2) - блок bar с управляющими элементами
+                 - положение в хедере не зависит от сиблингов, значит просто блок.
+                 - минусы - теряем понимание, что это такое, можно добавить модификатор bar_top -->
+        <div class="main-header__bar">
             <div class="container-center clearfix">
-<!--            позиционирование блока через inline-block поэтому не оборачиваю ссылки в div -->
-                <a class="bar-logo btn" href="#">Техномарт</a>
+<!--            на link повесим text-decoration и color
+                TODO: решить, оборачивать ли в div для позиционирования  -->
+                <a class="logo link" href="#">Техномарт</a>
                 <form action="/echo" method="get">
                     <input type="search" name="search" placeholder="Поиск">
                     <input type="submit">
                 </form>
-                <span class="bar-bookmarks-count">Закладки: 0</span>
-                <span class="bar-cart-count">Корзина: 0</span>
-                <a class="bar-link" href="#">Оформить заказ</a>
+                <span class="bookmarks-count">Закладки: 0</span>
+                <span class="cart-count">Корзина: 0</span>
+                <a class="btn btn_no-border-radius link" href="#">Оформить заказ</a>
             </div>
         </div>
-        <div class="main-header-content container-center">
-            <p class="main-header-text">
+<!--    TODO: решить main-header__content или content.
+        Суть: 1) в отрыве от хедера не имеет смысла? -->
+        <div class="main-header__content container-center">
+            <p class="main-header__title">
                 Интернет-магазин строительных материалов и инструментов для ремонта
             </p>
-            <div class="main-header-contacts">
-                <p class="contacts-tel">+7 (812) 555-05-55</p>
-                <p class="contacts-adress">г. Санкт-Петербург, Б. Конюшенная, д. 19/8</p>
+            <div class="contacts">
+                <p class="contacts__tel">
+                    +7 (812) 555-05-55
+                </p>
+                <p class="contacts__adress">
+                    г. Санкт-Петербург, Б. Конюшенная, д. 19/8
+                </p>
             </div>
             <div class="user-block">
-                <a class="user-block__login" href="#">Войти</a>
-                <a class="user-block__sign-up" href="#" >Регистрация</a>
+                <a class="user-block__login link" href="#">Войти</a>
+                <a class="user-block__sign-up link" href="#" >Регистрация</a>
             </div>
+<!--        nav добавлен для семантики, сам стилизоваться не будет   -->
+            <nav class="container-center">
+<!--            ul потому что возможно появление подменю,
+                проще реализовывать именно так, является блоком -->
+                <ul class="nav">
+                    <li class="nav__item">
+                        <a class="nav__link link" href="#">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="#">Компания</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="#">Каталог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="#">Новости</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="#">Спецпредложения</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="#">Доставка</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="main-nav container-center">
-            <ul>
-                <li>
-                    <a class="main-nav-link" href="#">Главная</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Компания</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Каталог</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Новости</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Спецпредложения</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Доставка</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Контакты</a>
-                </li>
-            </ul>
-        </nav>
+
     </header>
     <div class="main-content">
         <section class="features  container-center">
             <article class="features-item">
                 <h2 class="features-item-title">Материалы</h2>
-                <div class="feature-items-btn">
-                    <a href="#" class="link-btn">на любой вкус</a>
-                </div>
+                <div class="feature-items-btn"><a href="#">на любой вкус</a></div>
             </article>
             <article class="features-item">
                 <h2 class="features-item-title">Инструмент</h2>
-                <div class="feature-items-btn">
-                    <a href="#" class="link-btn">на все случаи</a>
-                </div>
+                <div class="feature-items-btn"><a href="#">на все случаи</a></div>
             </article>
             <article class="features-item">
                 <h2 class="features-item-title">Техника</h2>
-                <div class="features-item-btn">
-                    <a href="#" class="link-btn">для стройки</a>
-                </div>
+                <div class="features-item-btn"><a href="#">для стройки</a></div>
             </article>
             <article class="features-slider">
                 <div class="features-slider-toggle">
@@ -102,24 +114,18 @@
             </article>
             <article class="features-item">
                 <h2 class="features-item-title">Скидки</h2>
-                <div class="features-item-btn">
-                    <a href="#" class="link-btn">50%</a>
-                </div>
+                <div class="features-item-btn"><a href="#">50%</a></div>
             </article>
             <article class="features-item">
                 <h2 class="features-item-title">Доставка</h2>
-                <div class="features-item-btn">
-                    <a href="#" class="link-btn">бесплатно</a>
-                </div>
+                <div class="features-item-btn"><a href="#">бесплатно</a></div>
             </article>
         </section>
         <div class="container-center">
             <article class="popular-products">
                 <header class="header-popular clearfix">
                     <h2 class="header-popular-title">Популярные товары:</h2>
-                    <div class="header-popular-btn">
-                        <a href="#" class="link-btn">Все популярные товары</a>
-                    </div>
+                    <div class="header-popular-btn"><a href="#">Все популярные товары</a></div>
                 </header>
                 <section class="products-items">
                     <div class="product-card">
@@ -157,40 +163,20 @@
                     </div>
                 </section>
             </article>
-        </div>
-        <div class="container-center">
             <article class="popular-brands">
                 <header class="header-popular clearfix">
                     <h2 class="header-popular-title">Популярные производители:</h2>
-                    <div class="header-popular-btn">
-                        <a href="#" class="link-btn">Все производители</a>
-                    </div>
+                    <div class="header-popular-btn"><a href="#">Все производители</a></div>
                 </header>
                 <ul class="brands-list">
-                    <li>
-                        <a href="#"><img src="" alt="Bosch" width="" height=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="" alt="Makita" width="" height=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="" alt="DeWalt" width="" height=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="" alt="Интерскол" width="" height=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="" alt="Hitachi" width="" height=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="" alt="LG" width="" height=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="" alt="AEG" width="" height=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="" alt="Metabo" width="" height=""></a>
-                    </li>
+                    <li><a href="#"><img src="" alt="Bosch"></a></li>
+                    <li><a href="#"><img src="" alt="Makita"></a></li>
+                    <li><a href="#"><img src="" alt="DeWalt"></a></li>
+                    <li><a href="#"><img src="" alt="Интерскол"></a></li>
+                    <li><a href="#"><img src="" alt="Hitachi"></a></li>
+                    <li><a href="#"><img src="" alt="LG"></a></li>
+                    <li><a href="#"><img src="" alt="AEG"></a></li>
+                    <li><a href="#"><img src="" alt="Metabo"></a></li>
                 </ul>
             </article>
         </div>
@@ -208,7 +194,7 @@
                 </ul>
                 <div class="service-slider-inner">
                     <div class="service-slide service-slide-active">
-<!--                    dd dt or label radio-->
+<!--                       dd dt or label radio-->
                         <h3 class="service-slide-title">Доставка</h3>
                         <p class="service-slide-promo">
                             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
@@ -237,8 +223,7 @@
                 <h2 class="company-title">Компания «Техномарт»</h2>
                 <p class="company-text">
                     Настоящий мужской шоппинг начинается здесь!
-                    Огромный выбор товаров для ремонта и строительства
-                    не оставит равнодушными любителей сэкномить на гастарбайтерах.
+                    Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.
                 </p>
                 <p class="company-text">
                     Мы можем доставить ваш товар в самые отдаленные точки России!
@@ -275,14 +260,14 @@
                 </div>
                 <div class="footer-upper-row__col-2">
                     <nav class="footer-menu">
-                        <ul class="footer-menu-sub">
+                        <ul class="footer-menu__sub">
                             <li><a href="#">Компания</a></li>
                             <li><a href="#">Новости</a></li>
                             <li><a href="#">Каталог</a></li>
                             <li><a href="#">Доставка</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
-                        <ul class="footer-menu-sub">
+                        <ul class="footer-menu__sub">
                             <li><a href="#">Материалы</a></li>
                             <li><a href="#">Техника</a></li>
                             <li><a href="#">Инструмент</a></li>
@@ -295,8 +280,8 @@
         <div class="footer-bottom-row">
             <div class="container-center">
                 <div class="footer-bottom-row__col copyright">
-                    © 2010–2015 Компания «Техномарт»<br>
-                    Все права защищены
+                        © 2010–2015 Компания «Техномарт»<br>
+                        Все права защищены
                 </div>
                 <div class="footer-bottom-row__col social-media">
                     <a class="social social-vk" href="http://vk.com/htmlacademy"></a>
@@ -304,13 +289,14 @@
                     <a class="social social-tw" href="http://twitter.com/htmlacademy_ru"></a>
                 </div>
                 <div class="footer-bottom-row__col feedback">
-                    Обратная связь:<br>
-                    <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                        Обратная связь:<br>
+<!--                    модификатор переопределит только цвет в css -->
+                        <a class="link link_color_yellow" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 
                 </div>
                 <div class="footer-bottom-row__col developer">
-                    Разработано — <br>
-                    <a href="http://htmlacademy.ru">htmlacademy.ru</a>
+                        Разработано — <br>
+                        <a href="http://htmlacademy.ru">htmlacademy.ru</a>
                 </div>
             </div>
         </div>

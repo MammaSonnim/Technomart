@@ -1,3 +1,14 @@
 body {
-    font-family: 'Cuprum', sans-serif; 
+    font-family: 'Cuprum', sans-serif;
+}
+
+/* Common styles*/
+
+.link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn {
+    text-transform: uppercase;
 }
