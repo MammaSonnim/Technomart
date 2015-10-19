@@ -4,11 +4,9 @@ body {
 
 /* Common styles*/
 
-.link {
+.link-btn {
+    display: block
     text-decoration: none;
-    color: #ffffff;
-}
-
-.btn {
     text-transform: uppercase;
+    color: #ffffff;
 }
