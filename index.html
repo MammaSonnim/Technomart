@@ -10,7 +10,7 @@
         <div class="main-header-bar">
             <div class="container-center clearfix">
 <!--            позиционирование блока через inline-block поэтому не оборачиваю ссылки в div -->
-                <a class="bar-logo btn" href="#">Техномарт</a>
+                <a class="bar-logo link-btn" href="#">Техномарт</a>
                 <form action="/echo" method="get">
                     <input type="search" name="search" placeholder="Поиск">
                     <input type="submit">
@@ -128,7 +128,7 @@
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                         <div class="product-card-price-old">32500 р.</div>
-                        <div class="product-card-price">25500 р.</div>
+                        <a class="product-card-price link-btn">25500 р.</a>
                     </div>
                     <div class="product-card">
                         <div class="product-card-image">
@@ -136,7 +136,7 @@
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
                         <div class="product-card-price-old">22500 р.</div>
-                        <div class="product-card-price">15500 р.</div>
+                        <a class="product-card-price link-btn">15500 р.</a>
                     </div>
                     <div class="product-card">
                         <div class="product-card-image">
@@ -144,7 +144,7 @@
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 6000</h3>
                         <div class="product-card-price-old">30500 р.</div>
-                        <div class="product-card-price">25500 р.</div>
+                        <a class="product-card-price link-btn">25500 р.</a>
                     </div>
                     <div class="product-card">
                         <div class="flag flag-new">Новинка-заменить - псевдо</div>
@@ -153,7 +153,7 @@
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 2000</h3>
                         <div class="product-card-price-old"></div>
-                        <div class="product-card-price">12500 р.</div>
+                        <a class="product-card-price link-btn">12500 р.</a>
                     </div>
                 </section>
             </article>
@@ -201,34 +201,29 @@
                     Хороший интернет-магазин отличается от плохого не только ценами!
                     Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                 </p>
-                <ul class="service-menu">
-                    <li class="active"><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Кредит</a></li>
-                </ul>
-                <div class="service-slider-inner">
-                    <div class="service-slide service-slide-active">
-<!--                    dd dt or label radio-->
-                        <h3 class="service-slide-title">Доставка</h3>
-                        <p class="service-slide-promo">
-                            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем, поднимая его на ваш на этаж!
-                        </p>
-                    </div>
-                    <div class="service-slide">
-                        <h3 class="service-slide-title">Гарантия</h3>
-                        <p class="service-slide-promo">
-                            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем, поднимая его на ваш на этаж!
-                        </p>
-                    </div>
-                    <div class="service-slide">
-                        <h3 class="service-slide-title">Кредит</h3>
-                        <p class="service-slide-promo">
-                            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем, поднимая его на ваш на этаж!
-                        </p>
-                    </div>
+                <div class="service-slider">
+                    <dl>
+                        <dt>Доставка</dt>
+                        <dd>
+                            <p class="service-slide-promo">
+                                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                                Ведь мы неплохо заработаем, поднимая его на ваш на этаж!
+                            </p>
+                        </dd>
+                        <dt>Гарантия</dt>
+                        <dd>
+                            <p class="service-slide-promo">
+                                Если купленный у нас товар поломается или заискрит, а также в случае пожара,                                           спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии.
+                                Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                            </p>
+                        </dd>
+                        <dt>Кредит</dt>
+                        <dd>
+                            <p class="service-slide-promo">
+                                Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                            </p>
+                        </dd>
+                    </dl>
                 </div>
             </div>
         </section>
