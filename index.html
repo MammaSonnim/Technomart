@@ -69,15 +69,15 @@
             <section class="features  container-center">
                 <article class="features-item">
                     <h2 class="features-item-title">Материалы</h2>
-                    <a href="#" class="feature-items-btn link-btn">на любой вкус</a>
+                    <a href="#" class="features-item-btn link-btn">на любой вкус</a>
                 </article>
                 <article class="features-item">
                     <h2 class="features-item-title">Инструмент</h2>
-                    <a href="#" class="feature-items-btn link-btn">на все случаи</a>
+                    <a href="#" class="features-item-btn link-btn">на все случаи</a>
                 </article>
                 <article class="features-item">
                     <h2 class="features-item-title">Техника</h2>
-                    <a href="#" class="feature-items-btn link-btn">для стройки</a>
+                    <a href="#" class="features-item-btn link-btn">для стройки</a>
                 </article>
                 <article class="features-slider">
                     <input type="radio" id="features-slider-btn-1" name="toggle" checked>
@@ -86,15 +86,15 @@
                         <label for="features-slider-btn-1"></label>
                         <label for="features-slider-btn-2"></label>
                     </div>
-                    <div class="feature-slider-inner">
-                        <div class="feature-slider-slides">
-                            <div class="feature-slide">
+                    <div class="features-slider-inner">
+                        <div class="features-slider-slides">
+                            <div class="features-slide">
                                 <h2 class="features-slide-title">Перфораторы</h2>
                                 <p>Настоящие мужские игрушки</p>
                                 <img src="" alt="">
                                 <a href="#" class="features-slide-btn btn-link">Открыть каталог</a>
                             </div>
-                             <div class="feature-slide">
+                             <div class="features-slide">
                                 <h2 class="features-slide-title">Дрели</h2>
                                 <p>Соседям на радость!</p>
                                 <img src="" alt="">
@@ -109,11 +109,11 @@
                 </article>
                 <article class="features-item">
                     <h2 class="features-item-title">Скидки</h2>
-                    <a href="#" class="feature-items-btn link-btn">50%</a>
+                    <a href="#" class="features-item-btn link-btn">50%</a>
                 </article>
                 <article class="features-item">
                     <h2 class="features-item-title">Доставка</h2>
-                    <a href="#" class="feature-items-btn link-btn">бесплатно</a>
+                    <a href="#" class="features-item-btn link-btn">бесплатно</a>
                 </article>
             </section>
             <div class="container-center">
@@ -182,28 +182,28 @@
                         <a href="#" class="header-popular-btn link-btn">Все производители</a>
                     </header>
                     <ul class="brands-list">
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="Bosch" width="" height=""></a>
                         </li>
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="Makita" width="" height=""></a>
                         </li>
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="DeWalt" width="" height=""></a>
                         </li>
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="Интерскол" width="" height=""></a>
                         </li>
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="Hitachi" width="" height=""></a>
                         </li>
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="LG" width="" height=""></a>
                         </li>
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="AEG" width="" height=""></a>
                         </li>
-                        <li>
+                        <li class="brands-item">
                             <a href="#"><img src="" alt="Metabo" width="" height=""></a>
                         </li>
                     </ul>
@@ -216,30 +216,49 @@
                         Хороший интернет-магазин отличается от плохого не только ценами!
                         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                     </p>
-                    <div class="service-slider">
-                        <dl>
-                            <dt>Доставка</dt>
-                            <dd class="service-slide-1">
-                                <p class="service-slide-promo">
-                                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-                                    Ведь мы неплохо заработаем, поднимая его на ваш на этаж!
-                                </p>
-                            </dd>
-                            <dt>Гарантия</dt>
-                            <dd class="service-slide-2">
-                                <p class="service-slide-promo">
-                                    Если купленный у нас товар поломается или заискрит, а также в случае пожара,                                                                                     спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии.
-                                    Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
-                                </p>
-                            </dd>
-                            <dt>Кредит</dt>
-                            <dd class="service-slide-3">
-                                <p class="service-slide-promo">
-                                    Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
-                                </p>
-                            </dd>
-                        </dl>
-                    </div>
+                    <article class="service-slider">
+                        <input type="radio" id="service-slider-btn-1" name="toggle" checked>
+                        <input type="radio" id="service-slider-btn-2" name="toggle">
+                        <input type="radio" id="service-slider-btn-3" name="toggle">
+                        <ul class="service-slider-controls">
+                            <li class="service-slider-control">
+                                <label for="service-slider-btn-1">Доставка</label>
+                            </li>
+                            <li class="service-slider-control">
+                                <label for="service-slider-btn-2">Гарантия</label>
+                            </li>
+                            <li class="service-slider-control">
+                                <label for="service-slider-btn-3">Кредит</label>
+                            </li>
+                        </ul>
+                        <div class="service-slider-inner">
+                            <div class="service-slider-slides">
+                                <div class="service-slide">
+                                    <h2 class="service-slide-title">Доставка</h2>
+                                    <p class="service-slide-promo">
+                                        Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+                                        Ведь мы неплохо заработаем, поднимая его на ваш на этаж!
+                                    </p>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="service-slide">
+                                    <h2 class="service-slide-title">Гарантия</h2>
+                                    <p class="service-slide-promo">
+                                        Если купленный у нас товар поломается или заискрит, а также в случае пожара,                                                                                     спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии.
+                                        Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                                    </p>
+                                    <img src="" alt="">
+                                </div>
+                                <div class="service-slide">
+                                    <h2 class="service-slide-title">Кредит</h2>
+                                    <p class="service-slide-promo">
+                                        Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+                                    </p>
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </article>
             <div class="container-center clearfix">
