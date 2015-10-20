@@ -76,6 +76,16 @@
             <div class="catalog-header">
                 <h1 class="catalog-title">Перфораторы</h1>
             </div>
+            <div class="popup-cart">
+                <div class="popup-content">
+                    <a href="#">Назад</a>
+                    <p>Товар добавлен в корзину!</p>
+                </div>
+                <div class="popup-footer">
+                    <a class="link-btn" href="#">Оформить заказ</a>
+                    <a class="link-btn" href="#">Продолжить покупки</a>
+                </div>
+            </div>
             <section class="catalog-col catalog-filter">
                 <div class="catalog-filter-header">
                     Фильтр:
@@ -83,13 +93,53 @@
                 <form action="/echo" method="get">
                     <fieldset class="filter-price">
                         <h2 class="filter-title">Цена</h2>
+                        <div class="filter-price-range">
+                            <div class="range-scale">
+                                <div style="margin-left:50px;width:100px;" class="bar"></div>
+                            </div>
+                            <div class="range-toggle min-toggle"></div>
+                            <div class="range-toggle max-toggle"></div>
+                        </div>
+                        <div class="range-price-controls">
+                            от <input class="min-price" type="text" value="5 000">
+                            до <input class="max-price" type="text" value="15 000">
+                        </div>
                     </fieldset>
                     <fieldset class="filter-brands">
                         <h2 class="filter-title">Производители</h2>
+                        <label>
+                        <input type="checkbox" name="checkbox" value="bosch" checked>
+                            Bosch
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="interscol">
+                            Интерскол
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="makita" checked>
+                            Makita
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="devalt">
+                            Dewalt
+                        </label>
+                        <label>
+                            <input type="checkbox" name="checkbox" value="hitachi">
+                            Hitachi
+                        </label>
                     </fieldset>
                     <fieldset class="filter-supply">
                         <h2 class="filter-title">Питание</h2>
-                    </fields
+                        <label>
+                        <input type="radio" name="radiogroup" value="shave" checked>
+                            Аккумуляторные
+                        </label>
+                        <label>
+                            <input type="radio" name="radiogroup" value="care">
+                            Сетевые
+                        </label>
+                    </fieldset>
+                    <button type="submit" class="link-btn">Показать</button>
                 </form>
             </section>
             <div class="catalog-col catalog-col-2">
