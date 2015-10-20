@@ -287,8 +287,28 @@
                     </p>
                     <div class="map">
                         <a href="#"><img src="" alt="«Техномарт» на карте" width="" height=""></a>
+                        <div class="map-open">
+                            <img src="#" alt="Карта" width="" height="">
+                        </div>
                     </div>
                     <a href="#" class="link-btn">Заблудились? Напишите нам!</a>
+                    <div class="write-us">
+                        <a href="#">Назад</a>
+                        <form action="/echo" method="get">
+                            <fieldset>
+                                <label for="name-field">Ваше имя:</label>
+                                <input type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
+                                <label for="email-field">Ваш e-mail:</label>
+                                <input type="email" name="password" id="email-field" placeholder="Для отправки ответа">
+                                <label for="text-field">Текст письма:</label>
+                                <input type="text" name="text" size="25" id="text-field" placeholder="В свободной форме">
+                            </fieldset>
+                            <fieldset>
+                                <input type="button" name="send" value="Отправить">
+                                <input type="button" name="cancel" value="Отмена">
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
