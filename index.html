@@ -15,7 +15,7 @@
                     <input type="search" name="search" placeholder="Поиск">
                     <input type="submit">
                 </form>
-                <span class="bar-bookmarks-count">Закладки: 0</span>
+                <span class="bar-bookmark-count">Закладки: 0</span>
                 <span class="bar-cart-count">Корзина: 0</span>
                 <a class="bar-link" href="#">Оформить заказ</a>
             </div>
@@ -80,24 +80,31 @@
                 <a href="#" class="feature-items-btn link-btn">для стройки</a>
             </article>
             <article class="features-slider">
-                <div class="features-slider-toggle">
-                    <input type="radio" id="features-slider-btn-1" name="toggle" checked>
-                    <input type="radio" id="features-slider-btn-2" name="toggle">
+                <input type="radio" id="features-slider-btn-1" name="toggle" checked>
+                <input type="radio" id="features-slider-btn-2" name="toggle">
+                <div class="features-slider-controls">
                     <label for="features-slider-btn-1"></label>
                     <label for="features-slider-btn-2"></label>
                 </div>
                 <div class="feature-slider-inner">
-                    <h2 class="features-slider-title">Перфораторы</h2>
-                    <p>Настоящие мужские игрушки</p>
-                    <div class="features-slider-slides">
-                        <img src="images/features-slide-1.jpg" width="620" height="266">
-                        <img src="images/features-slide-1.jpg" width="620" height="266">
+                    <div class="feature-slider-slides">
+                        <div class="feature-slide">
+                            <h2 class="features-slide-title">Перфораторы</h2>
+                            <p>Настоящие мужские игрушки</p>
+                            <img src="" alt="">
+                            <a href="#" class="features-slider-btn btn-link">Открыть каталог</a>
+                        </div>
+                         <div class="feature-slide">
+                            <h2 class="features-slide-title">Дрели</h2>
+                            <p>Соседям на радость!</p>
+                            <img src="" alt="">
+                            <a href="#" class="features-slider-btn btn-link">Открыть каталог</a>
+                        </div>
                     </div>
-                    <div class="features-slider-controls">
-                        <a href="#" class="control-left"></a>
-                        <a href="#" class="control-right"></a>
-                    </div>
-                    <a href="#" class="features-slider-btn">Открыть каталог</a>
+                </div>
+                <div class="features-slider-controls">
+                    <a href="#" class="control-left"></a>
+                    <a href="#" class="control-right"></a>
                 </div>
             </article>
             <article class="features-item">
@@ -117,8 +124,12 @@
                 </header>
                 <section class="products-items">
                     <div class="product-card">
+                        <div class="product-card-actions">
+                            <a href="#" class="link-btn buy">Купить</a>
+                            <a href="#" class="link-btn bookmark">В закладки</a>
+                        </div>
                         <div class="product-card-image">
-                            <a href="#"><img src="" alt="" width="" height=""></a>
+                            <img src="" alt="" width="" height="">
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
 <!--                     product-card-price-old тоже через псевдоэлемент? -->
@@ -126,24 +137,36 @@
                         <a class="product-card-price link-btn">25500 р.</a>
                     </div>
                     <div class="product-card">
+                        <div class="product-card-actions">
+                            <a href="#" class="link-btn buy">Купить</a>
+                            <a href="#" class="link-btn bookmark">В закладки</a>
+                        </div>
                         <div class="product-card-image">
-                            <a href="#"><img src="" alt="" width="" height=""></a>
+                            <img src="" alt="" width="" height="">
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
                         <div class="product-card-price-old">22500 р.</div>
                         <a class="product-card-price link-btn">15500 р.</a>
                     </div>
                     <div class="product-card">
+                        <div class="product-card-actions">
+                            <a href="#" class="link-btn buy">Купить</a>
+                            <a href="#" class="link-btn bookmark">В закладки</a>
+                        </div>
                         <div class="product-card-image">
-                            <a href="#"><img src="" alt="" width="" height=""></a>
+                            <img src="" alt="" width="" height="">
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 6000</h3>
                         <div class="product-card-price-old">30500 р.</div>
                         <a class="product-card-price link-btn">25500 р.</a>
                     </div>
                     <div class="product-card">
+                        <div class="product-card-actions">
+                            <a href="#" class="link-btn buy">Купить</a>
+                            <a href="#" class="link-btn bookmark">В закладки</a>
+                        </div>
                         <div class="product-card-image">
-                            <a href="#"><img src="" alt="" width="" height=""></a>
+                            <img src="" alt="" width="" height="">
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 2000</h3>
                         <div class="product-card-price-old"></div>
@@ -243,7 +266,9 @@
                 <p class="company-text">
                     Вы можете забрать товар сами, заехав в наш офис
                 </p>
-                <div class="map"><a href="#"><img src="" alt="«Техномарт» на карте" width="" height=""></a></div>
+                <div class="map">
+                    <a href="#"><img src="" alt="«Техномарт» на карте" width="" height=""></a>
+                </div>
                 <a href="#" class="link-btn">Заблудились? Напишите нам!</a>
             </div>
         </div>
