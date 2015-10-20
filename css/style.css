@@ -1,0 +1,71 @@
+body {
+    font-family: 'Cuprum', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/*before reset.css*/
+nav,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Common styles*/
+
+.container-center {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.clearfix {
+    
+}
+.link-btn {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* MAIN HEADER start */
+
+/* Main Header Bar */
+.main-header-bar {
+    background-color: #32425c;
+}
+.bar-logo {
+    
+}
+
+/* Main Header Content*/
+.main-header-content {
+    background-color: #f1f5f7;
+}
+
+/* Main Navigation */
+.main-nav {
+    padding: 0;
+}
+.main-nav-list {
+    font-size: 0;
+}
+.main-nav-item {
+    display: inline-block;
+    font-size: 17px;
+    vertical-align: middle;
+    background-color: #32425c;
+    border-bottom: 5px solid #293449;
+}
+.main-nav-link {
+    padding: 20px 30px;
+    text-transform: none;
+}
+.main-nav-item:first-child .main-nav-link {
+    padding-left: 50px;
+}
+.main-nav-item:last-child .main-nav-link {
+    padding-right: 50px;
+}
+
+/* MAIN HEADER end */

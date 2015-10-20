@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Техномарт</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="main-header">
         <div class="main-header-bar">
             <div class="container-center clearfix">
-<!--            позиционирование блока через inline-block поэтому не оборачиваю ссылки в div -->
                 <a class="bar-logo link-btn" href="#">Техномарт</a>
                 <form action="/echo" method="get">
                     <input type="search" name="search" placeholder="Поиск">
@@ -20,48 +20,50 @@
                 <a class="bar-link" href="#">Оформить заказ</a>
             </div>
         </div>
-        <div class="main-header-content container-center">
-            <p class="main-header-text">
-                Интернет-магазин строительных материалов и инструментов для ремонта
-            </p>
-            <div class="main-header-contacts">
-                <p class="contacts-tel">
-                    +7 (812) 555-05-55
+        <div class="main-header-content">
+            <div class="container-center">
+                <p class="main-header-text">
+                    Интернет-магазин строительных материалов и инструментов для ремонта
                 </p>
-                <p class="contacts-adress">
-                    г. Санкт-Петербург, Б. Конюшенная, д. 19/8
-                </p>
-            </div>
-            <div class="user-block">
-                <a class="user-block__login" href="#">Войти</a>
-                <a class="user-block__sign-up" href="#" >Регистрация</a>
+                <div class="main-header-contacts">
+                    <p class="contacts-tel">
+                        +7 (812) 555-05-55
+                    </p>
+                    <p class="contacts-adress">
+                        г. Санкт-Петербург, Б. Конюшенная, д. 19/8
+                    </p>
+                </div>
+                <div class="user-block">
+                    <a class="user-block-login" href="#">Войти</a>
+                    <a class="user-block-sign-up" href="#" >Регистрация</a>
+                </div>
+                <nav class="main-nav container-center">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item">
+                            <a class="main-nav-link link-btn" href="#">Главная</a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a class="main-nav-link link-btn" href="#">Компания</a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a class="main-nav-link link-btn" href="#">Каталог</a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a class="main-nav-link link-btn" href="#">Новости</a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a class="main-nav-link link-btn" href="#">Спецпредложения</a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a class="main-nav-link link-btn" href="#">Доставка</a>
+                        </li>
+                        <li class="main-nav-item">
+                            <a class="main-nav-link link-btn" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <nav class="main-nav container-center">
-            <ul>
-                <li>
-                    <a class="main-nav-link" href="#">Главная</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Компания</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Каталог</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Новости</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Спецпредложения</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Доставка</a>
-                </li>
-                <li>
-                    <a class="main-nav-link" href="#">Контакты</a>
-                </li>
-            </ul>
-        </nav>
     </header>
     <div class="main-content">
         <section class="features  container-center">
@@ -291,7 +293,6 @@
                 <div class="footer-bar-col feedback">
                     Обратная связь:<br>
                     <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-
                 </div>
                 <div class="footer-bar-col developer">
                     Разработано — <br>
