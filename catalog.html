@@ -13,10 +13,14 @@
                 <a class="bar-logo link-btn" href="#">Техномарт</a>
                 <form action="/echo" method="get">
                     <input type="search" name="search" placeholder="Поиск">
-                    <input type="submit">
+                    <button type="submit">
                 </form>
-                <span class="bar-bookmark-count">Закладки: 0</span>
-                <span class="bar-cart-count count-active">Корзина: 10</span>
+                <div class="bar-bookmark-count">
+                    <a href="#">Закладки: 0</a>
+                </div>
+                <div class="bar-cart-count count-active">
+                    <a href="#">Корзина: 10</a>
+                </div>
                 <a class="bar-link" href="#">Оформить заказ</a>
             </div>
         </div>
@@ -73,7 +77,7 @@
     </header>
     <div class="catalog-content">
         <ul class="breadcrumbs container">
-            <li><a href="#"><img src="" alt="Главная" width="15" height="12"></a></li>
+            <li><a href="#">Главная</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Инструмент</a></li>
             <li>Перфораторы</li>
@@ -93,12 +97,10 @@
                 </div>
             </div>
             <section class="catalog-col catalog-filter">
-                <div class="catalog-filter-header">
-                    Фильтр:
-                </div>
                 <form action="/echo" method="get">
+                    <h2 class="catalog-filter-header">Фильтр:</h2>
                     <fieldset class="filter-price">
-                        <h2 class="filter-title">Цена</h2>
+                        <h3 class="filter-title">Цена</h3s>
                         <div class="filter-price-range">
                             <div class="range-scale">
                                 <div style="margin-left:50px;width:100px;" class="bar"></div>
@@ -112,7 +114,7 @@
                         </div>
                     </fieldset>
                     <fieldset class="filter-brands">
-                        <h2 class="filter-title">Производители</h2>
+                        <h3 class="filter-title">Производители</h3>
                         <label>
                         <input type="checkbox" name="checkbox" value="bosch" checked>
                             Bosch
@@ -135,7 +137,7 @@
                         </label>
                     </fieldset>
                     <fieldset class="filter-supply">
-                        <h2 class="filter-title">Питание</h2>
+                        <h3 class="filter-title">Питание</h3>
                         <label>
                         <input type="radio" name="radiogroup" value="shave" checked>
                             Аккумуляторные
@@ -158,8 +160,8 @@
                         <li><a href="#">По типу</a></li>
                         <li><a href="#">По функционалу</a></li>
                     </ul>
-                    <div class="sort-ascend"></div>
-                    <div class="sort-descend"></div>
+                    <a class="sort-ascend" href="#"></a>
+                    <a class="sort-descend" href="#"></a>
                 </div>
                 <section class="catalog-products-items">
                     <article class="product-card">
@@ -171,7 +173,6 @@
                             <img src="" alt="" width="" height="">
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
-    <!--                        product-card-price-old тоже через псевдоэлемент? -->
                         <div class="product-card-price-old">32500 р.</div>
                         <a class="product-card-price link-btn">25500 р.</a>
                     </article>
@@ -285,9 +286,7 @@
                 <h2>Пара слов о перфораторах</h2>
                 <p>
                     Перфоратор — универсальный строительный инструмент.
-                    Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-                </p>
-                <p>
+                    Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
                     Существуют электромеханические и пневматические перфораторы.
                     Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
                     В ассортиментном ряду есть выбор «трехрежимников»:

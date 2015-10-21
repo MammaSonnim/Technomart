@@ -13,10 +13,14 @@
                 <a class="bar-logo link-btn" href="#">Техномарт</a>
                 <form action="/echo" method="get">
                     <input type="search" name="search" placeholder="Поиск">
-                    <input type="submit">
+                    <button type="submit">
                 </form>
-                <span class="bar-bookmark-count">Закладки: 0</span>
-                <span class="bar-cart-count">Корзина: 0</span>
+                <div class="bar-bookmark-count">
+                    <a href="#">Закладки: 0</a>
+                </div>
+                <div class="bar-cart-count count-active">
+                    <a href="#">Корзина: 0</a>
+                </div>
                 <a class="bar-link" href="#">Оформить заказ</a>
             </div>
         </div>
@@ -33,7 +37,7 @@
                         г. Санкт-Петербург, Б. Конюшенная, д. 19/8
                     </p>
                 </div>
-                <div class="user-block">
+                <div class="user-block-auth">
                     <a class="user-block-login" href="#">Войти</a>
                     <a class="user-block-sign-up" href="#" >Регистрация</a>
                 </div>
@@ -91,13 +95,11 @@
                         <div class="features-slide">
                             <h2 class="features-slide-title">Перфораторы</h2>
                             <p>Настоящие мужские игрушки</p>
-                            <img src="" alt="">
                             <a href="#" class="features-slide-btn btn-link">Открыть каталог</a>
                         </div>
                          <div class="features-slide">
                             <h2 class="features-slide-title">Дрели</h2>
                             <p>Соседям на радость!</p>
-                            <img src="" alt="">
                             <a href="#" class="features-slide-btn btn-link">Открыть каталог</a>
                         </div>
                     </div>
@@ -132,7 +134,6 @@
                             <img src="" alt="" width="" height="">
                         </div>
                         <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
-<!--                        product-card-price-old тоже через псевдоэлемент? -->
                         <div class="product-card-price-old">32500 р.</div>
                         <a class="product-card-price link-btn">25500 р.</a>
                     </article>
@@ -239,7 +240,6 @@
                                     Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
                                     Ведь мы неплохо заработаем, поднимая его на ваш на этаж!
                                 </p>
-                                <img src="" alt="">
                             </div>
                             <div class="service-slide">
                                 <h2 class="service-slide-title">Гарантия</h2>
@@ -247,14 +247,13 @@
                                     Если купленный у нас товар поломается или заискрит, а также в случае пожара,                                                                                     спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии.
                                     Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
                                 </p>
-                                <img src="" alt="">
                             </div>
                             <div class="service-slide">
                                 <h2 class="service-slide-title">Кредит</h2>
                                 <p class="service-slide-promo">
                                     Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
                                 </p>
-                                <img src="" alt="">
+                                <a href="#" class="link-btn">Отправить заявку</a>
                             </div>
                         </div>
                     </div>
