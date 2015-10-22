@@ -1,12 +1,15 @@
 /*font-family: 'PT Sans', sans-serif;*/
 body {
-    font-family: 'Cuprum', 'Arial', sans-serif;
-    padding: 0;
-    margin: 0;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #32425c;
 }
 
 /* Common styles */
-
+    
+}
 .container-center {
     width: 940px;
     margin: 0 auto;
@@ -16,6 +19,13 @@ body {
     content:'';
     display:table;
     clear:both;
+}
+.page-title {
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #32425c;
 }
 .link-btn {
     display: block;
@@ -68,6 +78,14 @@ body {
 /* MAIN HEADER end */
 
 /* MAIN CONTENT start */
+
+.features-item-title {
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
 
 /* MAIN CONTENT end */
 
