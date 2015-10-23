@@ -160,7 +160,63 @@ body {
 .brands-item:nth-child(4n) {
     margin-right: 0;
 }
+/* Company block */
+.company-cols {
+    
+}
+.company-col-left {
+    /*    вынести размеры блока в семантический класс? */
+    width: 540px;
+    float: left;
+    outline: 1px solid red;
+}
+.company-col-right {
+    width: 300px;
+    float: right;
+    outline: 1px solid red;
+    
+}
+.map-open {
+    display: none;
+}
+.popup-write-us {
+    display: none;
+}
 /* MAIN CONTENT end */
 
-/* MAIN HEADER start */
-/* MAIN HEADER end */
+/* MAIN FOOTER start */
+.main-footer-content-col-left {
+    width: 350px;
+    float: left;
+    outline: 1px solid red;
+}
+.main-footer-content-col-right {
+    width: 550px;
+    float: right;
+    outline: 1px solid red;
+}
+.footer-menu-sub li {
+    display: inline-block;
+}
+/* Footer Bar */
+.main-footer-bar-col {
+    width: 300px;
+    float: left;
+    outline: 1px solid red;
+}
+.main-footer-bar-col:last-child {
+    float: right;
+}
+.copyright {
+
+}
+.social-media {
+
+}
+.feedback {
+    display: inline-block;
+}
+.developer {
+    display: inline-block;
+}
+/* MAIN FOOTER end */
