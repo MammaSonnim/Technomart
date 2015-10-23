@@ -9,11 +9,11 @@ body {
 
 /* Common styles */
     
-}
 .container-center {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
+    outline: 1px solid red;
 }
 .clearfix:after{
     content:'';
@@ -36,19 +36,31 @@ body {
 
 /* MAIN HEADER start */
 
+.main-header {
+    margin-bottom: 59px;
+}
+
 /* Main Header Bar */
 .main-header-bar {
     background-color: #32425c;
 }
-.bar-logo {
-    
+.bar-item {
+    display: inline-block;
 }
 
 /* Main Header Content*/
 .main-header-content {
     background-color: #f1f5f7;
 }
-
+.header-content-col {
+    width: 310px;
+    margin-right: 10px;
+    float: left;
+}
+.header-content-col:last-child {
+    float: right;
+    margin-right: 0;
+}
 /* Main Navigation */
 .main-nav {
     padding: 0;
@@ -59,26 +71,46 @@ body {
 }
 .main-nav-item {
     display: inline-block;
+    font-family: Cuprum;
     font-size: 17px;
-    vertical-align: middle;
+    font-weight: 400;
+    vertical-align: top;
     background-color: #32425c;
     border-bottom: 5px solid #293449;
 }
 .main-nav-link {
+    min-width: 56px;
     padding: 20px 30px;
     text-transform: none;
 }
-.main-nav-item:first-child .main-nav-link {
-    padding-left: 50px;
+.main-nav-item:first-child {
+    padding-left: 20px;
 }
-.main-nav-item:last-child .main-nav-link {
-    padding-right: 50px;
+.main-nav-item:last-child {
+    padding-right: 20px;
 }
 
 /* MAIN HEADER end */
 
 /* MAIN CONTENT start */
-
+.features {
+    margin-bottom: 33px;
+}
+.features-col-left {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    outline: 1px solid red;
+}
+.features-col-right {
+    margin-bottom: 20px;
+    float: right;
+    outline: 1px solid red;
+}
+.features-item {
+    width: 300px;
+    min-height: 123px;
+}
 .features-item-title {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 24px;
@@ -86,7 +118,48 @@ body {
     font-weight: 700;
     color: #ffffff;
 }
+.features-slider {
+    width: 620px;
+    min-height: 266px;
+}
 
+.popular-products {
+    
+}
+.header-popular {
+    
+}
+.products-items {
+    
+}
+.product-card {
+    width: 220px;
+    margin-right: 20px;
+    float: left;
+    outline: 1px solid red;
+}
+.product-card:nth-child(4n) {
+    margin-right: 0;
+}
+.product-card-image {
+    outline: 1px solid red;
+}
+
+/* Popular Brands */
+.brands-list {
+    
+}
+.brands-item {
+    display: block;
+    width: 220px;
+    min-height: 145px;
+    margin-right: 20px;
+    float: left;
+    outline: 1px solid red;
+}
+.brands-item:nth-child(4n) {
+    margin-right: 0;
+}
 /* MAIN CONTENT end */
 
 /* MAIN HEADER start */
