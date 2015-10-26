@@ -31,7 +31,7 @@ body {
     display: block;
     text-transform: uppercase;
     text-decoration: none;
-    color: #ffffff;
+    color: ;
 }
 
 /* MAIN HEADER start */
@@ -122,23 +122,24 @@ body {
     width: 620px;
     min-height: 266px;
 }
-
 .popular-products {
     
 }
 .header-popular {
     
 }
-.products-items {
-    
+.products {
+    font-size: 0;
 }
 .product-card {
     width: 220px;
     margin-right: 20px;
-    float: left;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
     outline: 1px solid red;
 }
-.product-card:nth-child(4n) {
+.popular-products .product-card:nth-child(4n) {
     margin-right: 0;
 }
 .product-card-image {
@@ -165,7 +166,6 @@ body {
     
 }
 .company-col-left {
-    /*    вынести размеры блока в семантический класс? */
     width: 540px;
     float: left;
     outline: 1px solid red;
@@ -174,7 +174,6 @@ body {
     width: 300px;
     float: right;
     outline: 1px solid red;
-    
 }
 .map-open {
     display: none;
@@ -184,7 +183,80 @@ body {
 }
 /* MAIN CONTENT end */
 
+/* CATALOG CONTENT start*/
+
+.breadcrumbs-item {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.popup-cart {
+    display: none;
+}
+
+/* Filter */
+.catalog-filter {
+    width: 220px;
+    float: left;
+}
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+input {
+    display: block;
+}
+
+/* Gallery */
+.catalog-gallery {
+    width: 700px;
+    float: right;
+}
+.catalog-gallery-sort {
+    
+}
+.sort-header {
+    float: left;
+    width: 140px;
+    outline: 1px solid red;
+}
+.sort-list {
+    float: right;
+    width: 380px;
+    outline: 1px solid red;
+}
+.sort-direction {
+    float: right;
+    width: 60px;
+    outline: 1px solid red;
+}
+.sort-direction {
+    font-size: 0;
+}
+.sort-list {
+    font-size: 0;
+}
+.sort-item {
+    display: inline-block;
+    vertical-align: baseline;
+    font-size: 13px;
+}
+.catalog-products {
+    font-size: 0;
+}
+.catalog-products .product-card:nth-child(3n) {
+    margin-right: 0;
+}
+.catalog-paginator {
+    
+}
+.paginator-link {
+    display: inline-block;
+    vertical-align: baseline;
+}
+/* CATALOG CONTENT end*/
+
 /* MAIN FOOTER start */
+/* Main Footer Content*/
 .main-footer-content-col-left {
     width: 350px;
     float: left;
@@ -197,6 +269,7 @@ body {
 }
 .footer-menu-sub li {
     display: inline-block;
+    vertical-align: baseline;
 }
 /* Footer Bar */
 .main-footer-bar-col {
@@ -214,9 +287,11 @@ body {
 
 }
 .feedback {
-    display: inline-block;
+    width: 150px;
+    float: left;
 }
 .developer {
-    display: inline-block;
+    width: 110px;
+    float: right;
 }
 /* MAIN FOOTER end */
