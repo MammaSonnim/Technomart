@@ -45,7 +45,7 @@ body {
     background-color: #32425c;
 }
 .bar-item {
-    display: inline-block;
+    float: left;
 }
 
 /* Main Header Content*/
@@ -53,7 +53,7 @@ body {
     background-color: #f1f5f7;
 }
 .header-content-col {
-    width: 310px;
+    width: 305px;
     margin-right: 10px;
     float: left;
 }
@@ -116,7 +116,6 @@ body {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
-    color: #ffffff;
 }
 .features-slider {
     width: 620px;
@@ -148,14 +147,14 @@ body {
 
 /* Popular Brands */
 .brands-list {
-    
+    font-size:0;
 }
 .brands-item {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     width: 220px;
     min-height: 145px;
     margin-right: 20px;
-    float: left;
     outline: 1px solid red;
 }
 .brands-item:nth-child(4n) {
@@ -198,12 +197,11 @@ body {
     width: 220px;
     float: left;
 }
-fieldset {
+.filter-price,
+.filter-brands,
+.filter-supply {
     margin: 0;
     padding: 0;
-}
-input {
-    display: block;
 }
 
 /* Gallery */
