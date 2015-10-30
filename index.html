@@ -11,15 +11,15 @@
     <header class="main-header">
         <div class="main-header-bar">
             <div class="container-center clearfix">
-                <a class="bar-logo bar-item" href="#">Техномарт</a>
-                <form class="bar-item" action="/echo" method="get">
+                <a class="bar-logo bar-item btn" href="#">Техномарт</a>
+                <form class="search bar-item clearfix" action="/echo" method="get">
+                    <input type="search" name="search" placeholder="Поиск">
                     <button id="submit-search" type="submit"></button>
                     <label for="submit-search"></label>
-                    <input type="search" name="search" placeholder="Поиск">
                 </form>
                 <a class="bar-bookmark-count bar-btn bar-item" href="#">Закладки: <span>0</span></a>
                 <a class="bar-cart-count bar-btn bar-item" href="#">Корзина: <span>0</span></a>
-                <a class="bar-btn bar-item" href="#">Оформить заказ</a>
+                <a class="bar-order-btn bar-btn bar-item" href="#">Оформить заказ</a>
             </div>
         </div>
         <div class="main-header-content">

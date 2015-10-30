@@ -1,4 +1,84 @@
-/*font-family: 'PT Sans', sans-serif;*/
+@charset "UTF-8";
+
+ @font-face {
+  font-family: 'symbols-technomart';
+  src: url('../font/symbols-technomart.eot?22619757');
+  src: url('../font/symbols-technomart.eot?22619757#iefix') format('embedded-opentype'),
+       url('../font/symbols-technomart.woff?22619757') format('woff'),
+       url('../font/symbols-technomart.ttf?22619757') format('truetype'),
+       url('../font/symbols-technomart.svg?22619757#symbols-technomart') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-technomart';
+    src: url('../font/symbols-technomart.svg?22619757#symbols-technomart') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-technomart";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-left:before { content: '\3c'; } /* '&lt;' */
+.icon-right:before { content: '\3e'; } /* '&gt;' */
+.icon-basket:before { content: '\62'; } /* 'b' */
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-twitter:before { content: '\74'; } /* 't' */
+.icon-vk:before { content: '\76'; } /* 'v' */
+.icon-up:before { content: '\2c4'; } /* '˄' */
+.icon-down:before { content: '\2c5'; } /* '˅' */
+.icon-left-big:before { content: '\2190'; } /* '←' */
+.icon-right-big:before { content: '\2192'; } /* '→' */
+.icon-login:before { content: '\2386'; } /* '⎆' */
+.icon-logout:before { content: '\241b'; } /* '␛' */
+.icon-up-dir:before { content: '\25b2'; } /* '▲' */
+.icon-down-dir:before { content: '\25bc'; } /* '▼' */
+.icon-circle:before { content: '\25cb'; } /* '○' */
+.icon-circle-dot:before { content: '\25cf'; } /* '●' */
+.icon-star:before { content: '\2605'; } /* '★' */
+.icon-check-off:before { content: '\2610'; } /* '☐' */
+.icon-check-on:before { content: '\2611'; } /* '☑' */
+.icon-youtube:before { content: '\f39e'; } /* '' */
+.icon-home:before { content: '🏠'; } /* '\1f3e0' */
+.icon-user:before { content: '👨'; } /* '\1f468' */
+.icon-phone:before { content: '📞'; } /* '\1f4de' */
+.icon-instagramm:before { content: '📷'; } /* '\1f4f7' */
+.icon-search:before { content: '🔍'; } /* '\1f50d' */
+.icon-bookmark:before { content: '🔖'; } /* '\1f516' */
+
 body {
     min-width: 960px;
     font-family: 'PT Sans', 'Arial', sans-serif;
@@ -14,7 +94,6 @@ body {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-    outline: 1px solid red;
 }
 .clearfix:after{
     content:'';
@@ -33,6 +112,7 @@ body {
     font-family: 'Cuprum', 'Arail', sans-serif;
     font-size: 14px;
     line-height: 18px;
+    text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
@@ -49,12 +129,7 @@ body {
     background-color: #32425c;
 }
 .bar-item {
-    position: relative;
     float: left;
-}
-
-.bar-item:nth-child(n+3) {
-    float: right;
 }
 
 .bar-item:last-child {
@@ -62,35 +137,120 @@ body {
 }
 
 .bar-btn {
-    
+    position: relative;
+    display: block;
+    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-size: 17px;
+    line-height: 42px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .bar-logo {
     width: 220px;
     background-color: #ee3643;
+    font-size: 24px;
+    line-height: 42px;
+    font-weight: 700;
+    box-shadow: 0 5px #b52933;
 }
 
-.bar-item input[type="search"] {
-    margin-left: 35px;
+.bar-logo:hover {
+    background-color: #ca2c37;
 }
 
-.bar-item button[type="submit"] {
+.bar-logo:active {
+    background-color: #ba2732;
+}
+
+.search {
+    width: 270px;
+    position: relative;
+}
+
+.search input[type="search"] {
+    float: right;
+    padding-left: 49px;
+    width: 220px;
+    height: 40px;
+    background-color: #32425c;
+    border: none;
+    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.search input[type="search"]:focus {
+    background-color: white;
+    outline: none;
+    color: #000000;
+}
+
+.search button[type="submit"] {
     display: none;
 }
 
-.bar-item button[type="submit"] + label:before {
-    content:'';
+.search button[type="submit"] + label:before {
     position: absolute;
-    width: 17px;
-    height: 17px;
-    background: green;
+    left: 20px;
+    content: '🔍';
+    font-family: 'symbols-technomart';
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    margin-right: 10px;
+    font-size: 17px;
+    color: #ffffff;
+    opacity: 0.5;
 }
+
+.search button[type="submit"]:focus + label:before {
+    color: #ee3643;
+    opacity: 1;
+}
+
 .bar-bookmark-count {
-    margin-left: 35px;
+    padding: 0 20px;
+}
+
+.bar-bookmark-count:before {
+    content: '🔖';
+    font-family: 'symbols-technomart';
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    font-size: 17px;
+    opacity: 0.5;
 }
 
 .bar-cart-count {
-    margin-left: 35px;
+    padding: 0 20px;
+}
+
+.bar-cart-count:before {
+    content: '\62';
+    font-family: 'symbols-technomart';
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    font-size: 17px;
+    opacity: 0.5;
+}
+
+.bar-order-btn {
+    padding: 0 20px;
+    background-color: #63a63e;
+}
+
+.bar-order-btn:hover {
+    background-color: #5fbb2d
+}
+
+.bar-order-btn:active {
+    background-color: #518534;
 }
 
 /* Main Header Content*/
