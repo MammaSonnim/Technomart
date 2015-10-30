@@ -61,13 +61,17 @@ body {
     margin-right: 0;
 }
 
+.bar-btn {
+    
+}
+
 .bar-logo {
     width: 220px;
     background-color: #ee3643;
 }
 
 .bar-item input[type="search"] {
-    margin-left: 32px;
+    margin-left: 35px;
 }
 
 .bar-item button[type="submit"] {
@@ -80,6 +84,13 @@ body {
     width: 17px;
     height: 17px;
     background: green;
+}
+.bar-bookmark-count {
+    margin-left: 35px;
+}
+
+.bar-cart-count {
+    margin-left: 35px;
 }
 
 /* Main Header Content*/
