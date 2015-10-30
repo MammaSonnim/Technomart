@@ -11,18 +11,21 @@
     <header class="main-header">
         <div class="main-header-bar">
             <div class="container-center clearfix">
-                <a class="bar-logo bar-item link-btn" href="#">Техномарт</a>
+                <a class="bar-logo bar-item" href="#">Техномарт</a>
                 <form class="bar-item" action="/echo" method="get">
+                    <button id="submit-search" type="submit"></button>
+                    <label for="submit-search"></label>
                     <input type="search" name="search" placeholder="Поиск">
-                    <button type="submit"></button>
                 </form>
                 <div class="bar-bookmark-count bar-item">
-                    <a href="#">Закладки: <span>0</span></a>
+                    <a class="bar-btn" href="#">Закладки: <span>0</span></a>
                 </div>
                 <div class="bar-cart-count bar-item">
-                    <a href="#">Корзина: <span>0</span></a>
+                    <a class="bar-btn" href="#">Корзина: <span>0</span></a>
                 </div>
-                <a class="bar-link bar-item" href="#">Оформить заказ</a>
+                <div>
+                    <a class="bar-btn bar-item" href="#">Оформить заказ</a>
+                </div>
             </div>
         </div>
         <div class="main-header-content">
@@ -47,25 +50,25 @@
                 <nav class="main-nav">
                     <ul class="main-nav-list">
                         <li class="main-nav-item">
-                            <a class="main-nav-link link-btn" href="#">Главная</a>
+                            <a class="main-nav-link btn" href="#">Главная</a>
                         </li>
                         <li class="main-nav-item">
-                            <a class="main-nav-link link-btn" href="#">Компания</a>
+                            <a class="main-nav-link btn" href="#">Компания</a>
                         </li>
                         <li class="main-nav-item">
-                            <a class="main-nav-link link-btn" href="#">Каталог</a>
+                            <a class="main-nav-link btn" href="#">Каталог</a>
                         </li>
                         <li class="main-nav-item">
-                            <a class="main-nav-link link-btn" href="#">Новости</a>
+                            <a class="main-nav-link btn" href="#">Новости</a>
                         </li>
                         <li class="main-nav-item">
-                            <a class="main-nav-link link-btn" href="#">Спецпредложения</a>
+                            <a class="main-nav-link btn" href="#">Спецпредложения</a>
                         </li>
                         <li class="main-nav-item">
-                            <a class="main-nav-link link-btn" href="#">Доставка</a>
+                            <a class="main-nav-link btn" href="#">Доставка</a>
                         </li>
                         <li class="main-nav-item">
-                            <a class="main-nav-link link-btn" href="#">Контакты</a>
+                            <a class="main-nav-link btn" href="#">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -76,15 +79,15 @@
         <section class="features  container-center clearfix">
             <article class="features-item features-col-left">
                 <h2 class="features-item-title">Материалы</h2>
-                <a href="#" class="features-item-btn link-btn">на любой вкус</a>
+                <a href="#" class="features-item-btn btn">на любой вкус</a>
             </article>
             <article class="features-item features-col-left">
                 <h2 class="features-item-title">Инструмент</h2>
-                <a href="#" class="features-item-btn link-btn">на все случаи</a>
+                <a href="#" class="features-item-btn btn">на все случаи</a>
             </article>
             <article class="features-item features-col-right">
                 <h2 class="features-item-title">Техника</h2>
-                <a href="#" class="features-item-btn link-btn">для стройки</a>
+                <a href="#" class="features-item-btn btn">для стройки</a>
             </article>
             <article class="features-slider features-col-left">
                 <input type="radio" id="features-slider-btn-1" name="toggle" checked>
@@ -114,67 +117,67 @@
             </article>
             <article class="features-item features-col-right">
                 <h2 class="features-item-title">Скидки</h2>
-                <a href="#" class="features-item-btn link-btn">50%</a>
+                <a href="#" class="features-item-btn btn">50%</a>
             </article>
             <article class="features-item features-col-right">
                 <h2 class="features-item-title">Доставка</h2>
-                <a href="#" class="features-item-btn link-btn">бесплатно</a>
+                <a href="#" class="features-item-btn btn">бесплатно</a>
             </article>
         </section>
 
         <article class="popular-products container-center">
             <header class="header-popular clearfix">
                 <h2 class="header-popular-title page-title">Популярные товары:</h2>
-                <a href="#" class="header-popular-btn link-btn">Все популярные товары</a>
+                <a href="#" class="header-popular-btn btn">Все популярные товары</a>
             </header>
             <section class="products">
                 <article class="product-card">
                     <div class="product-card-actions">
-                        <a href="#" class="link-btn buy">Купить</a>
-                        <a href="#" class="link-btn bookmark">В закладки</a>
+                        <a href="#" class="btn buy">Купить</a>
+                        <a href="#" class="btn bookmark">В закладки</a>
                     </div>
                     <div class="product-card-image">
                         <img src="images/product_001.jpg" alt="Перфоратор BOSCH BFG 9000" width="220" height="170">
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                     <div class="product-card-price-old">32500 р.</div>
-                    <a class="product-card-price link-btn">25500 р.</a>
+                    <a class="product-card-price btn">25500 р.</a>
                 </article>
                 <article class="product-card">
                     <div class="product-card-actions">
-                        <a href="#" class="link-btn buy">Купить</a>
-                        <a href="#" class="link-btn bookmark">В закладки</a>
+                        <a href="#" class="btn buy">Купить</a>
+                        <a href="#" class="btn bookmark">В закладки</a>
                     </div>
                     <div class="product-card-image">
                         <img src="images/product_002.jpg" alt="Перфоратор BOSCH BFG 3000" width="220" height="170">
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
                     <div class="product-card-price-old">22500 р.</div>
-                    <a class="product-card-price link-btn">15500 р.</a>
+                    <a class="product-card-price btn">15500 р.</a>
                 </article>
                 <article class="product-card">
                     <div class="product-card-actions">
-                        <a href="#" class="link-btn buy">Купить</a>
-                        <a href="#" class="link-btn bookmark">В закладки</a>
+                        <a href="#" class="btn buy">Купить</a>
+                        <a href="#" class="btn bookmark">В закладки</a>
                     </div>
                     <div class="product-card-image">
                         <img src="images/product_003.jpg" alt="Перфоратор BOSCH BFG 6000" width="220" height="170">
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 6000</h3>
                     <div class="product-card-price-old">30500 р.</div>
-                    <a class="product-card-price link-btn">25500 р.</a>
+                    <a class="product-card-price btn">25500 р.</a>
                 </article>
                 <article class="product-card">
                     <div class="product-card-actions">
-                        <a href="#" class="link-btn buy">Купить</a>
-                        <a href="#" class="link-btn bookmark">В закладки</a>
+                        <a href="#" class="btn buy">Купить</a>
+                        <a href="#" class="btn bookmark">В закладки</a>
                     </div>
                     <div class="product-card-image">
                         <img src="images/product_002.jpg" alt="Перфоратор BOSCH BFG 2000" width="220" height="170">
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 2000</h3>
                     <div class="product-card-price-old"></div>
-                    <a class="product-card-price link-btn">12500 р.</a>
+                    <a class="product-card-price btn">12500 р.</a>
                 </article>
             </section>
         </article>
@@ -182,7 +185,7 @@
         <article class="popular-brands container-center">
             <header class="header-popular clearfix">
                 <h2 class="header-popular-title page-title">Популярные производители:</h2>
-                <a href="#" class="header-popular-btn link-btn">Все производители</a>
+                <a href="#" class="header-popular-btn btn">Все производители</a>
             </header>
             <div class="brands-list">
                 <a class="brands-item" href="#">
@@ -255,7 +258,7 @@
                                 <p class="service-slide-promo">
                                     Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
                                 </p>
-                                <a href="#" class="link-btn">Отправить заявку</a>
+                                <a href="#" class="btn">Отправить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -279,7 +282,7 @@
                     <li>Автотрейдинг</li>
                     <li>ЖелДорЭкспедиция</li>
                 </ul>
-                <a href="#" class="link-btn">Подробнее о компании</a>
+                <a href="#" class="btn">Подробнее о компании</a>
             </div>
             <div class="company-location company-col-right">
                 <h2 class="company-title">Контакты</h2>
@@ -292,7 +295,7 @@
                 <div class="map-open">
                     <img src="images/map-open.png" alt="Карта" width="940" height="446">
                 </div>
-                <a href="#" class="link-btn">Заблудились? Напишите нам!</a>
+                <a href="#" class="btn">Заблудились? Напишите нам!</a>
                 <div class="popup-write-us">
                     <a href="#">Назад</a>
                     <form action="/echo" method="get">
@@ -306,7 +309,7 @@
                         </fieldset>
                         <fieldset>
                             <input type="button" name="send" value="Отправить">
-                            <a class="link-btn" href="#">Отмена</a>
+                            <a class="btn" href="#">Отмена</a>
                         </fieldset>
                     </form>
                 </div>

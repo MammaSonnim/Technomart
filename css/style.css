@@ -49,6 +49,7 @@ body {
     background-color: #32425c;
 }
 .bar-item {
+    position: relative;
     float: left;
 }
 
@@ -66,18 +67,19 @@ body {
 }
 
 .bar-item input[type="search"] {
-    
+    margin-left: 32px;
 }
 
 .bar-item button[type="submit"] {
     display: none;
 }
 
-.bar-item button[type="submit"] + label {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: red;
+.bar-item button[type="submit"] + label:before {
+    content:'';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background: green;
 }
 
 /* Main Header Content*/
