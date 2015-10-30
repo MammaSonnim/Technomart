@@ -28,11 +28,14 @@ body {
     font-weight: 400;
     color: #32425c;
 }
-.link-btn {
+.btn {
     display: block;
+    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    color: ;
+    color: #ffffff;
 }
 
 /* MAIN HEADER start */
@@ -47,6 +50,34 @@ body {
 }
 .bar-item {
     float: left;
+}
+
+.bar-item:nth-child(n+3) {
+    float: right;
+}
+
+.bar-item:last-child {
+    margin-right: 0;
+}
+
+.bar-logo {
+    width: 220px;
+    background-color: #ee3643;
+}
+
+.bar-item input[type="search"] {
+    
+}
+
+.bar-item button[type="submit"] {
+    display: none;
+}
+
+.bar-item button[type="submit"] + label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: red;
 }
 
 /* Main Header Content*/
