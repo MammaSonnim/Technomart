@@ -351,6 +351,7 @@ body {
 
 .user-block-auth {
     width: 280px;
+    font-size: 0;
 }
 
 .user-block-btn {
@@ -358,17 +359,46 @@ body {
     vertical-align: top;
     font-size: 21px;
     line-height: 45px;
+    font-weight: 400;
     color: #000000;
     background-color: #ffffff;
     text-transform: none;
 }
 
 .user-block-login {
-    
+    margin-right: 10px;
+    padding-right: 25px;
+}
+
+.user-block-login:before {
+    content: '\2386';
+    padding: 0 14px;
+    margin: 0;
+    font-size: 22px;
+    color: #c5c5c5;
+    opacity: 1;
 }
 
 .user-block-sign-up {
-    
+    padding: 0 24px;
+}
+
+.user-block-login:hover,
+.user-block-sign-up:hover {
+    color: #ee3643;
+}
+
+.user-block-login:hover:before {
+    color: #32425c;
+}
+
+.user-block-login:active,
+.user-block-sign-up:active {
+    color: #c5c5c5;
+}
+
+.user-block-login:active:before {
+    color: #c5c5c5;
 }
 
 /* Main Navigation */
@@ -387,21 +417,32 @@ body {
 
 .main-nav-link {
     font-size: 17px;
+    line-height: 55px;
     font-weight: 400;
     vertical-align: top;
     border-bottom: 5px solid #293449;
-    min-width: 56px;
-    padding: 20px 30px;
+    padding: 0 30px;
     text-transform: none;
     background-color: #32425c;
 }
 
 .main-nav-item:first-child .main-nav-link {
-    padding-left: 50px;
+    padding-left: 52px;
+    padding-right: 32px;
 }
 
 .main-nav-item:last-child .main-nav-link {
-    padding-right: 50px;
+    padding-left: 31px;
+    padding-right: 55px;
+}
+
+.main-nav-link:hover {
+    background-color: #293449;
+}
+
+.main-nav-link:active {
+    color: #b2b2b2;
+    background-color: #1d2739;
 }
 
 /* MAIN HEADER end */
