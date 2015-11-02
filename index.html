@@ -8,13 +8,24 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+   <!--
+<i class="sprite sprite-features_delivery"></i>
+<i class="sprite sprite-features_materials"></i>
+<i class="sprite sprite-features_mech"></i>
+<i class="sprite sprite-features_sales"></i>
+<i class="sprite sprite-features_tools"></i>
+<i class="sprite sprite-flag_new"></i>
+<i class="sprite sprite-service_slide_credit"></i>
+<i class="sprite sprite-service_slide_delivery"></i>
+<i class="sprite sprite-service_slide_garanty"></i>
+<i class="sprite sprite-shadow-service"></i>
+-->
     <header class="main-header">
         <div class="main-header-bar">
             <div class="container-center clearfix">
                 <a class="bar-logo bar-item btn" href="#">Техномарт</a>
                 <form class="search bar-item clearfix" action="/echo" method="get">
                     <input id="search-field" type="search" name="search" placeholder="Поиск">
-                    <label for="search-field"></label>
                     <button id="search-submit" type="submit"></button>
                     <label for="search-submit"></label>
                 </form>
@@ -29,7 +40,7 @@
                     <div class="main-header-text header-content-col">
                         Интернет-магазин строительных материалов и&nbspинструментов для ремонта
                     </div>
-                    <div class="main-header-contacts header-content-col">
+                    <div class="main-header-contacts">
                         <div class="contacts-tel">
                             +7 (812) 555-05-55
                         </div>
@@ -37,7 +48,7 @@
                             г. Санкт-Петербург, Б. Конюшенная, д. 19/8
                         </div>
                     </div>
-                    <div class="user-block-auth header-content-col">
+                    <div class="user-block-auth">
                         <a class="user-block-login user-block-btn btn" href="#">Войти</a>
                         <a class="user-block-sign-up user-block-btn btn" href="#" >Регистрация</a>
                     </div>
@@ -88,11 +99,11 @@
                 <input type="radio" id="features-slider-btn-1" name="toggle" checked>
                 <input type="radio" id="features-slider-btn-2" name="toggle">
                 <div class="features-slider-controls">
-                    <label for="features-slider-btn-1"></label>
-                    <label for="features-slider-btn-2"></label>
+                    <label class="features-slider-control" for="features-slider-btn-1"></label>
+                    <label class="features-slider-control" for="features-slider-btn-2"></label>
                 </div>
                 <div class="features-slider-inner">
-                    <div class="features-slider-slides">
+                    <div class="features-slides">
                         <div class="features-slide">
                             <h2 class="features-slide-title">Перфораторы</h2>
                             <p>Настоящие мужские игрушки</p>
@@ -105,14 +116,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="features-slider-controls">
+                <div class="features-slider-controls-arrows">
                     <a href="#" class="control-left"></a>
                     <a href="#" class="control-right"></a>
                 </div>
             </article>
             <article class="features-item features-col-right">
-                <h2 class="features-item-title">Скидки</h2>
-                <a href="#" class="features-item-btn btn">50%</a>
+                <h2 class="features-item-title">Скидки 50%</h2>
+                <a href="#" class="features-item-btn btn">на 350 товаров</a>
             </article>
             <article class="features-item features-col-right">
                 <h2 class="features-item-title">Доставка</h2>
