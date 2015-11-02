@@ -220,12 +220,18 @@ img {
 
 .bar-btn {
     position: relative;
+    width: 150px;
+    display: block;
+    font-family: 'Cuprum', 'Arail', sans-serif;
     font-size: 17px;
+    text-align: center;
     line-height: 42px;
     background-color: #32425c;
-    text-transform: none;
     border-radius: 0;
+    text-decoration: none;
+    color: #ffffff;
 }
+
 
 .bar-logo {
     width: 220px;
@@ -318,12 +324,6 @@ img {
  
 .search input:-ms-input-placeholder {
     color: #ffffff;
-}
-
-.bar-bookmark-count,
-.bar-cart-count,
-.bar-order-btn {
-    width: 150px;
 }
 
 .bar-bookmark-count:before,
@@ -438,13 +438,15 @@ img {
 .user-block-btn {
     display: inline-block;
     vertical-align: top;
+    font-family: 'Cuprum', 'Arail', sans-serif;
     font-size: 21px;
     line-height: 45px;
     font-weight: 400;
+    text-align: center;
     color: #000000;
     background-color: #ffffff;
     text-transform: none;
-    border-radius: 0;
+    text-decoration: none;
 }
 
 .user-block-login {
@@ -498,13 +500,17 @@ img {
 }
 
 .main-nav-link {
+    display: block;
+    font-family: 'Cuprum', 'Arail', sans-serif;
     font-size: 17px;
     line-height: 55px;
     font-weight: 400;
     vertical-align: top;
+    text-align: center;
+    color: #ffffff;
     border-bottom: 5px solid #293449;
+    text-decoration: none;
     padding: 0 30px;
-    text-transform: none;
     background-color: #32425c;
     border-radius: 0;
 }
