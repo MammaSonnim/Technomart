@@ -799,7 +799,6 @@ img {
 
 .products {
     font-size: 0;
-    margin-bottom: 20px;
 }
 
 .product-card {
@@ -807,6 +806,7 @@ img {
     width: 218px;
     min-height: 318px;
     margin-right: 20px;
+    margin-bottom: 20px;
     display: inline-block;
     font-size: 17px;
     vertical-align: top;
@@ -836,7 +836,7 @@ img {
 }
 
 .product-card:hover {
-    box-shadow: 0 2px 15px #999999;
+    box-shadow: 0 10px 25px #a9adb5;
 }
 
 .product-card-actions {
@@ -980,11 +980,21 @@ img {
 .brands-item {
     display: inline-block;
     vertical-align: top;
-    width: 220px;
+    width: 218px;
     min-height: 145px;
     margin-right: 20px;
     text-align: center;
     line-height: 145px;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+.brands-item:hover {
+    box-shadow: 0 10px 25px #a9adb5;
+}
+
+.brands-item:active {
+    box-shadow: 0 4px 10px #a9adb5;
 }
 
 .brands-item img {
@@ -995,6 +1005,29 @@ img {
 .brands-item:nth-child(4n) {
     margin-right: 0;
 }
+
+.brands-item:active img {
+    opacity: 0.5;
+}
+
+/* Service */
+
+.service {
+    display: block;
+    padding-top: 65px;
+    background-color: #f2f6f8;
+}
+
+.service-title {
+    margin-bottom: 25px;
+}
+
+.service-text {
+    width: 400px;
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
 /* Company block */
 .company-cols {
     
