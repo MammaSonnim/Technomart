@@ -194,7 +194,7 @@ img {
     text-decoration: none;
     background-color: #ee3643;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .btn:hover {
@@ -785,6 +785,7 @@ img {
     display: block;
     background-color: #f7f3ec;
     padding: 25px;
+    margin-bottom: 20px;
 }
 
 .header-popular-title {
@@ -802,12 +803,15 @@ img {
 
 .product-card {
     position: relative;
-    width: 220px;
+    width: 218px;
+    min-height: 318px;
     margin-right: 20px;
     display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
     vertical-align: top;
-    font-size: 18px;
-    outline: 1px solid red;
+    text-align: center;
+    border: 1px solid #cccccc;
 }
 
 .product-card:after {
@@ -830,22 +834,150 @@ img {
 .popular-products .product-card:nth-child(4n) {
     margin-right: 0;
 }
+
+.product-card-actions {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 218px;
+    height: 88px;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.product-card:first-child .product-card-actions{
+    display: block;
+}
+
+.product-card-actions-buy,
+.product-card-actions-bookmark {
+    background-color: #63a63e;
+    width: 135px;
+    margin: 0 auto 7px;
+}
+
+.product-card-actions-buy {
+    box-shadow: inset 0 -3px 0 #367315;
+}
+
+/* ПОЧЕМУ 'B', а не корзинка в результате?! в header-bar тот же код! я даже его сюда вынесла, чтобы ничто случайно не переопределило шрифт */
+.product-card-actions-buy:before {
+    content: '\62';
+    font-family: 'symbols-technomart';
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    font-size: 17px;
+    opacity: 0.5;
+}
+
+.product-card-actions-bookmark {
+    width: 129px;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #63a63e;
+    border: 3px solid #63a63e;
+    background-color: #ffffff;
+}
+
+.product-card-actions-buy:hover {
+    background-color: #5fbb2d;
+}
+
+.product-card-actions-buy:active {
+    background-color: #518534;
+}
+
+.product-card-actions-buy:hover:before,
+.product-card-actions-buy:active:before {
+    opacity: 1;
+}
+
+.product-card-actions-bookmark:hover {
+    background-color: #ffffff;
+    border-color: #32425c;
+    color: #32425c;
+}
+
+.product-card-actions-bookmark:active {
+    background-color: #ffffff;
+    border-color: #c1c6ce;
+    color: #c1c6ce;
+}
+
 .product-card-image {
-    outline: 1px solid red;
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    height: 160px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 168px;
+    overflow: hidden;
+}
+
+.product-card-image img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product-card-title {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    padding: 0 25px;
+}
+
+.product-card-discount {
+    margin-bottom: 10px;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    color: #999999;
+    min-height: 20px;
+    line-height: 18px;
+}
+
+.product-card-price {
+    position: relative;
+    width: 80px;
+    margin: 0 auto 20px;
+    padding: 0 30px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.product-card-price:after {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    content: '';
+    border: 19px solid #ffffff;
+    border-left-color: #ee3643;
 }
 
 /* Popular Brands */
 .brands-list {
-    font-size:0;
+    font-size: 0;
 }
 .brands-item {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     width: 220px;
     min-height: 145px;
     margin-right: 20px;
-    outline: 1px solid red;
+    text-align: center;
+    line-height: 145px;
 }
+
+.brands-item img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .brands-item:nth-child(4n) {
     margin-right: 0;
 }
@@ -934,11 +1066,12 @@ img {
     margin-right: 0;
 }
 .catalog-paginator {
-    
+    font-size: 0;
 }
 .paginator-link {
     display: inline-block;
     vertical-align: baseline;
+    font-size: 14px;
 }
 /* CATALOG CONTENT end*/
 
