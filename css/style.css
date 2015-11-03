@@ -30,9 +30,9 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 10px;
   text-align: center;
-  /* opacity: .8; */
+  opacity: 1;
  
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
@@ -46,11 +46,13 @@
   margin-left: .2em;
  
   /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
+  font-size: 100%;
  
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
+
+ 
  
 .icon-left:before { content: '\3c'; } /* '&lt;' */
 .icon-right:before { content: '\3e'; } /* '&gt;' */
@@ -78,6 +80,95 @@
 .icon-instagramm:before { content: '📷'; } /* '\1f4f7' */
 .icon-search:before { content: '🔍'; } /* '\1f50d' */
 .icon-bookmark:before { content: '🔖'; } /* '\1f516' */
+
+/* Custom :hover and :active styles for icons*/
+
+.icon-search:before {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    margin-right: 10px;
+    font-size: 130%;
+    color: #6a7180;
+}
+
+.search input[type="search"]:hover ~ .icon-search:before {
+    color: #ffffff;
+}
+
+.search button[type="submit"]:hover ~ .icon-search:before {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.search input[type="search"]:focus ~ .icon-search:before {
+    color: #ee3643;
+}
+
+.icon-bookmark:before,
+.icon-basket:before {
+    opacity: 0.5;
+}
+
+.icon-bookmark:hover:before,
+.icon-basket:hover:before {
+    opacity: 1;
+}
+
+.icon-bookmark:active:before,
+.icon-basket:active:before {
+   opacity: 0.5;
+}
+
+.icon-phone:before {
+    margin-right: 33px;
+    color: #b7bfc8;
+}
+
+.icon-login:before {
+    color: #c5c5c5;
+}
+
+
+.icon-login:hover:before {
+    color: #32425c;
+}
+
+.icon-login:active:before {
+    color: #c5c5c5;
+}
+
+.icon-left:before,
+.icon-right:before {
+    position: absolute;
+    bottom: 65px;
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.icon-left:before {
+    left: -290px;
+}
+
+.icon-right:before {
+    right: -290px;
+}
+
+.product-card-actions .icon-basket:before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 130%;
+    margin-right: 20px;
+    opacity: 0.5;
+}
+
+.product-card-actions .icon-basket:hover:before,
+.product-card-actions .icon-basket:active:before {
+    opacity: 1;
+}
+
+/* Sprites */
 
 .sprite {
     background-image: url(../images/sprite.png);
@@ -290,32 +381,6 @@ img {
     display: none;
 }
 
-.search input[type="search"] ~ label[for="search-submit"]:before {
-    position: absolute;
-    left: 20px;
-    content: '🔍';
-    font-family: 'symbols-technomart';
-    display: inline-block;
-    line-height: 40px;
-    vertical-align: top;
-    margin-right: 10px;
-    font-size: 17px;
-    color: #6a7180;
-}
-
-.search input[type="search"]:hover ~ label[for="search-submit"]:before {
-    color: #ffffff;
-}
-
-.search button[type="submit"]:hover ~ label[for="search-submit"]:before {
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.search input[type="search"]:focus ~ label[for="search-submit"]:before {
-    color: #ee3643;
-}
-
 .search input::-webkit-input-placeholder {
     color: #ffffff;
 }
@@ -332,45 +397,15 @@ img {
     color: #ffffff;
 }
 
-.bar-bookmark-count:before,
-.bar-cart-count:before,
-.contacts-tel:before,
-.user-block-login:before {
-    font-family: 'symbols-technomart';
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px;
-    font-size: 17px;
-    opacity: 0.5;
-}
-
-.bar-bookmark-count:before {
-    content: '🔖';
-}
-
-.bar-cart-count:before {
-    content: '\62';
-}
-
 .bar-bookmark-count:hover,
 .bar-cart-count:hover {
    background-color: #212a3a;
-}
-
-.bar-bookmark-count:hover:before,
-.bar-cart-count:hover:before {
-   opacity: 1;
 }
 
 .bar-bookmark-count:active,
 .bar-cart-count:active {
    background-color: #161d29;
    color: #a2a4a6;
-}
-
-.bar-bookmark-count:active:before,
-.bar-cart-count:active:before {
-   opacity: 0.5;
 }
 
 .bar-order-btn {
@@ -420,14 +455,6 @@ img {
     color: #ee3643;
 }
 
-.contacts-tel:before {
-    content: '📞';
-    margin-right: 40px;
-    font-size: 22px;
-    vertical-align: middle;
-    color: #b7bfc8;
-}
-
 .contacts-adress {
     font-size: 14px;
     line-height: 24px;
@@ -457,16 +484,7 @@ img {
 
 .user-block-login {
     margin-right: 10px;
-    padding-right: 25px;
-}
-
-.user-block-login:before {
-    content: '\2386';
-    padding: 0 14px;
-    margin: 0;
-    font-size: 22px;
-    color: #c5c5c5;
-    opacity: 1;
+    padding: 0 25px 0 11px;
 }
 
 .user-block-sign-up {
@@ -478,18 +496,11 @@ img {
     color: #ee3643;
 }
 
-.user-block-login:hover:before {
-    color: #32425c;
-}
-
 .user-block-login:active,
 .user-block-sign-up:active {
     color: #c5c5c5;
 }
 
-.user-block-login:active:before {
-    color: #c5c5c5;
-}
 
 /* Main Navigation */
 .main-nav {
@@ -756,29 +767,6 @@ img {
     transform: translate(-620px);
 }
 
-.features-slider-control:after {
-    position: absolute;
-    bottom: 65px;
-    content: '';
-    display: block;
-    border: 20px solid #ffffff;
-    border-left-color: #ffffff;
-    border-right-width: 0;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-}
-
-.features-slider-control:first-child:after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    right: 255px;
-}
-
-.features-slider-control:last-child:after {
-    left: 255px;
-}
-
 /* Popular Products */
 
 .header-popular {
@@ -862,18 +850,8 @@ img {
 }
 
 .product-card-actions-buy {
+    position: relative;
     box-shadow: inset 0 -3px 0 #367315;
-}
-
-/* ПОЧЕМУ 'B', а не корзинка в результате?! в header-bar тот же код! я даже его сюда вынесла, чтобы ничто случайно не переопределило шрифт */
-.product-card-actions-buy:before {
-    content: '\62';
-    font-family: 'symbols-technomart';
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px;
-    font-size: 17px;
-    opacity: 0.5;
 }
 
 .product-card-actions-bookmark {
@@ -894,10 +872,6 @@ img {
     box-shadow: inset 0 -3px 0 #518534;
 }
 
-.product-card-actions-buy:hover:before,
-.product-card-actions-buy:active:before {
-    opacity: 1;
-}
 
 .product-card-actions-bookmark:hover {
     background-color: #ffffff;
