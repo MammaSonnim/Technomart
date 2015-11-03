@@ -965,6 +965,14 @@ img {
     border-left-color: #ee3643;
 }
 
+.product-card-price:hover:after {
+    border-left-color: #ca2c37;
+}
+
+.product-card-price:active:after {
+    border-left-color: #ba2732;
+}
+
 /* Popular Brands */
 .brands-list {
     font-size: 0;
