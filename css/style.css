@@ -891,6 +891,7 @@ img {
 
 .product-card-actions-buy:active {
     background-color: #518534;
+    box-shadow: inset 0 -3px 0 #518534;
 }
 
 .product-card-actions-buy:hover:before,
