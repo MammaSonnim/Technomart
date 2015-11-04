@@ -129,7 +129,6 @@
     color: #c5c5c5;
 }
 
-
 .icon-login:hover:before {
     color: #32425c;
 }
@@ -236,6 +235,8 @@
     background-position: -1811px -5px;
 }
 
+/* Common styles */
+
 body {
     min-width: 960px;
     font-family: 'PT Sans', 'Arial', sans-serif;
@@ -245,7 +246,6 @@ body {
     color: #32425c;
 }
 
-/* Common styles */
 img {
     max-width: 100%;
     height: auto;
@@ -1000,6 +1000,86 @@ img {
     width: 400px;
     margin: 0 0 25px 0;
     padding: 0;
+}
+
+.service-slider {
+    position: relative;
+    width: 700px;
+    margin-left: 240px;
+}
+
+.service-slider-inner {
+    overflow: hidden;
+}
+
+.service-slides {
+    width: 300%;
+    min-height: 272px;
+    background: no-repeat;
+}
+
+.service-slide {
+    float: left;
+    width: 620px;
+    padding: 47px 0 57px 80px;
+}
+
+.service-slide-title {
+    margin: 0 0 25px 0;
+    padding: 0;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #32425c;
+}
+
+.service-slide-text {
+    margin: 0;
+    padding: 0;
+    width: 275px;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.service-slide-btn {
+    width: 195px;
+    line-height: 38px;
+}
+
+.service-slider-controls {
+    position: absolute;
+    top: 47px;
+    left: -240px;
+    width: 240px;
+}
+
+.service-slider-control {
+    padding: 15px 22px;
+    display: block;
+    background-color: #32425c;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 30px;
+    cursor: pointer;
+    border-top: 1px solid #405069;
+    border-bottom: 1px solid #293449;
+}
+
+.service-slider input[type="radio"] {
+    display: none;
+}
+
+/* pseudo-shadow */
+.service-slider:before {
+    position: absolute;
+    left: -10px;
+    content: '';
+    width: 10px;
+    height: 272px;
+    background: url(../images/shadow-service.png) no-repeat;
+    z-index: 100;
 }
 
 /* Company block */
