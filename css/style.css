@@ -1243,9 +1243,9 @@ img {
     float: right;
     outline: 1px solid red;
 }
-.footer-menu-sub li {
+.footer-nav-item {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: middle;
 }
 /* Footer Bar */
 .main-footer-bar-col {
