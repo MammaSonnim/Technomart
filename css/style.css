@@ -1000,22 +1000,24 @@ img {
     width: 400px;
     margin: 0 0 25px 0;
     padding: 0;
+    color: #000000;
 }
 
 .service-slider {
     position: relative;
     width: 700px;
-    margin-left: 240px;
+    margin: 0 0 50px 240px;
 }
 
 .service-slider-inner {
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
 }
 
 .service-slides {
     width: 300%;
     min-height: 272px;
-    background: no-repeat;
 }
 
 .service-slide {
@@ -1036,11 +1038,10 @@ img {
 }
 
 .service-slide-text {
-    margin: 0;
+    margin: 0 0 30px 0;
     padding: 0;
-    width: 275px;
-    font-size: 13px;
-    line-height: 24px;
+    width: 380px;
+    color: #000000;
 }
 
 .service-slide-btn {
@@ -1069,6 +1070,42 @@ img {
 
 .service-slider input[type="radio"] {
     display: none;
+}
+
+#service-slider-btn-1:checked ~ .service-slider-controls label[for="service-slider-btn-1"],
+#service-slider-btn-2:checked ~ .service-slider-controls label[for="service-slider-btn-2"],
+#service-slider-btn-3:checked ~ .service-slider-controls label[for="service-slider-btn-3"] {
+    background-color: #ffffff;
+    color: #32425c;
+    border-color: #ffffff;
+}
+
+#service-slider-btn-1:checked ~ .service-slider-inner .service-slides {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+#service-slider-btn-2:checked ~ .service-slider-inner .service-slides {
+    -webkit-transform: translate(-700px);
+    -ms-transform: translate(-700px);
+    transform: translate(-700px);
+}
+
+#service-slider-btn-3:checked ~ .service-slider-inner .service-slides {
+    -webkit-transform: translate(-1400px);
+    -ms-transform: translate(-1400px);
+    transform: translate(-1400px);
+}
+
+#service-slider-btn-1:checked ~ .service-slider-inner {
+    background-image: url(../images/service_slide_delivery.png);
+}
+#service-slider-btn-2:checked ~ .service-slider-inner {
+    background-image: url(../images/service_slide_garanty.png);
+}
+#service-slider-btn-3:checked ~ .service-slider-inner {
+    background-image: url(../images/service_slide_credit.png);
 }
 
 /* pseudo-shadow */
