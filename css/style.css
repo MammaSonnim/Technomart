@@ -271,8 +271,13 @@ img {
     line-height: 38px;
     vertical-align: middle;
     font-weight: 400;
-    color: #32425c;
+    color: #000000;
     text-transform: uppercase;
+}
+
+.page-text {
+    margin: 0;
+    padding: 0;
 }
 
 .btn {
@@ -778,6 +783,7 @@ img {
 
 .header-popular-title {
     float: left;
+    color: #32425c;
 }
 
 .header-popular-btn {
@@ -950,6 +956,7 @@ img {
 /* Popular Brands */
 .brands-list {
     font-size: 0;
+    margin-bottom: 65px;
 }
 .brands-item {
     display: inline-block;
@@ -1068,6 +1075,10 @@ img {
     border-bottom: 1px solid #293449;
 }
 
+.service-slider-control:hover {
+    background-color: #293449;
+}
+
 .service-slider input[type="radio"] {
     display: none;
 }
@@ -1133,12 +1144,19 @@ img {
     float: right;
     outline: 1px solid red;
 }
+
+.company-title {
+    margin-bottom: 10px;
+}
+/* вынести наверх */
+
 .map-open {
     display: none;
 }
 .popup-write-us {
     display: none;
 }
+
 /* MAIN CONTENT end */
 
 /* CATALOG CONTENT start*/
