@@ -373,23 +373,23 @@
             </div>
         </div>
     </footer>
-    <div class="popup-write-us">
-        <a href="#">Назад</a>
-        <form action="/echo" method="get">
-            <div class="form-top clearfix">
-                <label class="label-text" for="name-field">Ваше имя:
-                    <input class="pop-up-input" type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
+    <div class="modal">
+        <div class="modal-close">Назад</div>
+        <form class="contact-form" action="/echo" method="post">
+            <div class="modal-top">
+                <label class="contact-form-label" for="name-field">Ваше имя:
+                    <input class="contact-form-item" type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
                 </label>
-                <label class="label-text" for="email-field">Ваш e-mail:
-                    <input class="pop-up-input" type="email" name="password" id="email-field" placeholder="Для отправки ответа">
+                <label class="contact-form-label" for="email-field">Ваш e-mail:
+                    <input class="contact-form-item" type="email" name="password" id="email-field" placeholder="Для отправки ответа">
                 </label>
-                <label class="label-text" for="text-field">Текст письма:
-                    <input class="pop-up-input" type="text" name="text" size="25" id="text-field" placeholder="В свободной форме">
+                <label class="contact-form-label" for="text-field">Текст письма:
+                    <textarea class="contact-form-item text-field" name="text" rows="5" id="text-field" placeholder="В свободной форме"></textarea>
                 </label>
             </div>
-            <div class="form-bottom">
-                <input class="form-item btn" type="button" name="send" value="Отправить">
-                <a class="form-item form-btn" href="#">Отмена</a>
+            <div class="modal-bottom">
+                <input class="modal-btn btn" type="button" name="send" value="Отправить">
+                <a class="modal-btn form-btn" href="#">Отмена</a>
             </div>
         </form>
     </div>
