@@ -23,15 +23,15 @@
     <header class="main-header">
         <div class="main-header-bar">
             <div class="container-center clearfix">
-                <a class="bar-logo bar-item btn" href="#">Техномарт</a>
-                <form class="search bar-item clearfix" action="/echo" method="get">
+                <a class="bar-logo btn" href="#">Техномарт</a>
+                <form class="search clearfix" action="/echo" method="get">
                     <input id="search-field" type="search" name="search" placeholder="Поиск">
                     <button id="search-submit" type="submit"></button>
                     <label class="icon-search" for="search-submit"></label>
                 </form>
-                <a class="bar-bookmark-count bar-btn bar-item icon-bookmark" href="#">Закладки: <span>0</span></a>
-                <a class="bar-cart-count bar-btn bar-item icon-basket" href="#">Корзина: <span>0</span></a>
-                <a class="bar-order-btn bar-btn bar-item" href="#">Оформить заказ</a>
+                <a class="bar-bookmark-count bar-btn icon-bookmark" href="#">Закладки: <span>0</span></a>
+                <a class="bar-cart-count bar-btn icon-basket" href="#">Корзина: <span>0</span></a>
+                <a class="bar-order-btn bar-btn" href="#">Оформить заказ</a>
             </div>
         </div>
         <div class="main-header-content">
@@ -142,7 +142,7 @@
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 9000</h3>
                     <div class="product-card-discount">32500 р.</div>
-                    <a class="product-card-price btn">25500 р.</a>
+                    <div class="product-card-price">25500 р.</div>
                 </article>
                 <article class="product-card">
                     <div class="product-card-actions">
@@ -154,7 +154,7 @@
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 3000</h3>
                     <div class="product-card-discount">22500 р.</div>
-                    <a class="product-card-price btn">15500 р.</a>
+                    <div class="product-card-price">15500 р.</div>
                 </article>
                 <article class="product-card">
                     <div class="product-card-actions">
@@ -166,7 +166,7 @@
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 6000</h3>
                     <div class="product-card-discount">30500 р.</div>
-                    <a class="product-card-price btn">25500 р.</a>
+                    <div class="product-card-price">25500 р.</div>
                 </article>
                 <article class="product-card">
                     <div class="product-card-actions">
@@ -178,7 +178,7 @@
                     </div>
                     <h3 class="product-card-title">Перфоратор BOSCH BFG 2000</h3>
                     <div class="product-card-discount"></div>
-                    <a class="product-card-price btn">12500 р.</a>
+                    <div class="product-card-price">12500 р.</div>
                 </article>
             </section>
         </article>
@@ -266,7 +266,7 @@
             </div>
         </article>
         <div class="company-cols container-center clearfix">
-            <div class="company-info company-col-left">
+            <div class="company-col-left">
                 <h2 class="company-title page-title">Компания «Техномарт»</h2>
                 <p class="company-text page-text">
                     Настоящий мужской шоппинг начинается здесь!
@@ -278,41 +278,25 @@
                     Техномарт работает со многими транспортными компаниями:
                 </p>
                 <ul class="page-list">
-                    <li class="page-list-item">Деловые линии</li>
+                    <li class="page-list-item"><div>Деловые линии</div></li>
                     <li class="page-list-item">Автотрейдинг</li>
                     <li class="page-list-item">ЖелДорЭкспедиция</li>
                 </ul>
-                <a href="#" class="btn">Подробнее о компании</a>
+                <a href="#" class="btn company-info-btn">Подробнее о компании</a>
             </div>
-            <div class="company-location company-col-right">
+            <div class="company-col-right">
                 <h2 class="company-title page-title">Контакты</h2>
-                <p class="page-text">
-                    Вы можете забрать товар сами, заехав в наш офис
+                <p class="company-text page-text">
+                    Вы можете забрать товар сами,<br>
+                    заехав в наш офис:
                 </p>
-                <div class="map">
+                <div class="company-map">
                     <a href="#"><img src="images/map-preview.png" alt="«Техномарт» на карте" width="300" height="158"></a>
                 </div>
-                <div class="map-open">
+                <div class="company-map-open">
                     <img src="images/map-open.png" alt="Карта" width="940" height="446">
                 </div>
-                <a href="#" class="btn">Заблудились? Напишите нам!</a>
-                <div class="popup-write-us">
-                    <a href="#">Назад</a>
-                    <form action="/echo" method="get">
-                        <fieldset>
-                            <label for="name-field">Ваше имя:</label>
-                            <input type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
-                            <label for="email-field">Ваш e-mail:</label>
-                            <input type="email" name="password" id="email-field" placeholder="Для отправки ответа">
-                            <label for="text-field">Текст письма:</label>
-                            <input type="text" name="text" size="25" id="text-field" placeholder="В свободной форме">
-                        </fieldset>
-                        <fieldset>
-                            <input type="button" name="send" value="Отправить">
-                            <a class="btn" href="#">Отмена</a>
-                        </fieldset>
-                    </form>
-                </div>
+                <a href="#" class="company-form btn">Заблудились? Напишите нам!</a>
             </div>
         </div>
     </div>
@@ -389,5 +373,25 @@
             </div>
         </div>
     </footer>
+    <div class="popup-write-us">
+        <a href="#">Назад</a>
+        <form action="/echo" method="get">
+            <div class="form-top clearfix">
+                <label class="label-text" for="name-field">Ваше имя:
+                    <input class="pop-up-input" type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
+                </label>
+                <label class="label-text" for="email-field">Ваш e-mail:
+                    <input class="pop-up-input" type="email" name="password" id="email-field" placeholder="Для отправки ответа">
+                </label>
+                <label class="label-text" for="text-field">Текст письма:
+                    <input class="pop-up-input" type="text" name="text" size="25" id="text-field" placeholder="В свободной форме">
+                </label>
+            </div>
+            <div class="form-bottom">
+                <input class="form-item btn" type="button" name="send" value="Отправить">
+                <a class="form-item form-btn" href="#">Отмена</a>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
