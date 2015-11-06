@@ -214,7 +214,7 @@ img {
 
 .btn {
     display: block;
-    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 14px;
     line-height: 38px;
     text-align: center;
@@ -236,7 +236,7 @@ img {
 /* MAIN HEADER start */
 
 .main-header {
-    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     margin-bottom: 60px;
 }
 
@@ -249,7 +249,7 @@ img {
     position: relative;
     width: 150px;
     float: left;
-    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     text-align: center;
     line-height: 42px;
@@ -296,7 +296,7 @@ img {
     height: 40px;
     background-color: #32425c;
     border: none;
-    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 24px;
     color: #ffffff;
@@ -398,16 +398,16 @@ img {
     text-align: center;
 }
 
-.user-block-auth {
+.user-block {
     float: right;
-    width: 280px;
+    width: 300px;
     font-size: 0;
 }
 
 .user-block-btn {
     display: inline-block;
     vertical-align: top;
-    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
     line-height: 45px;
     font-weight: 400;
@@ -419,7 +419,7 @@ img {
 }
 
 .user-block-login {
-    margin-right: 10px;
+    margin: 0 10px 0 20px;
     padding: 0 25px 0 11px;
 }
 
@@ -455,7 +455,7 @@ img {
 
 .main-nav-link {
     display: block;
-    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 17px;
     line-height: 55px;
     font-weight: 400;
@@ -1383,7 +1383,7 @@ img {
 .form-btn {
     background-color: #ffffff;
     color: #000000;
-    font-family: 'Cuprum', 'Arail', sans-serif;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     line-height: 38px;
     text-align: center;
     text-transform: uppercase;
@@ -1394,12 +1394,55 @@ img {
 
 /* CATALOG CONTENT start*/
 
+/* catalog-header user-block */
+
+.count-active,
+.count-active:hover,
+.count-active:active {
+    background-color: #ee3643;
+}
+
+.user-block-top {
+    background-color: #ffffff;
+}
+
+.user-block-name {
+    padding: 10px;
+    float: left;
+    width: 230px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.icon-user:before {
+    color: #c5c5c5;
+}
+
+.user-block-logout {
+    padding: 10px;
+    float: right;
+    font-size: 0;
+    line-height: 0;
+}
+
+.icon-logout:before {
+    margin-right: 0;
+    font-size: 22px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #c5c5c5;
+}
+
+.icon-logout:hover:before,
+.user-block-name:hover .icon-user:before {
+    color: #32425c;
+}
+
 .breadcrumbs-item {
     display: inline-block;
     vertical-align: baseline;
-}
-.popup-cart {
-    display: none;
 }
 
 /* Filter */
