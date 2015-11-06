@@ -1405,13 +1405,14 @@ img {
     padding: 10px;
     float: left;
     width: 230px;
-    font-size: 18px;
+    font-size: 21px;
     line-height: 24px;
     color: #000000;
     text-decoration: none;
 }
 
 .icon-user:before {
+    font-size: 18px;
     color: #c5c5c5;
 }
 
@@ -1430,13 +1431,15 @@ img {
     color: #c5c5c5;
 }
 
-.icon-logout:hover:before {
+.icon-logout:hover:before,
+.user-block-name:hover.icon-user:before {
     color: #32425c;
 }
 
-.user-block-name:hover {
-    color: #32425c;
-    outline: 1px solid green;
+.icon-logout:active:before,
+.user-block-name:active.icon-user:before,
+.user-block-name:active {
+    color: #c5c5c5;
 }
 
 .breadcrumbs-item {
