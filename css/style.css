@@ -265,10 +265,11 @@ img {
 
 .logo {
     width: 220px;
+    padding: 12px 0 12px 0;
     float: left;
     background-color: #ee3643;
     font-size: 24px;
-    line-height: 42px;
+    line-height: 24px;
     font-weight: 700;
     box-shadow: 0 5px #b52933;
     border-radius: 0;
@@ -1103,6 +1104,7 @@ img {
     position: absolute;
     content: '';
     display: inline-block;
+    vertical-align: middle;
     margin-right: 10px;
     top: 10px;
     left: 0;
@@ -1138,7 +1140,7 @@ img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 21px;
+    width: 18px;
     height: 21px;
     padding: 10px;
     font-size: 0;
@@ -1153,48 +1155,122 @@ img {
 /* MAIN FOOTER start */
 /* Main Footer Content*/
 
-.main-footer,
-.main-footer a {
+.main-footer {
+    font-family: 'Cuprum', 'Arial', sans-serif;
     color: #ffffff;
 }
 
 .main-footer-content {
     background-color: #32425c;
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .main-footer-content-col-left {
+    margin-bottom: 30px;
     width: 350px;
     float: left;
-    outline: 1px solid red;
 }
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 33px;
+    padding: 16.5px 0 16.5px 0;
+    font-size: 30px;
+    line-height: 30px;
+    float: none;
+}
+
 .main-footer-content-col-right {
     width: 550px;
     float: right;
-    outline: 1px solid red;
+    margin-top: 22px;
 }
+
+.footer-nav-list {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.footer-nav-list:nth-child(2) {
+    margin-left: 25px;
+}
+
 .footer-nav-item {
     display: inline-block;
     vertical-align: middle;
 }
+
+.footer-nav-link {
+    padding: 16.5px 29.5px 16.5px 29.5px;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-nav-item:first-child .footer-nav-link {
+    padding-left: 0;
+}
+
+.footer-nav-item:last-child .footer-nav-link {
+    padding-right: 0;
+}
+
+.footer-nav-list:nth-child(2) .footer-nav-link {
+    color: #ffd180;
+}
+
 /* Footer Bar */
 .main-footer-bar {
+    padding: 35px 0 35px 0;
+    font-size: 16px;
+    line-height: 18px;
     background-color: #293449;
 }
 
 .main-footer-bar-col {
     width: 300px;
     float: left;
-    outline: 1px solid red;
 }
 .main-footer-bar-col:last-child {
     float: right;
 }
-.copyright {
 
+.main-footer-bar a {
+    color: #ffd180;
+    text-decoration: none;
 }
+
 .social-media {
-
+    font-size: 0;
+    text-align: center;
+    line-height: 42px;
 }
+
+.social {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #212a3a;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.social:last-child {
+    margin-right: 0;
+}
+
+.social:before {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #ffffff;
+}
+
 .feedback {
     width: 150px;
     float: left;
