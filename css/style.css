@@ -151,7 +151,6 @@ img {
 
 .main-header {
     font-family: 'Cuprum', 'Arial', sans-serif;
-    margin-bottom: 60px;
 }
 
 /* Main Header Bar */
@@ -461,7 +460,7 @@ img {
 
 /* MAIN CONTENT start */
 .features {
-    margin-bottom: 33px;
+    margin: 60px 0 33px 0;
 }
 .features-col-left {
     margin-right: 20px;
@@ -1479,9 +1478,54 @@ img {
     color: #c5c5c5;
 }
 
+/* PAGE CONTENT start */
+.breadcrumbs-item,
+.catalog-filter-header,
+.filter-btn,
+.sort-header,
+.sort-item {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000000;
+}
+
 .breadcrumbs-item {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.breadcrumbs-item:first-child {
+    font-size: 0;
+    line-height: 0;
+}
+
+.icon-home:before {
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+    color: #c1c6ce;
+}
+
+.breadcrumbs-item:after {
+    content: '\3e';
+    font-family: "symbols-technomart";
+    display: inline-block;
+    width: 1em;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    color: #c1c6ce;
+    padding-left: 15px;
+}
+
+.breadcrumbs-item:last-child:after {
+    display: none;
 }
 
 .page-header {
@@ -1491,6 +1535,8 @@ img {
     margin-bottom: 20px;
     color: #32425c;
 }
+
+
 
 /* Filter */
 .catalog-filter {
@@ -1552,4 +1598,4 @@ img {
     vertical-align: baseline;
     font-size: 14px;
 }
-/* CATALOG CONTENT end*/
+/* PAGE CONTENT end*/
