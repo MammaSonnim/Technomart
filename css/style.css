@@ -1181,6 +1181,11 @@ img {
     float: none;
 }
 
+.footer-logo:hover,
+.footer-logo:active {
+    background-color: #ee3643;
+}
+
 .main-footer-content-col-right {
     width: 550px;
     float: right;
@@ -1220,6 +1225,14 @@ img {
 
 .footer-nav-list:nth-child(2) .footer-nav-link {
     color: #ffd180;
+}
+
+.footer-nav-link:hover {
+    text-decoration: underline;
+}
+
+.footer-nav-link:active {
+    opacity: 0.5;
 }
 
 /* Footer Bar */
@@ -1271,6 +1284,11 @@ img {
     color: #ffffff;
 }
 
+.social:hover,
+.social:active {
+    background-color: #ee3643;
+}
+
 .feedback {
     width: 150px;
     float: left;
@@ -1278,6 +1296,11 @@ img {
 .developer {
     width: 110px;
     float: right;
+}
+
+.feedback a:active,
+.developer a:active {
+    color: #ee3643;
 }
 /* MAIN FOOTER end */
 
