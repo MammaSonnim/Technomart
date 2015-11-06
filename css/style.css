@@ -357,12 +357,11 @@ img {
 .user-block {
     float: right;
     width: 300px;
-    font-size: 0;
 }
 
 .user-block-btn {
-    display: inline-block;
-    vertical-align: top;
+    width: 85px;
+    float: left;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 21px;
     line-height: 45px;
@@ -372,6 +371,10 @@ img {
     background-color: #ffffff;
     text-transform: none;
     text-decoration: none;
+}
+
+.user-block-btn:last-child {
+    width: 101px;
 }
 
 .user-block-login {
@@ -688,19 +691,18 @@ img {
 
 /* Popular Products */
 
-.header-popular {
-    display: block;
+.index-header {
     background-color: #f7f3ec;
     padding: 25px;
     margin-bottom: 20px;
 }
 
-.header-popular-title {
+.index-header-title {
     float: left;
     color: #32425c;
 }
 
-.header-popular-btn {
+.index-header-btn {
     min-width: 253px;
     float: right;
 }
@@ -1315,7 +1317,7 @@ img {
     z-index: 100;
 }
 
-.modal-top {
+.modal-content {
     padding: 45px 80px 15px 80px;
     font-size: 0;
 }
@@ -1355,7 +1357,7 @@ img {
     width: 426px;
 }
 
-.modal-bottom {
+.modal-footer {
     padding: 37px 80px 37px 80px;
     font-size: 0;
     background-color: #f1f1f1;
@@ -1399,6 +1401,7 @@ img {
 
 .user-block-top {
     background-color: #ffffff;
+    margin-bottom: 5px;
 }
 
 .user-block-name {
@@ -1442,9 +1445,51 @@ img {
     color: #c5c5c5;
 }
 
+.user-block-bottom {
+    
+}
+
+.user-block-link {
+    padding-left: 15px;
+    color: #32425c;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.user-block-link:after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+    background-color: #32425c;
+    margin-left: 15px;
+}
+
+.user-block-link:last-child:after {
+    display: none;
+}
+
+.user-block-link:hover {
+    color: #ee3643;
+}
+
+.user-block-link:active {
+    color: #c5c5c5;
+}
+
 .breadcrumbs-item {
     display: inline-block;
     vertical-align: baseline;
+}
+
+.page-header {
+    display: block;
+    background-color: #f2f6f8;
+    padding: 25px;
+    margin-bottom: 20px;
+    color: #32425c;
 }
 
 /* Filter */

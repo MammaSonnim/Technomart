@@ -48,7 +48,7 @@
                             г. Санкт-Петербург, Б. Конюшенная, д. 19/8
                         </div>
                     </div>
-                    <div class="user-block">
+                    <div class="user-block clearfix">
                         <a class="user-block-login user-block-btn icon-login" href="#">Войти</a>
                         <a class="user-block-sign-up user-block-btn" href="#" >Регистрация</a>
                     </div>
@@ -127,9 +127,9 @@
             </article>
         </section>
         <article class="popular-products container-center">
-            <header class="header-popular clearfix">
-                <h2 class="header-popular-title page-title">Популярные товары:</h2>
-                <a href="#" class="header-popular-btn btn">Все популярные товары</a>
+            <header class="index-header clearfix">
+                <h2 class="index-header-title page-title">Популярные товары:</h2>
+                <a href="#" class="index-header-btn btn">Все популярные товары</a>
             </header>
             <section class="products">
                 <article class="product-card">
@@ -184,9 +184,9 @@
         </article>
 
         <article class="popular-brands container-center">
-            <header class="header-popular clearfix">
-                <h2 class="header-popular-title page-title">Популярные производители:</h2>
-                <a href="#" class="header-popular-btn btn">Все производители</a>
+            <header class="index-header clearfix">
+                <h2 class="index-header-title page-title">Популярные производители:</h2>
+                <a href="#" class="index-header-btn btn">Все производители</a>
             </header>
             <div class="brands-list">
                 <a class="brands-item" href="#">
@@ -375,7 +375,7 @@
     <div class="modal">
         <div class="modal-close">Назад</div>
         <form class="contact-form" action="/echo" method="post">
-            <div class="modal-top">
+            <div class="modal-content">
                 <label class="contact-form-label" for="name-field">Ваше имя:
                     <input class="contact-form-item" type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
                 </label>
@@ -386,7 +386,7 @@
                     <textarea class="contact-form-item text-field" name="text" rows="5" id="text-field" placeholder="В свободной форме"></textarea>
                 </label>
             </div>
-            <div class="modal-bottom">
+            <div class="modal-footer">
                 <input class="modal-btn btn" type="button" name="send" value="Отправить">
                 <a class="modal-btn form-btn" href="#">Отмена</a>
             </div>
