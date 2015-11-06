@@ -460,7 +460,7 @@ img {
 
 /* MAIN CONTENT start */
 .features {
-    margin: 60px 0 33px 0;
+    margin: 60px auto 33px auto;
 }
 .features-col-left {
     margin-right: 20px;
