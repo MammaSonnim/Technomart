@@ -1430,9 +1430,13 @@ img {
     color: #c5c5c5;
 }
 
-.icon-logout:hover:before,
-.user-block-name:hover .icon-user:before {
+.icon-logout:hover:before {
     color: #32425c;
+}
+
+.user-block-name:hover {
+    color: #32425c;
+    outline: 1px solid green;
 }
 
 .breadcrumbs-item {
