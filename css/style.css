@@ -167,55 +167,6 @@
     opacity: 1;
 }
 
-/* Sprites */
-.sprite {
-    background-image: url(../images/sprite.png);
-    background-repeat: no-repeat;
-    display: block;
-}
-
-.sprite-features_delivery {
-    width: 78px;
-    height: 63px;
-    background-position: -5px -5px;
-}
-
-.sprite-features_materials {
-    width: 44px;
-    height: 65px;
-    background-position: -93px -5px;
-}
-
-.sprite-features_mech {
-    width: 78px;
-    height: 62px;
-    background-position: -147px -5px;
-}
-
-.sprite-features_sales {
-    width: 59px;
-    height: 72px;
-    background-position: -235px -5px;
-}
-
-.sprite-features_tools {
-    width: 75px;
-    height: 61px;
-    background-position: -304px -5px;
-}
-
-.sprite-shadow-service {
-    width: 10px;
-    height: 272px;
-    background-position: -389px -5px;
-}
-
-.sprite-z_cross {
-    width: 21px;
-    height: 21px;
-    background-position: -409px -5px;
-}
-
 /* Common styles */
 
 body {
@@ -312,7 +263,7 @@ img {
     margin-right: 0;
 }
 
-.bar-logo {
+.logo {
     width: 220px;
     float: left;
     background-color: #ee3643;
@@ -1175,13 +1126,42 @@ img {
 
 .company-map-open {
     position: absolute;
-    display: block;
+    top: 33px;
+    left: 0;
+    display: none;
+    width: 940px;
+    height: 446px;
+    box-shadow: 0 0 20px rgba(0, 1, 1, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 21px;
+    height: 21px;
+    padding: 10px;
+    font-size: 0;
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    background-position: -469px 5px;
+    cursor: pointer;
 }
 
 /* MAIN CONTENT end */
 
 /* MAIN FOOTER start */
 /* Main Footer Content*/
+
+.main-footer,
+.main-footer a {
+    color: #ffffff;
+}
+
+.main-footer-content {
+    background-color: #32425c;
+}
+
 .main-footer-content-col-left {
     width: 350px;
     float: left;
@@ -1197,6 +1177,10 @@ img {
     vertical-align: middle;
 }
 /* Footer Bar */
+.main-footer-bar {
+    background-color: #293449;
+}
+
 .main-footer-bar-col {
     width: 300px;
     float: left;
@@ -1231,24 +1215,10 @@ img {
     width: 620px;
     min-height: 423px;
     border-top: 7px solid #ee3643;
-    display: block;
+    display: none;
     background-color: #ffffff;
     box-shadow: 0 20px 40px rgba(0, 1, 1, 0.5);
     z-index: 100;
-}
-
-.modal-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 21px;
-    height: 21px;
-    padding: 10px;
-    font-size: 0;
-    background-image: url(../images/sprite.png);
-    background-repeat: no-repeat;
-    background-position: -400px 5px;
-    cursor: pointer;
 }
 
 .modal-top {
