@@ -87,11 +87,13 @@
         <article class="catalog">
             <div class="container-center clearfix">
                 <header class="page-header">
-                    <h1 class="page-title">Перфораторы</h1>
+                    <h1 class="inner-header-title page-title">Перфораторы</h1>
                 </header>
                 <section class="catalog-col catalog-filter">
                     <form action="/echo" method="get">
-                        <h2 class="catalog-filter-header">Фильтр:</h2>
+                        <header class="filter-header">
+                            <h2 class="filter-header-title">Фильтр:</h2>
+                        </header>
                         <fieldset class="filter-price">
                             <h3 class="filter-title">Цена</h3>
                             <div class="filter-price-range">
@@ -144,21 +146,20 @@
                     </form>
                 </section>
                 <section class="catalog-col catalog-gallery">
-                    <div class="catalog-gallery-sort clearfix">
-                        <div class="sort-header">
+                    <header class="filter-header clearfix">
+                        <h2 class="filter-header-title sort-title">
                             Сортировка:
-                        </div>
+                        </h2>
                         <div class="sort-direction">
-                            <a class="sort-ascend sort-item" href="#"></a>
-                            <a class="sort-descend sort-item" href="#"></a>
+                            <a class="sort-ascend" href="#"></a>
+                            <a class="sort-descend" href="#"></a>
                         </div>
                         <div class="sort-list">
-                            <span class="sort-item">По цене</span>
+                            <a class="sort-item" href="#">По цене</a>
                             <a class="sort-item" href="#">По типу</a>
                             <a class="sort-item" href="#">По функционалу</a>
                         </div>
-
-                    </div>
+                    </header>
                     <section class="catalog-products">
                         <article class="product-card">
                             <div class="product-card-actions">

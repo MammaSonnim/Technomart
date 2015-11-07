@@ -87,7 +87,6 @@ body {
     min-width: 960px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
-    line-height: 24px;
     font-weight: 400;
     color: #32425c;
 }
@@ -117,7 +116,6 @@ img {
     line-height: 38px;
     vertical-align: middle;
     font-weight: 400;
-    color: #000000;
     text-transform: uppercase;
 }
 
@@ -1422,7 +1420,6 @@ img {
     padding: 10px;
     float: right;
     font-size: 0;
-    line-height: 0;
 }
 
 .icon-logout:before {
@@ -1479,11 +1476,17 @@ img {
 }
 
 /* PAGE CONTENT start */
+.breadcrumbs {
+    margin: 18px auto 18px auto;
+}
+
 .breadcrumbs-item,
 .catalog-filter-header,
+.filter-title,
 .filter-btn,
-.sort-header,
-.sort-item {
+.filter-header-title,
+.sort-item,
+.sort-direction {
     padding: 0;
     margin: 0;
     font-size: 13px;
@@ -1501,7 +1504,6 @@ img {
 
 .breadcrumbs-item:first-child {
     font-size: 0;
-    line-height: 0;
 }
 
 .icon-home:before {
@@ -1533,19 +1535,40 @@ img {
     background-color: #f2f6f8;
     padding: 25px;
     margin-bottom: 20px;
-    color: #32425c;
 }
 
-
+.inner-header-title {
+    color: #32425c;
+}
 
 /* Filter */
 .catalog-filter {
     width: 220px;
     float: left;
 }
+
+.filter-header {
+    padding: 10px 9px 10px 9px;
+    background-color: #f7f3ec;
+    margin-bottom: 20px;
+}
+
+.filter-header-title {
+
+}
+
+.filter-title {
+    padding: 0;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
 .filter-price,
 .filter-brands,
-.filter-supply {
+.filter-supply,
+.sort-ascend,
+.sort-descend {
     margin: 0;
     padding: 0;
 }
@@ -1555,35 +1578,57 @@ img {
     width: 700px;
     float: right;
 }
+
 .catalog-gallery-sort {
     
 }
-.sort-header {
+
+.sort-title {
     float: left;
     width: 140px;
     outline: 1px solid red;
 }
+
 .sort-list {
     float: right;
-    width: 380px;
-    outline: 1px solid red;
+    width: 391px;
 }
+
 .sort-direction {
     float: right;
-    width: 60px;
+    width: 68px;
     outline: 1px solid red;
 }
-.sort-direction {
-    font-size: 0;
-}
-.sort-list {
-    font-size: 0;
-}
+
 .sort-item {
+    margin: 0 33px;
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: middle;
     font-size: 13px;
 }
+
+.sort-item:first-child {
+    margin-left: 0;
+}
+
+.sort-item:last-child {
+    margin-right: 0;
+}
+
+.sort-direction {
+    width: 70px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sort-ascend {
+
+}
+
+.sort-descend {
+    
+}
+
 .catalog-products {
     font-size: 0;
 }
