@@ -91,21 +91,25 @@
                 </header>
                 <section class="catalog-col catalog-filter">
                     <form action="/echo" method="get">
-                        <header class="filter-header">
+                        <header class="filter-header clearfix">
                             <h2 class="filter-header-title">Фильтр:</h2>
                         </header>
                         <fieldset class="filter-price">
                             <h3 class="filter-title">Цена</h3>
-                            <div class="filter-price-range">
-                                <div class="range-scale">
-                                    <div style="margin-left:50px;width:100px;" class="bar"></div>
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div  class="bar" style="margin-left:50px;width:100px;"></div>
                                 </div>
-                                <div class="range-toggle min-toggle"></div>
-                                <div class="range-toggle max-toggle"></div>
+                                <div class="toggle toggle-min"></div>
+                                <div class="toggle toggle-max"></div>
                             </div>
-                            <div class="range-price-controls">
-                                от <input class="min-price" type="text" value="5 000">
-                                до <input class="max-price" type="text" value="15 000">
+                            <div class="price-controls">
+                                <label class="price-controls-min" for="price-controls-min">
+                                    <input class="price-controls-min" type="text" value="0">
+                                </label>
+                                <label class="price-controls-max" for="price-controls-max">
+                                    <input class="price-controls-max" type="text" value="30 000">
+                                </label>
                             </div>
                         </fieldset>
                         <fieldset class="filter-brands">
@@ -147,15 +151,15 @@
                 </section>
                 <section class="catalog-col catalog-gallery">
                     <header class="filter-header clearfix">
-                        <h2 class="filter-header-title sort-title">
+                        <h2 class="filter-header-title">
                             Сортировка:
                         </h2>
-                        <div class="sort-direction">
-                            <a class="sort-ascend" href="#"></a>
-                            <a class="sort-descend" href="#"></a>
+                        <div class="sort-direction clearfix">
+                            <a class="sort-ascend icon-up-dir active" href="#">Вверх</a>
+                            <a class="sort-descend icon-down-dir" href="#">Вниз</a>
                         </div>
-                        <div class="sort-list">
-                            <a class="sort-item" href="#">По цене</a>
+                        <div class="sort-list clearfix">
+                            <a class="sort-item active" href="#">По цене</a>
                             <a class="sort-item" href="#">По типу</a>
                             <a class="sort-item" href="#">По функционалу</a>
                         </div>
