@@ -1572,6 +1572,8 @@ img {
     border-bottom: 1px solid #e5e5e5;
 }
 
+/* Цена */
+
 .range-controls {
     position: relative;
     margin-bottom: 15px;
@@ -1587,7 +1589,6 @@ img {
 }
 
 .range-controls .bar {
-    width: 70%;
     height: 2px;
     background: #00ca74;
 }
@@ -1606,7 +1607,7 @@ img {
 }
 
 .range-controls .toggle-min {
-    left: 20px;
+    left: 10px;
 }
 
 .range-controls .toggle-max {
@@ -1643,6 +1644,52 @@ img {
     text-align: center;
     background-color: #f7f3ec;
     border-radius: 3px;
+}
+
+/* Производители */
+
+.filter-brands-item {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.filter-brands-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.filter-brands-item:before {
+    content: '\2610';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "symbols-technomart";
+    font-size: 28px;
+    line-height: 20px;
+    color: #c1c1c1;
+}
+
+.filter-brands input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .filter-brands-item:before {
+    content: '\2611';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "symbols-technomart";
+    font-size: 28px;
+    line-height: 20px;
+    color: #c1c1c1;
+}
+
+/* Питание */
+
+.filter-supply input[type="radio"] {
+    display: none;
 }
 
 /* Gallery */

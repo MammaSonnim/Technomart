@@ -98,7 +98,7 @@
                             <h3 class="filter-title">Цена</h3>
                             <div class="range-controls">
                                 <div class="scale">
-                                    <div class="bar"></div>
+                                    <div class="bar" style="margin-left: 0%; width: 70%"></div>
                                 </div>
                                 <div class="toggle toggle-min"></div>
                                 <div class="toggle toggle-max"></div>
@@ -106,7 +106,6 @@
                             <div class="price-controls clearfix">
                                 <label class="price-controls-min" for="price-controls-min">
                                     <input id="price-controls-min" type="text" value="0">
-                                -
                                 </label>
                                 <label class="price-controls-max" for="price-controls-max">
                                     <input id="price-controls-max" type="text" value="30 000">
@@ -115,26 +114,16 @@
                         </fieldset>
                         <fieldset class="filter-brands">
                             <h3 class="filter-title">Производители</h3>
-                            <label>
-                            <input type="checkbox" name="checkbox" value="bosch" checked>
-                                Bosch
-                            </label>
-                            <label>
-                                <input type="checkbox" name="checkbox" value="interscol">
-                                Интерскол
-                            </label>
-                            <label>
-                                <input type="checkbox" name="checkbox" value="makita" checked>
-                                Makita
-                            </label>
-                            <label>
-                                <input type="checkbox" name="checkbox" value="devalt">
-                                Dewalt
-                            </label>
-                            <label>
-                                <input type="checkbox" name="checkbox" value="hitachi">
-                                Hitachi
-                            </label>
+                            <label class="filter-brands-item" for="checkbox-1">Bosch</label>
+                            <input id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
+                            <label class="filter-brands-item" for="checkbox-2">Интерскол</label>
+                            <input id="checkbox-2" type="checkbox" name="checkbox" value="interscol">
+                            <label class="filter-brands-item" for="checkbox-3">Makita</label>
+                            <input id="checkbox-3" type="checkbox" name="checkbox" value="makita" checked>
+                            <label class="filter-brands-item" for="checkbox-4">Dewalt</label>
+                            <input id="checkbox-4" type="checkbox" name="checkbox" value="devalt">
+                            <label class="filter-brands-item" for="checkbox-5">Hitachi</label>
+                            <input id="checkbox-5" type="checkbox" name="checkbox" value="hitachi">
                         </fieldset>
                         <fieldset class="filter-supply">
                             <h3 class="filter-title">Питание</h3>
