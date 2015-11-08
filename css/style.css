@@ -1544,9 +1544,10 @@ img {
 }
 
 .filter-header {
-    background-color: #f7f3ec;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px 0 10px 19px;
+    background-color: #f7f3ec;
+    border-radius: 3px;
 }
 
 .filter-header-title {
@@ -1555,9 +1556,93 @@ img {
 }
 
 .filter-title {
+    margin-bottom: 10px;
     font-size: 17px;
     line-height: 30px;
     font-weight: 700;
+}
+
+.filter-price,
+.filter-brands,
+.filter-supply {
+    padding: 0 0 25px 0;
+    margin: 0 0 10px 0;
+    width: 220px;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.range-controls {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 39px 20px 0 20px;
+    min-height: 41px;
+    background-color: #f7f3ec;
+    border-radius: 3px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background-color: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid #fff;
+    background: #ababab;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    cursor: pointer;
+}
+
+.range-controls .toggle-min {
+    left: 20px;
+}
+
+.range-controls .toggle-max {
+    left: 145px;
+}
+
+.price-controls {
+    font-size: 0;
+    line-height: 18px;
+}
+
+.price-controls-min {
+    width: 117px;
+    float: left;
+}
+
+.price-controls-min:after {
+    content: "—";
+    padding: 10px 8px;
+    font-size: 17px;
+}
+
+.price-controls-max {
+    width: 95px;
+    float: right;
+}
+
+.price-controls input[type="text"] {
+    margin: 0;
+    padding: 8px;
+    width: 79px;
+    border: none;
+    font-size: 17px;
+    text-align: center;
+    background-color: #f7f3ec;
+    border-radius: 3px;
 }
 
 /* Gallery */
