@@ -1660,7 +1660,12 @@ img {
     margin-bottom: 0;
 }
 
-.filter-brands-item:before {
+.filter-brands input[type="checkbox"] {
+    display: none;
+}
+
+.filter-brands-item:before,
+input[type="checkbox"]:checked + .filter-brands-item:before {
     content: '\2610';
     margin-right: 10px;
     display: inline-block;
@@ -1671,19 +1676,16 @@ img {
     color: #c1c1c1;
 }
 
-.filter-brands input[type="checkbox"] {
-    display: none;
-}
-
 input[type="checkbox"]:checked + .filter-brands-item:before {
     content: '\2611';
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-    font-family: "symbols-technomart";
-    font-size: 28px;
-    line-height: 20px;
-    color: #c1c1c1;
+}
+
+input[type="checkbox"]:disabled + .filter-brands-item:before {
+    opacity: 0.3;
+}
+
+input[type="checkbox"]:disabled:checked + .filter-brands-item:before {
+    content: '\2611';
 }
 
 /* Питание */
