@@ -127,14 +127,10 @@
                         </fieldset>
                         <fieldset class="filter-supply">
                             <h3 class="filter-title">Питание</h3>
-                            <label>
-                            <input type="radio" name="radiogroup" value="shave" checked>
-                                Аккумуляторные
-                            </label>
-                            <label>
-                                <input type="radio" name="radiogroup" value="care">
-                                Сетевые
-                            </label>
+                            <input id="radio-1" type="radio" name="radiogroup" value="battery" checked disabled>
+                            <label class="filter-supply-item" for="radio-1">Аккумуляторные</label>
+                            <input id="radio-2" type="radio" name="radiogroup" value="mains">
+                            <label class="filter-supply-item" for="radio-2">Сетевые</label>
                         </fieldset>
                         <button class="filter-btn" type="submit">Показать</button>
                     </form>

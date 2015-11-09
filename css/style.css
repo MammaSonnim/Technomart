@@ -1646,9 +1646,10 @@ img {
     border-radius: 3px;
 }
 
-/* Производители */
+/* Производители и Питание */
 
-.filter-brands-item {
+.filter-brands-item,
+.filter-supply-item {
     margin-bottom: 20px;
     display: block;
     font-size: 15px;
@@ -1656,16 +1657,20 @@ img {
     text-transform: uppercase;
 }
 
-.filter-brands-item:last-of-type {
+.filter-brands-item:last-of-type,
+.filter-supply-item:last-of-type {
     margin-bottom: 0;
 }
 
-.filter-brands input[type="checkbox"] {
+.filter-brands input[type="checkbox"],
+.filter-supply input[type="radio"] {
     display: none;
 }
 
 .filter-brands-item:before,
-input[type="checkbox"]:checked + .filter-brands-item:before {
+input[type="checkbox"]:checked + .filter-brands-item:before,
+.filter-supply-item:before,
+input[type="radio"]:checked + .filter-supply-item:before {
     content: '\2610';
     margin-right: 10px;
     display: inline-block;
@@ -1676,22 +1681,23 @@ input[type="checkbox"]:checked + .filter-brands-item:before {
     color: #c1c1c1;
 }
 
-input[type="checkbox"]:checked + .filter-brands-item:before {
-    content: '\2611';
+.filter-supply-item:before {
+    content: '\25cb';
 }
 
-input[type="checkbox"]:disabled + .filter-brands-item:before {
-    opacity: 0.3;
-}
-
+input[type="checkbox"]:checked + .filter-brands-item:before,
 input[type="checkbox"]:disabled:checked + .filter-brands-item:before {
     content: '\2611';
 }
 
-/* Питание */
+input[type="radio"]:checked + .filter-supply-item:before,
+input[type="radio"]:disabled:checked + .filter-supply-item:before {
+    content: '\25cf';
+}
 
-.filter-supply input[type="radio"] {
-    display: none;
+input[type="checkbox"]:disabled + .filter-brands-item:before,
+input[type="radio"]:disabled + .filter-supply-item:before {
+    opacity: 0.3;
 }
 
 /* Gallery */
