@@ -1491,6 +1491,11 @@ img {
     text-decoration: none;
 }
 
+.breadcrumbs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .breadcrumbs-item {
     display: inline-block;
     vertical-align: middle;
