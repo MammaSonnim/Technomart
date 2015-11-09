@@ -94,7 +94,7 @@
                         <header class="filter-header clearfix">
                             <h2 class="filter-header-title">Фильтр:</h2>
                         </header>
-                        <fieldset class="filter-price">
+                        <fieldset class="filter filter-price">
                             <h3 class="filter-title">Цена</h3>
                             <div class="range-controls">
                                 <div class="scale">
@@ -112,7 +112,7 @@
                                 </label>
                             </div>
                         </fieldset>
-                        <fieldset class="filter-brands">
+                        <fieldset class="filter filter-brands">
                             <h3 class="filter-title">Производители</h3>
                             <input id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
                             <label class="filter-brands-item" for="checkbox-1">Bosch</label>
@@ -125,7 +125,7 @@
                             <input id="checkbox-5" type="checkbox" name="checkbox" value="hitachi" disabled>
                             <label class="filter-brands-item" for="checkbox-5">Hitachi</label>
                         </fieldset>
-                        <fieldset class="filter-supply">
+                        <fieldset class="filter filter-supply">
                             <h3 class="filter-title">Питание</h3>
                             <input id="radio-1" type="radio" name="radiogroup" value="battery" checked disabled>
                             <label class="filter-supply-item" for="radio-1">Аккумуляторные</label>
@@ -261,19 +261,21 @@
                         </article>
                     </section>
                     <div class="catalog-paginator">
-                        <a class="paginator-link btn">1</a>
-                        <a class="paginator-link btn" href="#">2</a>
-                        <a class="paginator-link btn" href="#">3</a>
-                        <a class="paginator-link btn" href="#">Следующая</a>
+                        <a class="paginator-link current" href="#">1</a>
+                        <a class="paginator-link" href="#">2</a>
+                        <a class="paginator-link" href="#">3</a>
+                        <a class="paginator-link" href="#">Следующая</a>
                     </div>
                 </section>
             </div>
             <section class="catalog-promo">
                 <div class="container-center">
-                    <h2 class="page-title">Пара слов о перфораторах</h2>
+                    <h2 class="page-title catalog-promo-title">Пара слов о перфораторах</h2>
                     <p class="page-text">
                         Перфоратор — универсальный строительный инструмент.
-                        Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+                        Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+                    </p>
+                    <p class="page-text">
                         Существуют электромеханические и пневматические перфораторы.
                         Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
                         В ассортиментном ряду есть выбор «трехрежимников»:
@@ -354,9 +356,10 @@
             </div>
         </div>
     </footer>
-    <div class="modal">
+    <div class="modal modal-cart">
         <div class="modal-close">Назад</div>
-            <div class="modal-content">
+            <div class="modal-content modal-cart-content">
+                <p class="modal-text">Товар добавлен в корзину!</p>
             </div>
             <div class="modal-footer">
                 <input class="modal-btn btn" type="button" name="send" value="Отправить">

@@ -88,7 +88,7 @@ body {
     font-family: 'PT Sans', 'Arial', sans-serif;
     font-size: 13px;
     font-weight: 400;
-    color: #32425c;
+    color: #000000;
 }
 
 img {
@@ -122,6 +122,8 @@ img {
 .page-text {
     margin: 0;
     padding: 0;
+    font-size: 13px;
+    line-height: 24px;
 }
 
 .btn {
@@ -929,8 +931,6 @@ img {
 .service-text {
     width: 400px;
     margin: 0 0 25px 0;
-    padding: 0;
-    color: #000000;
 }
 
 .service-slider {
@@ -1034,9 +1034,7 @@ img {
 
 .service-slide-text {
     margin: 0 0 30px 0;
-    padding: 0;
     width: 380px;
-    color: #000000;
 }
 
 .service-slide-btn {
@@ -1481,7 +1479,8 @@ img {
 .filter-header-title,
 .filter-title,
 .filter-btn,
-.sort-item {
+.sort-item,
+.paginator-link {
     padding: 0;
     margin: 0;
     font-size: 13px;
@@ -1562,14 +1561,17 @@ img {
     font-weight: 700;
 }
 
-.filter-price,
-.filter-brands,
-.filter-supply {
+.filter {
     padding: 0 0 25px 0;
     margin: 0 0 10px 0;
     width: 220px;
     border: none;
     border-bottom: 1px solid #e5e5e5;
+}
+
+.filter:last-of-type {
+    border-bottom: none;
+    margin-bottom: 55px;
 }
 
 /* Цена */
@@ -1599,7 +1601,7 @@ img {
     left: 0px;
     width: 4px;
     height: 4px;
-    border: 8px solid #fff;
+    border: 8px solid #ffffff;
     background: #ababab;
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -1700,10 +1702,21 @@ input[type="radio"]:disabled + .filter-supply-item:before {
     opacity: 0.3;
 }
 
+.filter-btn {
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    padding: 10px 39px;
+}
+
 /* Gallery */
 .catalog-gallery {
     width: 700px;
     float: right;
+    margin-bottom: 60px;
+}
+
+.catalog-products {
+    margin-bottom: 30px;
 }
 
 .sort-direction {
@@ -1781,8 +1794,65 @@ input[type="radio"]:disabled + .filter-supply-item:before {
 }
 
 .paginator-link {
+    min-width: 37px;
+    min-height: 37px;
+    margin-right: 10px;
     display: inline-block;
-    vertical-align: baseline;
-    font-size: 14px;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 37px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
 }
+
+.paginator-link:last-child {
+    padding: 0 32px;
+    margin-right: 0;
+}
+
+.paginator-link:hover {
+    border-color: #bdc6ca;
+}
+
+.paginator-link:active {
+    border-color: #ee3643;
+}
+
+.paginator-link.current {
+    background-color: #ee3643;
+    border-color: #ee3643;
+    color: #ffffff;
+}
+
+/* Catalog Promo */
+
+.catalog-promo {
+    background-color: #f2f6f8;
+    padding: 60px 0 70px 0;
+}
+
+.catalog-promo-title {
+    margin-bottom: 20px;
+}
+
 /* PAGE CONTENT end*/
+
+.modal-cart {
+    min-height: 282px;
+}
+
+.modal-cart-content {
+    padding: 52px 80px;
+    margin: 0;
+}
+
+.modal-text {
+    padding: 0 0 0 100px;
+    margin: 0;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 30px;
+    line-height: 66px;
+    background: url(../images/modal_success.png) no-repeat;
+    background-position: 0 50%;
+    
+}
