@@ -202,7 +202,7 @@ img {
     float: left;
 }
 
-.search input[type="search"] {
+.search-field {
     float: right;
     padding-left: 49px;
     width: 220px;
@@ -216,34 +216,34 @@ img {
     opacity: 1;
 }
 
-.search input[type="search"]:hover {
+.search-field:hover {
     background-color: #212a3a;
 }
 
-.search input[type="search"]:focus {
+.search-field:focus {
     background-color: #ffffff;
     outline: none;
     color: #000000;
 }
 
-.search button[type="submit"] {
-    display: none;
+.search-field::-webkit-input-placeholder {
+    color: #ffffff;
+}
+ 
+.search-field:-moz-placeholder { /* Firefox 18- */
+    color: #ffffff;
+}
+ 
+.search-field::-moz-placeholder {  /* Firefox 19+ */
+    color: #ffffff;
+}
+ 
+.search-field:-ms-input-placeholder {
+    color: #ffffff;
 }
 
-.search input::-webkit-input-placeholder {
-    color: #ffffff;
-}
- 
-.search input:-moz-placeholder { /* Firefox 18- */
-    color: #ffffff;
-}
- 
-.search input::-moz-placeholder {  /* Firefox 19+ */
-    color: #ffffff;
-}
- 
-.search input:-ms-input-placeholder {
-    color: #ffffff;
+.search-submit {
+    display: none;
 }
 
 .icon-search:before {
@@ -255,18 +255,47 @@ img {
     color: #6a7180;
 }
 
-.search input[type="search"]:hover ~ .icon-search:before {
+.search-field:hover + .search-submit {
     color: #ffffff;
 }
 
-.search button[type="submit"]:hover ~ .icon-search:before {
+.search-submit:hover {
     color: #ffffff;
     cursor: pointer;
 }
 
-.search input[type="search"]:focus ~ .icon-search:before {
+.search-field:focus + .search-submit {
     color: #ee3643;
 }
+
+/* почему не работает? */
+/*
+.search-submit:hover + .search-field {
+    background-color: red;
+}
+.search-submit:hover ~ .search-field {
+    background-color: red;
+}
+.icon-search:hover + .search-field {
+    background-color: red;
+}
+.icon-search:hover ~ .search-field {
+    background-color: red;
+}
+.icon-search:before:hover + .search-field {
+    background-color: red;
+}
+.icon-search:before:hover ~ .search-field {
+    background-color: red;
+}
+.icon-search:hover:before + .search-field {
+    background-color: red;
+}
+.icon-search:hover:before ~ .search-field {
+    background-color: red;
+}
+
+*/
 
 .bar-bookmark-count:hover,
 .bar-cart-count:hover {
