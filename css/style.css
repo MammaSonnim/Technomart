@@ -243,7 +243,11 @@ img {
 }
 
 .search-submit {
-    display: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    float: left;
+    color: #6a7180;
 }
 
 .icon-search:before {
@@ -252,56 +256,34 @@ img {
     left: 20px;
     margin-right: 10px;
     font-size: 130%;
-    color: #6a7180;
 }
 
-.search-field:hover ~ .icon-search:before {
-    color: #ffffff;
-}
-
-.search-submit:hover ~ .icon-search:before {
+.search-submit:hover {
     color: #ffffff;
     cursor: pointer;
 }
 
-.search-field:focus ~ .icon-search:before {
+.search-field:hover + .search-submit {
+    color: #ffffff;
+}
+
+.search-field:focus + .search-submit {
     color: #ee3643;
 }
 
-/* почему не работает? */
-/*
-.search-submit:hover + .search-field {
-    background-color: red;
-}
-.search-submit:hover ~ .search-field {
-    background-color: red;
-}
-.icon-search:hover + .search-field {
-    background-color: red;
-}
-.icon-search:hover ~ .search-field {
-    background-color: red;
-}
-.icon-search:before:hover + .search-field {
-    background-color: red;
-}
-.icon-search:before:hover ~ .search-field {
-    background-color: red;
-}
-.icon-search:hover:before + .search-field {
-    background-color: red;
-}
-.icon-search:hover:before ~ .search-field {
-    background-color: red;
+.search-submit-label {
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-при подъеме псевдоса наверх пашет вот этот вариант -->
-*/
-
-.icon-search:hover ~ .search-field {
+.search-submit-label:hover + .search-field {
     background-color: #212a3a;
 }
-
 
 .bar-bookmark-count:hover,
 .bar-cart-count:hover {
