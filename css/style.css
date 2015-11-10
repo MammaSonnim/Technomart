@@ -649,23 +649,29 @@ img {
 
 .features-slider-inner {
     overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.features-slider-btn-1:checked ~ .features-slider-inner {
+    background-image: url(../images/features_slide-1_perforator.jpg);
+}
+
+.features-slider-btn-2:checked ~ .features-slider-inner {
+    background-image: url(../images/features_slide-2_drill.jpg);
 }
 
 .features-slides {
     width: 200%;
     min-height: 266px;
-    background-repeat: no-repeat;
 }
 
 .features-slider-btn-1:checked ~ .features-slider-inner .features-slides {
-    background-image: url(../images/features_slide-1_perforator.jpg);
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
 }
 
 .features-slider-btn-2:checked ~ .features-slider-inner .features-slides {
-    background-image: url(../images/features_slide-2_drill.jpg);
     -webkit-transform: translate(-620px);
     -ms-transform: translate(-620px);
     transform: translate(-620px);
