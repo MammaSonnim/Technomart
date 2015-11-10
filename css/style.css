@@ -255,16 +255,16 @@ img {
     color: #6a7180;
 }
 
-.search-field:hover + .search-submit {
+.search-field:hover ~ .icon-search:before {
     color: #ffffff;
 }
 
-.search-submit:hover {
+.search-submit:hover ~ .icon-search:before {
     color: #ffffff;
     cursor: pointer;
 }
 
-.search-field:focus + .search-submit {
+.search-field:focus ~ .icon-search:before {
     color: #ee3643;
 }
 
@@ -642,8 +642,8 @@ img {
     display: none;
 }
 
-#features-slider-btn-1:checked ~ .features-slider-controls label[for="features-slider-btn-1"],
-#features-slider-btn-2:checked ~ .features-slider-controls label[for="features-slider-btn-2"] {
+.features-slider-btn-1:checked ~ .features-slider-controls .icon-left,
+.features-slider-btn-2:checked ~ .features-slider-controls .icon-right {
     background-color: #ca2c37;
 }
 
@@ -654,17 +654,18 @@ img {
 .features-slides {
     width: 200%;
     min-height: 266px;
-    background-image: url(../images/features_slides.jpg);
     background-repeat: no-repeat;
 }
 
-#features-slider-btn-1:checked ~ .features-slider-inner .features-slides {
+.features-slider-btn-1:checked ~ .features-slider-inner .features-slides {
+    background-image: url(../images/features_slide-1_perforator.jpg);
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
 }
 
-#features-slider-btn-2:checked ~ .features-slider-inner .features-slides {
+.features-slider-btn-2:checked ~ .features-slider-inner .features-slides {
+    background-image: url(../images/features_slide-2_drill.jpg);
     -webkit-transform: translate(-620px);
     -ms-transform: translate(-620px);
     transform: translate(-620px);
@@ -995,9 +996,9 @@ img {
     display: none;
 }
 
-#service-slider-btn-1:checked ~ .service-slider-controls label[for="service-slider-btn-1"],
-#service-slider-btn-2:checked ~ .service-slider-controls label[for="service-slider-btn-2"],
-#service-slider-btn-3:checked ~ .service-slider-controls label[for="service-slider-btn-3"] {
+.service-slider-btn-1:checked ~ .service-slider-controls .control-1,
+.service-slider-btn-2:checked ~ .service-slider-controls .control-2,
+.service-slider-btn-3:checked ~ .service-slider-controls .control-3 {
     background-color: #ffffff;
     color: #32425c;
     border-color: #ffffff;
@@ -1009,15 +1010,15 @@ img {
     background-position: 100% 100%;
 }
 
-#service-slider-btn-1:checked ~ .service-slider-inner {
+.service-slider-btn-1:checked ~ .service-slider-inner {
     background-image: url(../images/service_slide_delivery.png);
 }
 
-#service-slider-btn-2:checked ~ .service-slider-inner {
+.service-slider-btn-2:checked ~ .service-slider-inner {
     background-image: url(../images/service_slide_garanty.png);
 }
 
-#service-slider-btn-3:checked ~ .service-slider-inner {
+.service-slider-btn-3:checked ~ .service-slider-inner {
     background-image: url(../images/service_slide_credit.png);
 }
 
@@ -1026,19 +1027,19 @@ img {
     min-height: 272px;
 }
 
-#service-slider-btn-1:checked ~ .service-slider-inner .service-slides {
+.service-slider-btn-1:checked ~ .service-slider-inner .service-slides {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
 }
 
-#service-slider-btn-2:checked ~ .service-slider-inner .service-slides {
+.service-slider-btn-2:checked ~ .service-slider-inner .service-slides {
     -webkit-transform: translate(-700px);
     -ms-transform: translate(-700px);
     transform: translate(-700px);
 }
 
-#service-slider-btn-3:checked ~ .service-slider-inner .service-slides {
+.service-slider-btn-3:checked ~ .service-slider-inner .service-slides {
     -webkit-transform: translate(-1400px);
     -ms-transform: translate(-1400px);
     transform: translate(-1400px);
@@ -1079,7 +1080,8 @@ img {
     content: '';
     width: 10px;
     height: 272px;
-    background: url(../images/shadow-service.png) no-repeat;
+    background: url(../images/sprite.png) no-repeat;
+    background-position: -459px 0px;
     z-index: 100;
 }
 
