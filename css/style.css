@@ -295,7 +295,13 @@ img {
     background-color: red;
 }
 
+при подъеме псевдоса наверх пашет вот этот вариант -->
 */
+
+.icon-search:hover ~ .search-field {
+    background-color: #212a3a;
+}
+
 
 .bar-bookmark-count:hover,
 .bar-cart-count:hover {
