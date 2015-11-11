@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
  @font-face {
   font-family: 'symbols-technomart';
@@ -22,7 +22,7 @@
 */
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "symbols-technomart";
+  font-family: 'symbols-technomart';
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -603,6 +603,7 @@ img {
 .features-slider {
     position: relative;
     width: 620px;
+    background-color: #dda028;
 }
 
 .features-slider input[type="radio"] {
@@ -688,7 +689,7 @@ img {
 .features-slide {
     float: left;
     width: 570px;
-    padding: 25px;
+    padding: 25px 25px 21px 25px;
 }
 
 .features-slide-title {
@@ -841,7 +842,6 @@ img {
     vertical-align: top;
     width: 218px;
     height: 160px;
-    margin-right: 20px;
     margin-bottom: 10px;
     text-align: center;
     line-height: 168px;
@@ -1069,7 +1069,7 @@ img {
     width: 10px;
     height: 272px;
     background: url(../images/sprite.png) no-repeat;
-    background-position: -459px 0px;
+    background-position: -459px 0;
     z-index: 100;
 }
 
@@ -1100,7 +1100,7 @@ img {
 .page-list-item {
     position: relative;
     margin: 0;
-    padding: 0px 0 15px 35px;
+    padding: 0 0 15px 35px;
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -1555,7 +1555,7 @@ img {
 
 .breadcrumbs-item:after {
     content: '\3e';
-    font-family: "symbols-technomart";
+    font-family: 'symbols-technomart';
     display: inline-block;
     width: 1em;
     margin-right: 10px;
@@ -1643,7 +1643,7 @@ img {
 .range-controls .toggle {
     position: absolute;
     top: 30px;
-    left: 0px;
+    left: 0;
     width: 4px;
     height: 4px;
     border: 8px solid #ffffff;
@@ -1672,7 +1672,7 @@ img {
 }
 
 .price-controls-min:after {
-    content: "—";
+    content: '—';
     padding: 10px 8px;
     font-size: 17px;
 }
@@ -1722,7 +1722,7 @@ img {
     margin-right: 10px;
     display: inline-block;
     vertical-align: middle;
-    font-family: "symbols-technomart";
+    font-family: 'symbols-technomart';
     font-size: 28px;
     line-height: 20px;
     color: #c1c1c1;
