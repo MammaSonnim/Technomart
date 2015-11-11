@@ -486,13 +486,13 @@ img {
     margin: 60px auto 33px auto;
 }
 .features-col-left {
+    float: left;
     margin-right: 20px;
     margin-bottom: 20px;
-    float: left;
 }
 .features-col-right {
-    margin-bottom: 20px;
     float: right;
+    margin-bottom: 20px;
 }
 .features-item {
     position: relative;
@@ -1301,15 +1301,15 @@ img {
     right: 0;
     left: 0;
     bottom: 0;
-    margin: auto;
+    z-index: 100;
+    display: none;
     width: 620px;
-    height: 423px;
-    overflow: auto;
+    height: 424px;
+    margin: auto;
     border-top: 7px solid #ee3643;
-    display: block;
+    overflow: auto;
     background-color: #ffffff;
     box-shadow: 0 20px 40px rgba(0, 1, 1, 0.5);
-    z-index: 100;
 }
 
 .modal-close {
@@ -1883,8 +1883,8 @@ img {
 }
 
 .modal-cart-content {
-    padding: 52px 80px;
     margin: 0;
+    padding: 52px 80px;
 }
 
 .modal-text {
