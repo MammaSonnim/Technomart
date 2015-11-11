@@ -1304,12 +1304,14 @@ img {
 /* pop-up */
 .modal {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -215px;
-    margin-left: -310px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
     width: 620px;
-    min-height: 423px;
+    height: 423px;
+    overflow: auto;
     border-top: 7px solid #ee3643;
     display: none;
     background-color: #ffffff;
@@ -1850,7 +1852,7 @@ img {
 /* PAGE CONTENT end*/
 
 .modal-cart {
-    min-height: 282px;
+    height: 282px;
 }
 
 .modal-cart-content {
