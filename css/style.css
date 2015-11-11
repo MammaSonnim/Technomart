@@ -522,10 +522,10 @@ img {
 }
 
 .features-item:before {
+    content: '';
     position: absolute;
     top:20%;
     left: 70%;
-    content: '';
     background-image: url(../images/sprite.png);
     background-repeat: no-repeat;
 }
@@ -563,7 +563,7 @@ img {
 .flag-new:after {
     content: '';
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     width: 60px;
     height: 59px;
@@ -574,11 +574,14 @@ img {
 
 
 .features-item-title {
+    width: 170px;
     margin: 18px 0 15px 0;
     padding: 0;
-    font-family: 'Cuprum', 'Arial', sans-serif;
+        white-space: nowrap;
+    overflow: hidden;
     font-size: 24px;
     line-height: 30px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
     font-weight: 700;
     color: #ffffff;
 }
@@ -610,19 +613,19 @@ img {
     position: absolute;
     left: 50%;
     bottom: 36px;
+    z-index: 100;
     margin-left: -12px;
     text-align: center;
-    z-index: 100;
 }
 
 .features-slider-control {
     position: relative;
-    width: 6px;
-    height: 6px;
     display: inline-block;
     vertical-align: middle;
-    background-color: #ffffff;
+    width: 6px;
+    height: 6px;
     border: 2px solid #ffffff;
+    background-color: #ffffff;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -684,18 +687,19 @@ img {
 
 .features-slide {
     float: left;
-    width: 595px;
-    padding-left: 25px;
-    padding-top: 25px;
+    width: 570px;
+    padding: 25px;
 }
 
 .features-slide-title {
     margin: 0;
     padding: 0;
-    font-family: 'Cuprum', 'Arial', sans-serif;
-    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
     font-size: 36px;
     line-height: 36px;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
 }
@@ -703,6 +707,8 @@ img {
 .features-slide-text {
     margin: 0 0 120px 0;
     padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
     font-size: 18px;
     line-height: 24px;
     color: #ffffff;
@@ -710,24 +716,25 @@ img {
 
 .features-slide-btn {
     width: 195px;
-    line-height: 38px;
 }
 
 /* Popular Products */
 
 .index-header {
-    background-color: #f7f3ec;
-    padding: 25px;
     margin-bottom: 20px;
+    padding: 25px;
+    background-color: #f7f3ec;
 }
 
 .index-header-title {
     float: left;
+    max-width: 60%;
     color: #32425c;
 }
 
 .index-header-btn {
     min-width: 253px;
+    max-width: 40%;
     float: right;
 }
 
@@ -832,7 +839,7 @@ img {
 .product-card-image {
     display: inline-block;
     vertical-align: top;
-    width: 220px;
+    width: 218px;
     height: 160px;
     margin-right: 20px;
     margin-bottom: 10px;
@@ -1069,7 +1076,8 @@ img {
 /* Company block */
 .company-cols {
     position: relative;
-    padding: 50px 0 85px 0;
+    padding-top: 50px;
+    padding-bottom: 85px;
 }
 .company-col-left {
     width: 540px;
