@@ -11,11 +11,11 @@
     <header class="main-header">
         <div class="main-header-bar">
             <div class="container-center clearfix">
-                <a class="logo btn" href="#">Техномарт</a>
+                <a class="logo btn" href="index.html">Техномарт</a>
                 <form class="search clearfix" action="/echo" method="get">
+                    <label class="search-submit-label" for="search-submit"></label>
                     <input class="search-field" id="search-field" type="search" name="search" placeholder="Поиск">
-                    <button class="search-submit" id="search-submit" type="submit"></button>
-                    <label class="icon-search" for="search-submit"></label>
+                    <button class="search-submit icon-search" id="search-submit" type="submit"></button>
                 </form>
                 <a class="bar-bookmark-count bar-btn icon-bookmark" href="#">Закладки: <span>0</span></a>
                 <a class="bar-cart-count bar-btn icon-basket count-active" href="#">Корзина: <span>10</span></a>
@@ -114,22 +114,22 @@
                         </fieldset>
                         <fieldset class="filter filter-brands">
                             <h3 class="filter-title">Производители</h3>
-                            <input id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
+                            <input class="filer-brands-checkbox" id="checkbox-1" type="checkbox" name="checkbox" value="bosch" checked>
                             <label class="filter-brands-item" for="checkbox-1">Bosch</label>
-                            <input id="checkbox-2" type="checkbox" name="checkbox" value="interscol">
+                            <input class="filer-brands-checkbox" id="checkbox-2" type="checkbox" name="checkbox" value="interscol">
                             <label class="filter-brands-item" for="checkbox-2">Интерскол</label>
-                            <input id="checkbox-3" type="checkbox" name="checkbox" value="makita" checked disabled>
+                            <input class="filer-brands-checkbox" id="checkbox-3" type="checkbox" name="checkbox" value="makita" checked disabled>
                             <label class="filter-brands-item" for="checkbox-3">Makita</label>
-                            <input id="checkbox-4" type="checkbox" name="checkbox" value="devalt">
+                            <input class="filer-brands-checkbox" id="checkbox-4" type="checkbox" name="checkbox" value="devalt">
                             <label class="filter-brands-item" for="checkbox-4">Dewalt</label>
-                            <input id="checkbox-5" type="checkbox" name="checkbox" value="hitachi" disabled>
+                            <input class="filer-brands-checkbox" id="checkbox-5" type="checkbox" name="checkbox" value="hitachi">
                             <label class="filter-brands-item" for="checkbox-5">Hitachi</label>
                         </fieldset>
                         <fieldset class="filter filter-supply">
                             <h3 class="filter-title">Питание</h3>
-                            <input id="radio-1" type="radio" name="radiogroup" value="battery" checked disabled>
+                            <input class="filter-supply-radio" id="radio-1" type="radio" name="radiogroup" value="battery" checked>
                             <label class="filter-supply-item" for="radio-1">Аккумуляторные</label>
-                            <input id="radio-2" type="radio" name="radiogroup" value="mains">
+                            <input class="filter-supply-radio" id="radio-2" type="radio" name="radiogroup" value="mains">
                             <label class="filter-supply-item" for="radio-2">Сетевые</label>
                         </fieldset>
                         <button class="filter-btn" type="submit">Показать</button>
@@ -289,7 +289,7 @@
         <div class="main-footer-content">
             <div class="container-center clearfix">
                 <div class="main-footer-content-col-left footer-content-wrapper">
-                    <a class="footer-logo logo btn" href="#">Техномарт</a>
+                    <a class="footer-logo logo btn" href="index.html">Техномарт</a>
                     <p class="footer-contacts">
                         г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
                         +7 (812) 555-05-55
