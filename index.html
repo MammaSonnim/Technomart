@@ -377,7 +377,7 @@
             </div>
             <div class="modal-footer">
                 <button class="modal-btn btn" type="submit" name="send">Отправить</button>
-                <a class="modal-btn modal-form-btn" href="#">Отмена</a>
+                <a class="modal-btn modal-close-btn modal-contact-close-btn" href="#">Отмена</a>
             </div>
         </form>
     </div>
@@ -388,7 +388,7 @@
         </div>
         <div class="modal-footer">
             <button class="modal-btn btn" type="submit" name="send">Отправить</button>
-            <a class="modal-btn modal-form-btn" href="#">Отмена</a>
+            <a class="modal-btn modal-close-btn" href="#">Отмена</a>
         </div>
     </div>
     
@@ -407,10 +407,19 @@
             popupMap.classList.remove("modal-map-show");
         });
         
+        window.addEventListener("keydown", function(event) {
+            if (event.keyCode === 27) {
+                if (popupMap.classList.contains("modal-map-show")) {
+                    popupMap.classList.remove("modal-map-show");
+                }
+            }
+        });
+        
         
         var openContact = document.querySelector(".open-modal-btn");
         var popupContact = document.querySelector(".modal-contact");
         var closeContact = document.querySelector(".modal-contact-close");
+        var closeContactBtn = popupContact.querySelector(".modal-close-btn");
         var formContact = popupContact.querySelector(".contact-form");
         var nameContact = popupContact.querySelector("[name=name]");
         var emailContact = popupContact.querySelector("[name=email]");
@@ -433,11 +442,6 @@
                     }
         });
         
-        closeContact.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupContact.classList.remove("modal-contact-show");
-        });
-        
         formContact.addEventListener("submit", function(event) {
             if (!nameContact.value || !emailContact.value || !textContact.value) {
                 event.preventDefault();
@@ -448,10 +452,30 @@
             }
         });
         
+        closeContact.addEventListener("click", function(event) {
+            event.preventDefault();
+            popupContact.classList.remove("modal-contact-show");
+        });
         
+        closeContactBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            popupContact.classList.remove("modal-contact-show");
+        });
+        
+        window.addEventListener("keydown", function(event) {
+            if (event.keyCode === 27) {
+                if (popupContact.classList.contains("modal-contact-show")) {
+                    popupContact.classList.remove("modal-contact-show");
+                }
+            }
+        });
+        
+
+                     
         var openCart = document.querySelectorAll(".product-card-actions-buy");
         var popupCart = document.querySelector(".modal-cart");
         var closeCart = document.querySelector(".modal-cart-close");
+        var closeCartBtn = popupCart.querySelector(".modal-close-btn");
         	
         for (var i = 0; i < openCart.length; i++) {
             openCart[i].addEventListener("click", function(event) {
@@ -463,6 +487,19 @@
         closeCart.addEventListener("click", function(event) {
             event.preventDefault();
             popupCart.classList.remove("modal-cart-show");
+        });
+        
+        closeCartBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            popupCart.classList.remove("modal-cart-show");
+        });
+        
+        window.addEventListener("keydown", function(event) {
+            if (event.keyCode === 27) {
+                if (popupCart.classList.contains("modal-cart-show")) {
+                    popupCart.classList.remove("modal-cart-show");
+                }
+            }
         });
     </script>
 </body>
