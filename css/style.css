@@ -158,7 +158,7 @@ img {
 
 /* Main Header Bar */
 .main-header-bar {
-    background-color: #32425c;
+    background-color: #293449;
 }
 
 .bar-btn {
@@ -174,7 +174,7 @@ img {
     font-family: 'Cuprum', 'Arial', sans-serif;
     text-decoration: none;
     color: #ffffff;
-    background-color: #32425c;
+    background-color: #293449;
     border-radius: 0;
     
 }
@@ -219,17 +219,8 @@ img {
     line-height: 24px;
     font-family: 'Cuprum', 'Arial', sans-serif;
     color: #ffffff;
-    background-color: #32425c;
+    background-color: #293449;
     opacity: 1;
-}
-
-.search-field:hover {
-    background-color: #212a3a;
-}
-
-.search-field:focus {
-    color: #000000;
-    background-color: #ffffff;
     outline: none;
 }
 
@@ -254,6 +245,9 @@ img {
     margin: 0;
     padding: 0;
     border: none;
+}
+
+.icon-search {
     color: #6a7180;
 }
 
@@ -262,34 +256,28 @@ img {
     top: 12px;
     left: 20px;
     margin-right: 10px;
-    font-size: 130%;
+    font-size: 17px;
 }
 
-.search-submit:hover {
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.search-field:hover + .search-submit {
-    color: #ffffff;
-}
-
-.search-field:focus + .search-submit {
-    color: #ee3643;
-}
-
-.search-submit-label {
-    position: absolute;
-    z-index: 10;
-    top: 8px;
-    left: 18px;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.search-submit-label:hover + .search-field {
+.search:hover {
     background-color: #212a3a;
+}
+
+.search:hover .icon-search {
+    color: #ffffff;
+}
+
+.search-field:focus,
+.search-field:focus + .search-submit {
+    background-color: #ffffff;
+}
+
+.search-field:focus {
+    color: #000000;
+}
+
+.search-field:focus + .search-submit .icon-search {
+    color: #ee3643;
 }
 
 .bar-bookmark-count:hover,
