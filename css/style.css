@@ -1118,7 +1118,12 @@ img {
     margin-bottom: 32px;
 }
 
-.company-map-open {
+.open-modal-map {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modal-map {
     position: absolute;
     top: 33px;
     left: 0;
@@ -1126,6 +1131,10 @@ img {
     width: 940px;
     height: 446px;
     box-shadow: 0 0 20px rgba(0, 1, 1, 0.5);
+}
+
+.modal-map-show {
+    display: block;
 }
 
 
@@ -1292,7 +1301,6 @@ img {
     left: 0;
     bottom: 0;
     z-index: 100;
-    display: none;
     width: 620px;
     height: 424px;
     margin: auto;
@@ -1300,6 +1308,14 @@ img {
     overflow: auto;
     background-color: #ffffff;
     box-shadow: 0 20px 40px rgba(0, 1, 1, 0.5);
+}
+
+.modal-contact {
+    display: none;
+}
+
+.modal-contact-show {
+    display: block;
 }
 
 .modal-close {
@@ -1405,6 +1421,31 @@ img {
     border-radius: 3px;
 }
 
+.modal-cart {
+    display: none;
+    height: 282px;
+}
+
+.modal-cart-show {
+    display: block;
+}
+
+.modal-cart-content {
+    margin: 0;
+    padding: 52px 80px;
+}
+
+.modal-text {
+    padding: 0 0 0 100px;
+    margin: 0;
+    font-family: 'Cuprum', 'Arial', sans-serif;
+    font-size: 30px;
+    line-height: 66px;
+    background: url(../images/modal_success.png) no-repeat;
+    background-position: 0 50%;
+}
+
+
 
 /* CATALOG CONTENT start*/
 
@@ -1459,10 +1500,6 @@ img {
 .user-block-name:active .icon-user:before,
 .user-block-name:active {
     color: #c5c5c5;
-}
-
-.user-block-bottom {
-    
 }
 
 .user-block-link {
@@ -1870,22 +1907,3 @@ img {
 
 /* PAGE CONTENT end*/
 
-.modal-cart {
-    height: 282px;
-}
-
-.modal-cart-content {
-    margin: 0;
-    padding: 52px 80px;
-}
-
-.modal-text {
-    padding: 0 0 0 100px;
-    margin: 0;
-    font-family: 'Cuprum', 'Arial', sans-serif;
-    font-size: 30px;
-    line-height: 66px;
-    background: url(../images/modal_success.png) no-repeat;
-    background-position: 0 50%;
-    
-}

@@ -280,13 +280,13 @@
                     заехав в наш офис:
                 </p>
                 <div class="company-map">
-                    <a href="contacts.html"><img src="images/map-preview.png" alt="«Техномарт» на карте" width="300" height="158"></a>
+                    <a class="open-modal-map" href="contacts.html"><img src="images/map-preview.png" alt="«Техномарт» на карте" width="300" height="158"></a>
                 </div>
-                <div class="company-map-open">
-                    <div class="modal-close">Назад</div>
+                <div class="modal-map">
+                    <div class="modal-close modal-map-close">Назад</div>
                     <img src="images/map-open.png" alt="Карта" width="940" height="446">
                 </div>
-                <a href="contacts.html" class="open-modal-btn btn">Заблудились? Напишите нам!</a>
+                <a class="open-modal-btn btn" href="contacts.html">Заблудились? Напишите нам!</a>
             </div>
         </div>
     </div>
@@ -361,8 +361,8 @@
             </div>
         </div>
     </footer>
-    <div class="modal">
-        <a class="modal-close" href="index.html">Назад</a>
+    <div class="modal modal-contact">
+        <a class="modal-close modal-contact-close" href="#">Назад</a>
         <form class="contact-form" action="/echo" method="post">
             <div class="modal-content">
                 <label class="contact-form-label" for="name-field">Ваше имя:
@@ -381,5 +381,61 @@
             </div>
         </form>
     </div>
+    <div class="modal modal-cart">
+        <a class="modal-close modal-cart-close" href="catalog.html">Назад</a>
+        <div class="modal-content modal-cart-content">
+            <p class="modal-text">Товар добавлен в корзину!</p>
+        </div>
+        <div class="modal-footer">
+            <input class="modal-btn btn" type="button" name="send" value="Отправить">
+            <a class="modal-btn modal-form-btn" href="#">Отмена</a>
+        </div>
+    </div>
+    
+    <script>
+        var openMap = document.querySelector(".open-modal-map");
+        var popupMap = document.querySelector(".modal-map");
+        var closeMap = document.querySelector(".modal-map-close");
+        
+        openMap.addEventListener("click", function(eventMap) {
+            eventMap.preventDefault();
+            popupMap.classList.add("modal-map-show");
+        });
+        
+        closeMap.addEventListener("click", function(eventMap) {
+            eventMap.preventDefault();
+            popupMap.classList.remove("modal-map-show");
+        });
+        
+        var openContact = document.querySelector(".open-modal-btn");
+        var popupContact = document.querySelector(".modal-contact");
+        var closeContact = document.querySelector(".modal-contact-close");
+
+        openContact.addEventListener("click", function(eventContact) {
+            eventContact.preventDefault();
+            popupContact.classList.add("modal-contact-show");
+        });
+        
+        closeContact.addEventListener("click", function(eventContact) {
+            eventContact.preventDefault();
+            popupContact.classList.remove("modal-contact-show");
+        });
+        
+        var openCart = document.querySelectorAll(".product-card-actions-buy");
+        var popupCart = document.querySelector(".modal-cart");
+        var closeCart = document.querySelector(".modal-cart-close");
+        	
+        for (var i = 0; i < openCart.length; i++) {
+            openCart[i].addEventListener("click", function(eventCart) {
+                eventCart.preventDefault();
+                popupCart.classList.add("modal-cart-show");
+            });
+        }
+
+        closeCart.addEventListener("click", function(eventCart) {
+            eventCart.preventDefault();
+            popupCart.classList.remove("modal-cart-show");
+        });
+    </script>
 </body>
 </html>
