@@ -749,6 +749,7 @@ img {
 }
 
 .product-card:hover {
+    border-color: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 1, 1, 0.5);
 }
 
@@ -898,10 +899,12 @@ img {
 }
 
 .brands-item:hover {
+    border-color: #ffffff;
     box-shadow: 0 10px 25px rgba(0, 1, 1, 0.5);
 }
 
 .brands-item:active {
+    border-color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 1, 1, 0.5);
 }
 

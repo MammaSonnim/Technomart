@@ -366,17 +366,17 @@
         <form class="contact-form" action="/echo" method="post">
             <div class="modal-content">
                 <label class="contact-form-label" for="name-field">Ваше имя:
-                    <input class="contact-form-item" type="text" name="login" id="name-field" placeholder="Представьтесь, пожалуйста">
+                    <input class="contact-form-item" type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста" required>
                 </label>
                 <label class="contact-form-label" for="email-field">Ваш e-mail:
-                    <input class="contact-form-item" type="email" name="password" id="email-field" placeholder="Для отправки ответа">
+                    <input class="contact-form-item" type="email" name="email" id="email-field" placeholder="Для отправки ответа" required>
                 </label>
                 <label class="contact-form-label" for="text-field">Текст письма:
-                    <textarea class="contact-form-item text-field" name="text" rows="5" id="text-field" placeholder="В свободной форме"></textarea>
+                    <textarea class="contact-form-item text-field" name="text" rows="5" id="text-field" placeholder="В свободной форме" required></textarea>
                 </label>
             </div>
             <div class="modal-footer">
-                <input class="modal-btn btn" type="button" name="send" value="Отправить">
+                <button class="modal-btn btn" type="submit" name="send">Отправить</button>
                 <a class="modal-btn modal-form-btn" href="#">Отмена</a>
             </div>
         </form>
@@ -387,7 +387,7 @@
             <p class="modal-text">Товар добавлен в корзину!</p>
         </div>
         <div class="modal-footer">
-            <input class="modal-btn btn" type="button" name="send" value="Отправить">
+            <button class="modal-btn btn" type="submit" name="send">Отправить</button>
             <a class="modal-btn modal-form-btn" href="#">Отмена</a>
         </div>
     </div>
@@ -397,43 +397,71 @@
         var popupMap = document.querySelector(".modal-map");
         var closeMap = document.querySelector(".modal-map-close");
         
-        openMap.addEventListener("click", function(eventMap) {
-            eventMap.preventDefault();
+        openMap.addEventListener("click", function(event) {
+            event.preventDefault();
             popupMap.classList.add("modal-map-show");
         });
         
-        closeMap.addEventListener("click", function(eventMap) {
-            eventMap.preventDefault();
+        closeMap.addEventListener("click", function(event) {
+            event.preventDefault();
             popupMap.classList.remove("modal-map-show");
         });
+        
         
         var openContact = document.querySelector(".open-modal-btn");
         var popupContact = document.querySelector(".modal-contact");
         var closeContact = document.querySelector(".modal-contact-close");
+        var formContact = popupContact.querySelector(".contact-form");
+        var nameContact = popupContact.querySelector("[name=name]");
+        var emailContact = popupContact.querySelector("[name=email]");
+        var textContact = popupContact.querySelector("[name=text]");
+        var storageName = localStorage.getItem("nameContact");
+        var storageEmail = localStorage.getItem("emailContact");
 
-        openContact.addEventListener("click", function(eventContact) {
-            eventContact.preventDefault();
+        openContact.addEventListener("click", function(event) {
+            event.preventDefault();
             popupContact.classList.add("modal-contact-show");
+            
+            if (storageName) {
+                nameContact.value = storageName;
+                emailContact.focus();
+            } else if (storageEmail) {
+                    emailContact.value = storageEmail;
+                    textContact.focus();
+                } else {
+                        nameContact.focus();
+                    }
         });
         
-        closeContact.addEventListener("click", function(eventContact) {
-            eventContact.preventDefault();
+        closeContact.addEventListener("click", function(event) {
+            event.preventDefault();
             popupContact.classList.remove("modal-contact-show");
         });
+        
+        formContact.addEventListener("submit", function(event) {
+            if (!nameContact.value || !emailContact.value || !textContact.value) {
+                event.preventDefault();
+                console.log("Заполните все поля")
+            } else {
+                localStorage.setItem("nameContact", nameContact.value);
+                localStorage.setItem("emailContact", emailContact.value);
+            }
+        });
+        
         
         var openCart = document.querySelectorAll(".product-card-actions-buy");
         var popupCart = document.querySelector(".modal-cart");
         var closeCart = document.querySelector(".modal-cart-close");
         	
         for (var i = 0; i < openCart.length; i++) {
-            openCart[i].addEventListener("click", function(eventCart) {
-                eventCart.preventDefault();
+            openCart[i].addEventListener("click", function(event) {
+                event.preventDefault();
                 popupCart.classList.add("modal-cart-show");
             });
         }
 
-        closeCart.addEventListener("click", function(eventCart) {
-            eventCart.preventDefault();
+        closeCart.addEventListener("click", function(event) {
+            event.preventDefault();
             popupCart.classList.remove("modal-cart-show");
         });
     </script>
