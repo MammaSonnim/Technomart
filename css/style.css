@@ -946,20 +946,31 @@ img {
 
 .service-text {
     width: 400px;
-    margin: 0 0 25px 0;
+    margin: 0 0 65px 0;
 }
 
 .service-slider {
-    position: relative;
-    width: 700px;
-    margin: 0 0 0 240px;
+    width: 940px;
+    margin: 0 0 0 0;
 }
 
 .service-slider-controls {
-    position: absolute;
-    top: 47px;
-    left: -240px;
+    position: relative;
+    float: left;
     width: 240px;
+}
+
+/* pseudo-shadow */
+.service-slider-controls:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -45px;
+    width: 10px;
+    height: 272px;
+    background: url(../images/sprite.png) no-repeat;
+    background-position: -459px 0;
+    z-index: 100;
 }
 
 .service-slider-control {
@@ -993,6 +1004,9 @@ img {
 }
 
 .service-slider-inner {
+    float: right;
+    width: 620px;
+    min-height: 283px;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: 100% 100%;
@@ -1022,21 +1036,20 @@ img {
 }
 
 .service-slider-btn-2:checked ~ .service-slider-inner .service-slides {
-    -webkit-transform: translate(-700px);
-    -ms-transform: translate(-700px);
-    transform: translate(-700px);
+    -webkit-transform: translate(-620px);
+    -ms-transform: translate(-620px);
+    transform: translate(-620px);
 }
 
 .service-slider-btn-3:checked ~ .service-slider-inner .service-slides {
-    -webkit-transform: translate(-1400px);
-    -ms-transform: translate(-1400px);
-    transform: translate(-1400px);
+    -webkit-transform: translate(-1240px);
+    -ms-transform: translate(-1240px);
+    transform: translate(-1240px);
 }
 
 .service-slide {
     float: left;
     width: 620px;
-    padding: 47px 0 57px 80px;
 }
 
 .service-slide-title {
@@ -1057,21 +1070,8 @@ img {
 
 .service-slide-btn {
     width: 195px;
-    line-height: 38px;
 }
 
-
-/* pseudo-shadow */
-.service-slider:before {
-    position: absolute;
-    left: -10px;
-    content: '';
-    width: 10px;
-    height: 272px;
-    background: url(../images/sprite.png) no-repeat;
-    background-position: -459px 0;
-    z-index: 100;
-}
 
 /* Company block */
 .company-cols {
