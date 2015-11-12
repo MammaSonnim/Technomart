@@ -220,7 +220,6 @@ img {
     font-family: 'Cuprum', 'Arial', sans-serif;
     color: #ffffff;
     background-color: #293449;
-    opacity: 1;
     outline: none;
 }
 
@@ -1452,12 +1451,12 @@ img {
 }
 
 .icon-logout:hover:before,
-.user-block-name:hover.icon-user:before {
+.user-block-name:hover .icon-user:before {
     color: #32425c;
 }
 
 .icon-logout:active:before,
-.user-block-name:active.icon-user:before,
+.user-block-name:active .icon-user:before,
 .user-block-name:active {
     color: #c5c5c5;
 }
