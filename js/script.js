@@ -86,7 +86,7 @@ formContact.addEventListener("submit", function(event) {
   } else {
     localStorage.setItem("nameContact", nameContact.value);
     localStorage.setItem("emailContact", emailContact.value);
-    console.log("wtf!");
+    console.log(localStorage.getItem("emailContact"));
   }
 });
 
