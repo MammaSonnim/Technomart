@@ -24,6 +24,11 @@ closeCart.addEventListener("click", function(event) {
 closeCartBtn.addEventListener("click", function(event) {
   event.preventDefault();
   popupCart.classList.remove("modal-cart-show");
+  var count = Number(counter.innerHTML);
+    counter.innerHTML = count -=1;
+  if (count === 0) {
+    countBtn.classList.remove("count-active");
+  }
 });
 
 window.addEventListener("keydown", function(event) {
