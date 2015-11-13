@@ -11,7 +11,8 @@ for (var i = 0; i < openCart.length; i++) {
     event.preventDefault();
     popupCart.classList.add("modal-cart-show");
     countBtn.classList.add("count-active");
-    counter.innerHTML = 1;
+    var count = Number(counter.innerHTML);
+    counter.innerHTML = count +=1;
   });
 }
 
