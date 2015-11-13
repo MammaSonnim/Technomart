@@ -2,7 +2,8 @@
 var openCart = document.querySelectorAll(".product-card-actions-buy");
 var popupCart = document.querySelector(".modal-cart");
 var closeCart = document.querySelector(".modal-cart-close");
-var closeCartBtn = popupCart.querySelector(".modal-close-btn");
+var cancelCart = popupCart.querySelector(".modal-close-btn");
+var submitCart = popupCart.querySelector(".modal-btn");
 var countBtn = document.querySelector(".bar-cart-count");
 var counter = countBtn.querySelector(".count");
 
@@ -10,25 +11,25 @@ for (var i = 0; i < openCart.length; i++) {
   openCart[i].addEventListener("click", function(event) {
     event.preventDefault();
     popupCart.classList.add("modal-cart-show");
-    countBtn.classList.add("count-active");
-    var count = Number(counter.innerHTML);
-    counter.innerHTML = count +=1;
   });
 }
+
+submitCart.addEventListener("click", function(event) {
+  event.preventDefault();
+  countBtn.classList.add("count-active");
+  var count = Number(counter.innerHTML);
+  counter.innerHTML = count +=1;
+  popupCart.classList.remove("modal-cart-show");
+});
 
 closeCart.addEventListener("click", function(event) {
   event.preventDefault();
   popupCart.classList.remove("modal-cart-show");
 });
 
-closeCartBtn.addEventListener("click", function(event) {
+cancelCart.addEventListener("click", function(event) {
   event.preventDefault();
   popupCart.classList.remove("modal-cart-show");
-  var count = Number(counter.innerHTML);
-    counter.innerHTML = count -=1;
-  if (count === 0) {
-    countBtn.classList.remove("count-active");
-  }
 });
 
 window.addEventListener("keydown", function(event) {
@@ -38,7 +39,6 @@ window.addEventListener("keydown", function(event) {
     }
   }
 });
-
 
 var openMap = document.querySelector(".open-modal-map");
 var popupMap = document.querySelector(".modal-map");
@@ -66,7 +66,7 @@ window.addEventListener("keydown", function(event) {
 var openContact = document.querySelector(".open-modal-btn");
 var popupContact = document.querySelector(".modal-contact");
 var closeContact = document.querySelector(".modal-contact-close");
-var closeContactBtn = popupContact.querySelector(".modal-close-btn");
+var cancelContact = popupContact.querySelector(".modal-close-btn");
 var formContact = popupContact.querySelector(".contact-form");
 var nameContact = popupContact.querySelector("[name=name]");
 var emailContact = popupContact.querySelector("[name=email]");
@@ -106,7 +106,7 @@ closeContact.addEventListener("click", function(event) {
   popupContact.classList.remove("modal-error");
 });
 
-closeContactBtn.addEventListener("click", function(event) {
+cancelContact.addEventListener("click", function(event) {
   event.preventDefault();
   popupContact.classList.remove("modal-contact-show");
   popupContact.classList.remove("modal-error");
