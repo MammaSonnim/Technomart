@@ -1,4 +1,3 @@
-
 var openCart = document.querySelectorAll(".product-card-actions-buy");
 var popupCart = document.querySelector(".modal-cart");
 var closeCart = document.querySelector(".modal-cart-close");
