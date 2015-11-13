@@ -1140,6 +1140,15 @@ img {
     display: block;
 }
 
+.modal-map-close {
+    z-index: 100;
+}
+
+#map {
+  width: 940px;
+  height: 446px;
+}
+
 
 /* MAIN CONTENT end */
 
