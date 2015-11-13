@@ -1297,6 +1297,41 @@ img {
 /* MAIN FOOTER end */
 
 /* pop-up */
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/*
+.modal-fade {
+    -webkit-animation: fade 1s;
+    animation: fade 1s;
+}
+*/
+
+
 .modal {
     position: fixed;
     top: 0;
@@ -1311,6 +1346,8 @@ img {
     overflow: auto;
     background-color: #ffffff;
     box-shadow: 0 20px 40px rgba(0, 1, 1, 0.5);
+    -webkit-animation: fade 0.2s both;
+    animation: fade 0.2s both;
 }
 
 .modal-contact {
@@ -1446,6 +1483,41 @@ img {
     line-height: 66px;
     background: url(../images/modal_success.png) no-repeat;
     background-position: 0 50%;
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+}
+
+.modal-error {
+    -webkit-animation: shake 0.3s;
+    animation: shake 0.3s;
 }
 
 

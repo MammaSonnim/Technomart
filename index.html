@@ -366,13 +366,13 @@
         <form class="contact-form" action="/echo" method="post">
             <div class="modal-content">
                 <label class="contact-form-label" for="name-field">Ваше имя:
-                    <input class="contact-form-item" type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста" required>
+                    <input class="contact-form-item" type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста">
                 </label>
                 <label class="contact-form-label" for="email-field">Ваш e-mail:
-                    <input class="contact-form-item" type="email" name="email" id="email-field" placeholder="Для отправки ответа" required>
+                    <input class="contact-form-item" type="email" name="email" id="email-field" placeholder="Для отправки ответа">
                 </label>
                 <label class="contact-form-label" for="text-field">Текст письма:
-                    <textarea class="contact-form-item text-field" name="text" rows="5" id="text-field" placeholder="В свободной форме" required></textarea>
+                    <textarea class="contact-form-item text-field" name="text" rows="5" id="text-field" placeholder="В свободной форме"></textarea>
                 </label>
             </div>
             <div class="modal-footer">
@@ -391,116 +391,6 @@
             <a class="modal-btn modal-close-btn" href="#">Отмена</a>
         </div>
     </div>
-    
-    <script>
-        var openMap = document.querySelector(".open-modal-map");
-        var popupMap = document.querySelector(".modal-map");
-        var closeMap = document.querySelector(".modal-map-close");
-        
-        openMap.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupMap.classList.add("modal-map-show");
-        });
-        
-        closeMap.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupMap.classList.remove("modal-map-show");
-        });
-        
-        window.addEventListener("keydown", function(event) {
-            if (event.keyCode === 27) {
-                if (popupMap.classList.contains("modal-map-show")) {
-                    popupMap.classList.remove("modal-map-show");
-                }
-            }
-        });
-        
-        
-        var openContact = document.querySelector(".open-modal-btn");
-        var popupContact = document.querySelector(".modal-contact");
-        var closeContact = document.querySelector(".modal-contact-close");
-        var closeContactBtn = popupContact.querySelector(".modal-close-btn");
-        var formContact = popupContact.querySelector(".contact-form");
-        var nameContact = popupContact.querySelector("[name=name]");
-        var emailContact = popupContact.querySelector("[name=email]");
-        var textContact = popupContact.querySelector("[name=text]");
-        var storageName = localStorage.getItem("nameContact");
-        var storageEmail = localStorage.getItem("emailContact");
-
-        openContact.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupContact.classList.add("modal-contact-show");
-            
-            if (storageName) {
-                nameContact.value = storageName;
-                emailContact.focus();
-            } else if (storageEmail) {
-                    emailContact.value = storageEmail;
-                    textContact.focus();
-                } else {
-                        nameContact.focus();
-                    }
-        });
-        
-        formContact.addEventListener("submit", function(event) {
-            if (!nameContact.value || !emailContact.value || !textContact.value) {
-                event.preventDefault();
-                console.log("Заполните все поля")
-            } else {
-                localStorage.setItem("nameContact", nameContact.value);
-                localStorage.setItem("emailContact", emailContact.value);
-            }
-        });
-        
-        closeContact.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupContact.classList.remove("modal-contact-show");
-        });
-        
-        closeContactBtn.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupContact.classList.remove("modal-contact-show");
-        });
-        
-        window.addEventListener("keydown", function(event) {
-            if (event.keyCode === 27) {
-                if (popupContact.classList.contains("modal-contact-show")) {
-                    popupContact.classList.remove("modal-contact-show");
-                }
-            }
-        });
-        
-
-                     
-        var openCart = document.querySelectorAll(".product-card-actions-buy");
-        var popupCart = document.querySelector(".modal-cart");
-        var closeCart = document.querySelector(".modal-cart-close");
-        var closeCartBtn = popupCart.querySelector(".modal-close-btn");
-        	
-        for (var i = 0; i < openCart.length; i++) {
-            openCart[i].addEventListener("click", function(event) {
-                event.preventDefault();
-                popupCart.classList.add("modal-cart-show");
-            });
-        }
-
-        closeCart.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupCart.classList.remove("modal-cart-show");
-        });
-        
-        closeCartBtn.addEventListener("click", function(event) {
-            event.preventDefault();
-            popupCart.classList.remove("modal-cart-show");
-        });
-        
-        window.addEventListener("keydown", function(event) {
-            if (event.keyCode === 27) {
-                if (popupCart.classList.contains("modal-cart-show")) {
-                    popupCart.classList.remove("modal-cart-show");
-                }
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
