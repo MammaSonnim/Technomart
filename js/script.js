@@ -77,10 +77,11 @@ openContact.addEventListener('click', function(event) {
   event.preventDefault();
   popupContact.classList.add('modal-contact-show');
 
-  if (storageName) {
+  if (storageName && !storageEmail) {
     nameContact.value = storageName;
     emailContact.focus();
-  } else if (storageEmail) {
+  } else if (storageName && storageEmail) {
+      nameContact.value = storageName;
       emailContact.value = storageEmail;
       textContact.focus();
     } else {
