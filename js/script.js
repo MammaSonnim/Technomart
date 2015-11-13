@@ -3,11 +3,15 @@ var openCart = document.querySelectorAll(".product-card-actions-buy");
 var popupCart = document.querySelector(".modal-cart");
 var closeCart = document.querySelector(".modal-cart-close");
 var closeCartBtn = popupCart.querySelector(".modal-close-btn");
+var countBtn = document.querySelector(".bar-cart-count");
+var counter = countBtn.querySelector(".count");
 
 for (var i = 0; i < openCart.length; i++) {
   openCart[i].addEventListener("click", function(event) {
     event.preventDefault();
     popupCart.classList.add("modal-cart-show");
+    countBtn.classList.add("count-active");
+    counter.innerHTML = 1;
   });
 }
 
