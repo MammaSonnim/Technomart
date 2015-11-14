@@ -564,7 +564,7 @@ img {
     width: 170px;
     margin: 18px 0 15px 0;
     padding: 0;
-        white-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
     font-size: 24px;
     line-height: 30px;
@@ -597,12 +597,38 @@ img {
     display: none;
 }
 
+.features-slider-arrows {
+    position: relative;
+}
+
+.features-slider-arrow {
+    position: absolute;
+    top: 110px;
+    margin: 0;
+    font-size: 45px;
+    line-height: 45px;
+    color: #ffffff;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.icon-left {
+    left: 1%;
+}
+
+.icon-right {
+    right: 1%;
+}
+
 .features-slider-controls {
     position: absolute;
     left: 48%;
     bottom: 36px;
     z-index: 100;
     text-align: center;
+    font-size: 0;
 }
 
 .features-slider-control {
@@ -618,28 +644,12 @@ img {
 }
 
 .features-slider-control:first-child {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
-.features-slider-btn-1:checked ~ .features-slider-controls .icon-left,
-.features-slider-btn-2:checked ~ .features-slider-controls .icon-right {
+.features-slider-btn-1:checked ~ .features-slider-controls .control-1,
+.features-slider-btn-2:checked ~ .features-slider-controls .control-2 {
     background-color: #ca2c37;
-}
-
-.features-slider-controls .icon-left:before,
-.features-slider-controls .icon-right:before {
-    position: absolute;
-    bottom: 65px;
-    font-size: 45px;
-    color: #ffffff;
-}
-
-.icon-left:before {
-    left: -290px;
-}
-
-.icon-right:before {
-    right: -290px;
 }
 
 .features-slider-inner {
@@ -1529,8 +1539,6 @@ img {
     animation: shake 0.3s;
 }
 
-
-
 /* CATALOG CONTENT start*/
 
 /* catalog-header user-block */
@@ -1990,4 +1998,3 @@ img {
 }
 
 /* PAGE CONTENT end*/
-
