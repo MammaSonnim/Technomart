@@ -249,6 +249,12 @@ img {
     margin-right: 0;
 }
 
+.bar-bookmark-count,
+.bar-cart-count {
+    width: 128px;
+    padding-left: 20px;
+}
+
 .bar-bookmark-count:hover,
 .bar-cart-count:hover {
     background-color: #212a3a;
@@ -260,18 +266,10 @@ img {
     color: #a2a4a6;
 }
 
-.icon-bookmark:before {
-    margin-left: -10px;
-    margin-right: 10px;
-}
-
-.icon-basket:before {
-    margin-left: -15px;
-    margin-right: 15px;
-}
-
 .icon-bookmark:before,
 .icon-basket:before {
+    position: absolute;
+    left: 12px;
     opacity: 0.3;
 }
 
@@ -1146,6 +1144,11 @@ img {
 
 .modal-map-close {
     z-index: 100;
+}
+
+.y-map {
+    width: 940px;
+    height: 446px;
 }
 
 /* MAIN CONTENT end */
