@@ -16,7 +16,6 @@
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -28,8 +27,6 @@
   line-height: 1em;
   margin-left: .2em;
   font-size: 100%;}
-
- 
  
 .icon-left:before { content: '\3c'; } /* '&lt;' */
 .icon-right:before { content: '\3e'; } /* '&gt;' */
@@ -201,11 +198,9 @@ img {
     margin: 0;
     padding: 0;
     border: none;
-}
-
-.icon-search {
     color: #6a7180;
 }
+
 
 .icon-search:before {
     position: absolute;
@@ -214,11 +209,9 @@ img {
     font-size: 17px;
 }
 
-.search:hover {
+.search:hover,
+.search:hover .search-submit{
     background-color: #212a3a;
-}
-
-.search:hover .icon-search {
     color: #ffffff;
 }
 
@@ -231,7 +224,7 @@ img {
     color: #000000;
 }
 
-.search-field:focus + .search-submit .icon-search {
+.search-field:focus + .search-submit {
     color: #ee3643;
 }
 
@@ -1155,10 +1148,6 @@ img {
     z-index: 100;
 }
 
-#map {
-    width: 940px;
-    height: 446px;
-}
 /* MAIN CONTENT end */
 
 /* MAIN FOOTER start */
@@ -1274,7 +1263,6 @@ img {
     vertical-align: middle;
     width: 40px;
     height: 40px;
-    line-height: 40px;
     margin-right: 5px;
     background-color: #212a3a;
     border-radius: 50%;
@@ -1288,6 +1276,7 @@ img {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
+    line-height: 40px;
     font-size: 18px;
     color: #ffffff;
 }
@@ -1436,6 +1425,7 @@ img {
     line-height: 18px;
     font-family: 'PT Sans', 'Arial', sans-serif;
     border-radius: 3px;
+    outline: none;
 }
 
 .text-field {
@@ -1767,11 +1757,11 @@ img {
 }
 
 .range-controls .toggle-min {
-    left: 10px;
+    left: 20px;
 }
 
 .range-controls .toggle-max {
-    left: 145px;
+    left: 158px;
 }
 
 .price-controls {
@@ -2000,10 +1990,13 @@ img {
     border-color: #ee3643;
 }
 
-.paginator-link-current {
+.paginator-link-current,
+.paginator-link-current:hover,
+.paginator-link-current:active {
     background-color: #ee3643;
     border-color: #ee3643;
     color: #ffffff;
+    cursor: default;
 }
 
 /* Catalog Promo */

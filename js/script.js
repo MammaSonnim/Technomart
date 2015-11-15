@@ -47,7 +47,8 @@
   
   if (linkArrow) {
     for (var i = 0; i < linkArrow.length; i++) {
-      linkArrow[i].addEventListener('click', function(e) {
+      linkArrow[i].addEventListener('click', function(event) {
+        event.preventDefault();
         var currentInput = document.querySelector('.features-slider input:checked');
         var currentInputIndex = [].indexOf.call(inputNav, currentInput);
         var inputCount = inputNav.length;
