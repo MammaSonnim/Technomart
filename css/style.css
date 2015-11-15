@@ -10,18 +10,8 @@
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'symbols-technomart';
-    src: url('../font/symbols-technomart.svg?22619757#symbols-technomart') format('svg');
-  }
-}
-*/
  
- [class^="icon-"]:before, [class*=" icon-"]:before {
+ [class^='icon-']:before, [class*=' icon-']:before {
   font-family: 'symbols-technomart';
   font-style: normal;
   font-weight: normal;
@@ -33,24 +23,11 @@
   margin-right: 10px;
   text-align: center;
   opacity: 1;
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
-  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
   margin-left: .2em;
- 
-  /* you can be more comfortable with increased icons size */
-  font-size: 100%;
- 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
+  font-size: 100%;}
 
  
  
@@ -273,7 +250,6 @@ img {
     color: #ffffff;
     background-color: #293449;
     border-radius: 0;
-    
 }
 
 .bar-btn:last-child {
@@ -294,7 +270,6 @@ img {
 .icon-bookmark:before {
     margin-left: -10px;
     margin-right: 10px;
-    
 }
 
 .icon-basket:before {
@@ -485,15 +460,18 @@ img {
 .features {
     margin: 59px auto 33px auto;
 }
+
 .features-col-left {
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
 .features-col-right {
     float: right;
     margin-bottom: 20px;
 }
+
 .features-item {
     position: relative;
     width: 276px;
@@ -579,7 +557,6 @@ img {
     background-position: -389px -5px;
 }
 
-
 .features-item-title {
     width: 170px;
     margin: 21px 0 12px 0;
@@ -613,7 +590,7 @@ img {
     background-color: #dda028;
 }
 
-.features-slider input[type="radio"] {
+.features-slider input[type='radio'] {
     display: none;
 }
 
@@ -739,7 +716,6 @@ img {
 }
 
 /* Popular Products */
-
 .index-header {
     margin-bottom: 20px;
     padding: 25px 24px 26px 26px;
@@ -775,7 +751,6 @@ img {
     text-align: center;
     border: 1px solid #e5e5e5;
 }
-
 
 .popular-products .product-card:nth-child(4n) {
     margin-right: 0;
@@ -1012,7 +987,7 @@ img {
     background-color: #293449;
 }
 
-.service-slider input[type="radio"] {
+.service-slider input[type='radio'] {
     display: none;
 }
 
@@ -1168,7 +1143,7 @@ img {
     display: none;
     width: 940px;
     height: 446px;
-    box-shadow: 0 0 16px 0 rgba(35, 31, 32, 0.5);
+    box-shadow: 0 0 15px 1px rgba(35, 31, 32, 0.5);
     background: url(../images/map-open.png) no-repeat;
 }
 
@@ -1181,16 +1156,13 @@ img {
 }
 
 #map {
-  width: 940px;
-  height: 446px;
+    width: 940px;
+    height: 446px;
 }
-
-
 /* MAIN CONTENT end */
 
 /* MAIN FOOTER start */
 /* Main Footer Content*/
-
 .main-footer {
     font-family: 'Cuprum', 'Arial', sans-serif;
     color: #ffffff;
@@ -1347,7 +1319,6 @@ img {
 /* MAIN FOOTER end */
 
 /* pop-up */
-
 @-webkit-keyframes fade {
     0% {
         opacity: 0;
@@ -1373,14 +1344,6 @@ img {
         transform: translateY(0);
     }
 }
-
-/*
-.modal-fade {
-    -webkit-animation: fade 1s;
-    animation: fade 1s;
-}
-*/
-
 
 .modal {
     position: fixed;
@@ -1584,9 +1547,7 @@ img {
 }
 
 /* CATALOG CONTENT start*/
-
 /* catalog-header user-block */
-
 .count-active,
 .count-active:hover,
 .count-active:active {
@@ -1669,7 +1630,6 @@ img {
 }
 
 /* PAGE CONTENT start */
-
 .breadcrumbs-item,
 .filter-header-title,
 .filter-title,
@@ -1773,8 +1733,7 @@ img {
     border-bottom: none;
 }
 
-/* Цена */
-
+/* Price */
 .range-controls {
     position: relative;
     min-height: 41px;
@@ -1836,7 +1795,7 @@ img {
     float: right;
 }
 
-.price-controls input[type="text"] {
+.price-controls input[type='text'] {
     width: 79px;
     margin: 0;
     padding: 8px;
@@ -1847,7 +1806,7 @@ img {
     border-radius: 3px;
 }
 
-/* Производители и Питание */
+/* Brands and Supply */
 .filter-brands-item,
 .filter-supply-item {
     position: relative;
@@ -2048,7 +2007,6 @@ img {
 }
 
 /* Catalog Promo */
-
 .catalog-promo {
     padding: 61px 0 69px 0;
     background-color: #f2f6f8;
@@ -2057,5 +2015,3 @@ img {
 .catalog-promo-title {
     margin-bottom: 21px;
 }
-
-/* PAGE CONTENT end*/

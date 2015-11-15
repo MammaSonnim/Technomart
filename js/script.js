@@ -40,6 +40,37 @@
       }
     }
   });
+    
+
+  var linkArrow = document.querySelectorAll('.features-slider-arrows a');
+  var inputNav = document.querySelectorAll('[name="features-toggle"]');
+  
+  if (linkArrow) {
+    for (var i = 0; i < linkArrow.length; i++) {
+      linkArrow[i].addEventListener('click', function(e) {
+        var currentInput = document.querySelector('.features-slider input:checked');
+        var currentInputIndex = [].indexOf.call(inputNav, currentInput);
+        var inputCount = inputNav.length;
+        switch (this.dataset.direction) {
+          case 'left':
+            if (currentInputIndex == 0) {
+              inputNav[inputCount - 1].checked = true;
+            } else {
+              inputNav[currentInputIndex - 1].checked = true;
+            }
+            break;
+
+          case 'right':
+            if ((inputCount - 1) == currentInputIndex) {
+              inputNav[0].checked = true;
+            } else {
+              inputNav[currentInputIndex + 1].checked = true;
+            }
+            break;
+        }
+      });
+    };
+  }
 
   var openMap = document.querySelector('.open-modal-map');
   var popupMap = document.querySelector('.modal-map');
