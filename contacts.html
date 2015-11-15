@@ -68,7 +68,37 @@
             </div>
         </div>
     </header>
-        <footer class="main-footer">
+    <div class="page-content">
+        <div class="breadcrumbs container-center">
+            <a class="breadcrumbs-item icon-home" href="index.html">Главная</a>
+            <span class="breadcrumbs-item">Контакты</span>
+        </div>
+    </div>
+        <div class="container-center">
+            <header class="page-header">
+                <h1 class="inner-header-title page-title">Свяжитесь с нами!</h1>
+            </header>
+        </div>
+        <form class="contact-form page-contact-form" action="/echo" method="post">
+            <div class="modal-content page-contact-center">
+                <label class="contact-form-label" for="name-field">Ваше имя:
+                    <input class="contact-form-item" type="text" name="name" id="name-field" placeholder="Представьтесь, пожалуйста">
+                </label>
+                <label class="contact-form-label" for="email-field">Ваш e-mail:
+                    <input class="contact-form-item" type="email" name="email" id="email-field" placeholder="Для отправки ответа">
+                </label>
+                <label class="contact-form-label" for="text-field">Текст письма:
+                    <textarea class="contact-form-item text-field" name="text" rows="5" id="text-field" placeholder="В свободной форме"></textarea>
+                </label>
+            </div>
+            <div class="modal-footer page-content-footer">
+                <div class="page-contact-center">
+                    <button class="modal-btn btn" type="submit" name="send">Отправить</button>
+                    <button class="modal-btn modal-close-btn" type="reset">Отмена</button>
+                </div>
+            </div>
+        </form>
+    <footer class="main-footer">
         <div class="main-footer-content">
             <div class="container-center clearfix">
                 <div class="main-footer-content-col-left footer-content-wrapper">
@@ -139,7 +169,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
     

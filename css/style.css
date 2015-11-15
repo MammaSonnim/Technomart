@@ -56,7 +56,6 @@
 .icon-bookmark:before { content: '🔖'; } /* '\1f516' */
 
 /* Common styles */
-
 body {
     min-width: 960px;
     font-size: 13px;
@@ -2010,4 +2009,15 @@ img {
 
 .catalog-promo-title {
     margin-bottom: 21px;
+}
+
+/* Extra */
+
+.page-contact-form {
+    margin: -30px 0 80px 0;
+}
+
+.page-contact-center {
+    width: 460px;
+    margin: 0 auto 0 auto;
 }
