@@ -1495,6 +1495,7 @@ img {
     overflow: hidden;
     font-size: 14px;
     border: none;
+    outline: none;
 }
 
 .modal-btn:last-child {
@@ -1502,6 +1503,7 @@ img {
 }
 
 .modal-close-btn {
+    padding: 0;
     background-color: #ffffff;
     color: #000000;
     font-family: 'Cuprum', 'Arial', sans-serif;
@@ -1510,6 +1512,14 @@ img {
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 3px;
+}
+
+.modal-close-btn:hover {
+    outline: 1px solid #bdc6ca;
+}
+
+.modal-close-btn:active {
+    outline: 1px solid #ee3643;
 }
 
 .modal-cart {

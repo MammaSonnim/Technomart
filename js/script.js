@@ -10,14 +10,14 @@ for (var i = 0; i < openCart.length; i++) {
   openCart[i].addEventListener('click', function(event) {
     event.preventDefault();
     popupCart.classList.add('modal-cart-show');
+    countBtn.classList.add('count-active');
+    var count = Number(counter.innerHTML);
+    counter.innerHTML = count +=1;
   });
 }
 
 submitCart.addEventListener('click', function(event) {
   event.preventDefault();
-  countBtn.classList.add('count-active');
-  var count = Number(counter.innerHTML);
-  counter.innerHTML = count +=1;
   popupCart.classList.remove('modal-cart-show');
 });
 
@@ -37,6 +37,13 @@ window.addEventListener('keydown', function(event) {
         popupCart.classList.remove('modal-cart-show');
     }
   }
+});
+
+var rightSwitcher = document.querySelector('.icon-right');
+var leftSwither = document.querySelector('.icon-left');
+
+rightSwitcher.addEventListener('click', function(event) {
+  event.preventDefault()
 });
 
 var openMap = document.querySelector('.open-modal-map');
@@ -65,7 +72,6 @@ window.addEventListener('keydown', function(event) {
 var openContact = document.querySelector('.open-modal-btn');
 var popupContact = document.querySelector('.modal-contact');
 var closeContact = document.querySelector('.modal-contact-close');
-var cancelContact = popupContact.querySelector('.modal-close-btn');
 var formContact = popupContact.querySelector('.contact-form');
 var nameContact = popupContact.querySelector('[name=name]');
 var emailContact = popupContact.querySelector('[name=email]');
@@ -101,12 +107,6 @@ formContact.addEventListener('submit', function(event) {
 });
 
 closeContact.addEventListener('click', function(event) {
-  event.preventDefault();
-  popupContact.classList.remove('modal-contact-show');
-  popupContact.classList.remove('modal-error');
-});
-
-cancelContact.addEventListener('click', function(event) {
   event.preventDefault();
   popupContact.classList.remove('modal-contact-show');
   popupContact.classList.remove('modal-error');
