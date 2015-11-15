@@ -41,107 +41,105 @@
     }
   });
 
-  var rightSwitcher = document.querySelector('.icon-right');
-  var leftSwither = document.querySelector('.icon-left');
-
-  rightSwitcher.addEventListener('click', function(event) {
-    event.preventDefault()
-  });
-
   var openMap = document.querySelector('.open-modal-map');
   var popupMap = document.querySelector('.modal-map');
   var closeMap = document.querySelector('.modal-map-close');
 
-  openMap.addEventListener('click', function(event) {
-    event.preventDefault();
-    popupMap.classList.add('modal-map-show');
-  });
+  if (openMap) {
+      openMap.addEventListener('click', function(event) {
+      event.preventDefault();
+      popupMap.classList.add('modal-map-show');
+    });
 
-  closeMap.addEventListener('click', function(event) {
-    event.preventDefault();
-    popupMap.classList.remove('modal-map-show');
-  });
+    closeMap.addEventListener('click', function(event) {
+      event.preventDefault();
+      popupMap.classList.remove('modal-map-show');
+    });
 
-  window.addEventListener('keydown', function(event) {
-    if (event.keyCode === 27) {
-      if (popupMap.classList.contains('modal-map-show')) {
-          popupMap.classList.remove('modal-map-show');
+    window.addEventListener('keydown', function(event) {
+      if (event.keyCode === 27) {
+        if (popupMap.classList.contains('modal-map-show')) {
+            popupMap.classList.remove('modal-map-show');
+        }
       }
+    });
+
+
+    ymaps.ready(init);
+    var myMap;
+    function init() {
+    myMap = new ymaps.Map('map', {
+      center: [59.938554257894,30.322479499999993],
+      zoom: [16],
+      controls: []
+    }),
+    myMap.behaviors.disable('scrollZoom');
+    myMap.controls.add('zoomControl');
+
+    myPlacemark = new ymaps.Placemark([59.938554257894,30.322479499999993], {
+      hintContent: 'г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8',
+    }, {
+      preset: 'islands#redDotIcon'
+    });
+
+    myMap.geoObjects.add(myPlacemark);
     }
-  });
-  
-   ymaps.ready(init);
-  var myMap;
-  function init() {
-  myMap = new ymaps.Map('map', {
-    center: [59.938554257894,30.322479499999993],
-    zoom: [16],
-    controls: []
-  }),
-  myMap.behaviors.disable('scrollZoom');
-  myMap.controls.add('zoomControl');
-
-
-  myPlacemark = new ymaps.Placemark([59.938554257894,30.322479499999993], {
-    hintContent: 'г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8',
-  }, {
-    preset: 'islands#redDotIcon'
-  });
-
-  myMap.geoObjects.add(myPlacemark);
   }
-
-
+  
+  
   var openContact = document.querySelector('.open-modal-btn');
   var popupContact = document.querySelector('.modal-contact');
   var closeContact = document.querySelector('.modal-contact-close');
-  var formContact = popupContact.querySelector('.contact-form');
-  var nameContact = popupContact.querySelector('[name=name]');
-  var emailContact = popupContact.querySelector('[name=email]');
-  var textContact = popupContact.querySelector('[name=text]');
-  var storageName = localStorage.getItem('nameContact');
-  var storageEmail = localStorage.getItem('emailContact');
+  
+  if(popupContact) {
+    var formContact = popupContact.querySelector('.contact-form');
+    var nameContact = popupContact.querySelector('[name=name]');
+    var emailContact = popupContact.querySelector('[name=email]');
+    var textContact = popupContact.querySelector('[name=text]');
+    var storageName = localStorage.getItem('nameContact');
+    var storageEmail = localStorage.getItem('emailContact');
 
-  openContact.addEventListener('click', function(event) {
-    event.preventDefault();
-    popupContact.classList.add('modal-contact-show');
-
-    if (storageName && !storageEmail) {
-      nameContact.value = storageName;
-      emailContact.focus();
-    } else if (storageName && storageEmail) {
-        nameContact.value = storageName;
-        emailContact.value = storageEmail;
-        textContact.focus();
-      } else {
-          nameContact.focus();
-        }
-  });
-
-  formContact.addEventListener('submit', function(event) {
-    if (!nameContact.value || !emailContact.value || !textContact.value) {
+    openContact.addEventListener('click', function(event) {
       event.preventDefault();
-      popupContact.classList.add('modal-error');
-    } else {
-      localStorage.setItem('nameContact', nameContact.value);
-      localStorage.setItem('emailContact', emailContact.value);
-      console.log(localStorage.getItem('emailContact'));
-    }
-  });
+      popupContact.classList.add('modal-contact-show');
 
-  closeContact.addEventListener('click', function(event) {
-    event.preventDefault();
-    popupContact.classList.remove('modal-contact-show');
-    popupContact.classList.remove('modal-error');
-  });
+      if (storageName && !storageEmail) {
+        nameContact.value = storageName;
+        emailContact.focus();
+      } else if (storageName && storageEmail) {
+          nameContact.value = storageName;
+          emailContact.value = storageEmail;
+          textContact.focus();
+        } else {
+            nameContact.focus();
+          }
+    });
 
-  window.addEventListener('keydown', function(event) {
-    if (event.keyCode === 27) {
-      if (popupContact.classList.contains('modal-contact-show')) {
-          popupContact.classList.remove('modal-contact-show');
-          popupContact.classList.remove('modal-error');
+    formContact.addEventListener('submit', function(event) {
+      if (!nameContact.value || !emailContact.value || !textContact.value) {
+        event.preventDefault();
+        popupContact.classList.add('modal-error');
+      } else {
+        localStorage.setItem('nameContact', nameContact.value);
+        localStorage.setItem('emailContact', emailContact.value);
+        console.log(localStorage.getItem('emailContact'));
       }
-    }
-  });
+    });
+
+    closeContact.addEventListener('click', function(event) {
+      event.preventDefault();
+      popupContact.classList.remove('modal-contact-show');
+      popupContact.classList.remove('modal-error');
+    });
+
+    window.addEventListener('keydown', function(event) {
+      if (event.keyCode === 27) {
+        if (popupContact.classList.contains('modal-contact-show')) {
+            popupContact.classList.remove('modal-contact-show');
+            popupContact.classList.remove('modal-error');
+        }
+      }
+    });
+}
   
 })();
