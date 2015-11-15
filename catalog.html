@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 <head>
     <meta charset="UTF-8">
     <title>Техномарт</title>
@@ -368,6 +368,10 @@
             <a class="modal-btn modal-close-btn" href="#">Продолжить покупки</a>
         </div>
     </div>
+    <script>
+      var html = document.documentElement;
+      html.className = html.className.replace('no-js', 'js');
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
