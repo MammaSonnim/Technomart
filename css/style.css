@@ -1690,12 +1690,6 @@ img {
     font-size: 0;
 }
 
-.icon-home:before {
-    margin: 0;
-    font-size: 16px;
-    color: #c1c6ce;
-}
-
 .breadcrumbs-item:after {
     content: '\3e';
     display: inline-block;
@@ -1710,6 +1704,12 @@ img {
 
 .breadcrumbs-item:last-child:after {
     display: none;
+}
+
+.icon-home:before {
+    margin: 0;
+    font-size: 16px;
+    color: #c1c6ce;
 }
 
 .page-header {
