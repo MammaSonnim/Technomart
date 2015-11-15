@@ -773,7 +773,7 @@ img {
     line-height: 18px;
     vertical-align: top;
     text-align: center;
-    border: 1px solid #cccccc;
+    border: 1px solid #e5e5e5;
 }
 
 
@@ -783,7 +783,7 @@ img {
 
 .product-card:hover {
     border-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0, 1, 1, 0.5);
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
 .product-card-actions {
@@ -791,7 +791,7 @@ img {
     position: absolute;
     top: 1px;
     left: 0;
-    width: 220px;
+    width: 218px;
     height: 88px;
     padding: 42px 0 42px 0;
     background-color: #fff;
@@ -929,18 +929,18 @@ img {
     margin-right: 20px;
     text-align: center;
     line-height: 143px;
-    border: 1px solid #cccccc;
+    border: 1px solid #e5e5e5;
     margin-bottom: 20px;
 }
 
 .brands-item:hover {
     border-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0, 1, 1, 0.5);
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
 .brands-item:active {
     border-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 1, 1, 0.5);
+    box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
 }
 
 .brands-item img {
@@ -1168,7 +1168,8 @@ img {
     display: none;
     width: 940px;
     height: 446px;
-    box-shadow: 0 0 20px rgba(0, 1, 1, 0.5);
+    box-shadow: 0 0 16px 0 rgba(35, 31, 32, 0.5);
+    background: url(../images/map-open.png) no-repeat;
 }
 
 .modal-map-show {
@@ -1394,13 +1395,13 @@ img {
     border-top: 7px solid #ee3643;
     overflow: auto;
     background-color: #ffffff;
-    box-shadow: 0 20px 40px rgba(0, 1, 1, 0.5);
     -webkit-animation: fade 0.2s both;
     animation: fade 0.2s both;
 }
 
 .modal-contact {
     display: none;
+    box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
 }
 
 .modal-contact-show {
@@ -1515,6 +1516,7 @@ img {
     display: none;
     height: 275px;
     overflow: hidden;
+    box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
 }
 
 .modal-cart-show {
