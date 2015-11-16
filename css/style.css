@@ -577,7 +577,6 @@ img {
 .features-slider {
     position: relative;
     width: 620px;
-    background-color: #dda028;
 }
 
 .features-slider input[type='radio'] {
@@ -645,6 +644,7 @@ img {
 .features-slider-inner {
     overflow: hidden;
     background-repeat: no-repeat;
+    background-color: #dda028;
 }
 
 .features-slider-btn-1:checked ~ .features-slider-inner {
