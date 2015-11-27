@@ -1,2 +1,1 @@
-#Technomart
-htmlacademy.ru
+http://mammasonnim.github.io/Technomart/
