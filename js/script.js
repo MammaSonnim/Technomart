@@ -154,7 +154,6 @@
             } else {
                 localStorage.setItem('nameContact', nameContact.value);
                 localStorage.setItem('emailContact', emailContact.value);
-                console.log(localStorage.getItem('emailContact'));
             }
         });
 
